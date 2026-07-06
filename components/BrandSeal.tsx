@@ -5,19 +5,21 @@ interface BrandSealProps {
   size?: BrandSealSize;
   className?: string;
   priority?: boolean;
+  alt?: string;
 }
 
 export default function BrandSeal({
   size = "md",
   className = "",
   priority = false,
+  alt = "Blue Atlantic company logo",
 }: BrandSealProps) {
   const { dimension, className: sizeClass } = brandSealSizes[size];
 
   return (
     <Image
       src={brandAssets.seal.png}
-      alt="Blue Atlantic logo"
+      alt={alt}
       width={dimension}
       height={dimension}
       priority={priority}

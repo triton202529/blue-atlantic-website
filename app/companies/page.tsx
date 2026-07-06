@@ -18,7 +18,7 @@ export default function CompaniesPage() {
         compact
         eyebrow="Ecosystem"
         headline="The Blue Atlantic ecosystem"
-        supportingCopy="A portfolio of platforms and initiatives within the Blue Atlantic enterprise group — built with shared standards, disciplined execution, and long-term institutional purpose."
+        supportingCopy="A portfolio of platforms and initiatives within the Blue Atlantic enterprise group, built with shared standards, disciplined execution, and long-term institutional purpose."
       />
       <ContentSection surface="blue">
         <SectionHeader

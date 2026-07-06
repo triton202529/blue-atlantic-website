@@ -98,7 +98,7 @@ export const companies = [
     description:
       "A digital wallet and payment infrastructure platform designed for Caribbean users, businesses, and future financial service integrations.",
     detailDescription:
-      "A digital wallet and payment infrastructure platform designed for Caribbean users, businesses, and future financial service integrations. Tropicash reflects Blue Atlantic's financial technology direction — building payment systems with regional context and disciplined product development.",
+      "A digital wallet and payment infrastructure platform designed for Caribbean users, businesses, and future financial service integrations. Tropicash reflects Blue Atlantic's financial technology direction, building payment systems with regional context and disciplined product development.",
     href: "/companies#tropicash",
     id: "tropicash",
   },
@@ -146,7 +146,7 @@ export const companies = [
     description:
       "A future research and capital strategy direction focused on disciplined analysis, institutional development, and long-term growth planning.",
     detailDescription:
-      "A future research and capital strategy direction focused on disciplined analysis, institutional development, and long-term growth planning. This initiative represents Blue Atlantic's research and capital direction — not a live investment product or advisory service.",
+      "A future research and capital strategy direction focused on disciplined analysis, institutional development, and long-term growth planning. This initiative represents Blue Atlantic's research and capital direction and is not a live investment product or advisory service.",
     href: "/companies#blue-atlantic-capital",
     id: "blue-atlantic-capital",
   },
@@ -156,7 +156,7 @@ export const whyBlueAtlantic = [
   {
     title: "Caribbean-first execution",
     description:
-      "Built with regional understanding and long-term commitment to Caribbean enterprise development — systems shaped by local context, not imported without purpose.",
+      "Built with regional understanding and long-term commitment to Caribbean enterprise development. Systems are shaped by local context, not imported without purpose.",
   },
   {
     title: "Enterprise discipline",
@@ -166,17 +166,17 @@ export const whyBlueAtlantic = [
   {
     title: "Long-term institution building",
     description:
-      "Focused on durable platforms and enterprise infrastructure — not short-term ventures, speculative positioning, or hype-driven development.",
+      "Focused on durable platforms and enterprise infrastructure, not short-term ventures, speculative positioning, or hype-driven development.",
   },
   {
     title: "Product and governance alignment",
     description:
-      "Technology, financial systems, and operational intelligence developed together — with shared standards across the Blue Atlantic ecosystem.",
+      "Technology, financial systems, and operational intelligence developed together with shared standards across the Blue Atlantic ecosystem.",
   },
   {
     title: "Systems designed for accountability",
     description:
-      "Governance-aware development with audit visibility and structured controls — supporting enterprise accountability from the ground up.",
+      "Governance-aware development with audit visibility and structured controls that support enterprise accountability from the ground up.",
   },
   {
     title: "Regional ambition with global standards",

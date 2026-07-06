@@ -15,32 +15,32 @@ const focusAreas = [
   {
     title: "Product engineering",
     description:
-      "End-to-end platform development from concept through deployment — with maintainable architecture, Caribbean-first product thinking, and standards suited to long-term institutional use.",
+      "End-to-end platform development from concept through deployment, with maintainable architecture, Caribbean-first product thinking, and standards suited to long-term institutional use.",
   },
   {
     title: "Secure-by-design development",
     description:
-      "Structured attention to system architecture, access controls, and operational reliability in platform development. This reflects design intent — not claims of certified security or banking authorization.",
+      "Structured attention to system architecture, access controls, and operational reliability in platform development. This reflects design intent and does not claim certified security or banking authorization.",
   },
   {
     title: "Governance-aware systems",
     description:
-      "Platforms developed with governance considerations, audit visibility, and structured controls — supporting enterprise accountability across the Blue Atlantic ecosystem.",
+      "Platforms developed with governance considerations, audit visibility, and structured controls that support enterprise accountability across the Blue Atlantic ecosystem.",
   },
   {
     title: "Internal platform development",
     description:
-      "Technology built to support Blue Atlantic platforms and initiatives — shared foundations that connect financial, workforce, intelligence, and oversight systems.",
+      "Technology built to support Blue Atlantic platforms and initiatives through shared foundations that connect financial, workforce, intelligence, and oversight systems.",
   },
   {
     title: "Operational intelligence",
     description:
-      "Systems that support structured data analysis, decision-support workflows, and enterprise visibility — enabling disciplined operational oversight and evaluation.",
+      "Systems that support structured data analysis, decision-support workflows, and enterprise visibility, enabling disciplined operational oversight and evaluation.",
   },
   {
     title: "Maintainable architecture",
     description:
-      "Clean, scalable product architecture designed for long-term development — not short-term builds that cannot support institutional growth.",
+      "Clean, scalable product architecture designed for long-term development rather than short-term builds that cannot support institutional growth.",
   },
 ];
 
@@ -51,13 +51,13 @@ export default function TechnologyPage() {
         compact
         eyebrow="Technology"
         headline="Technology and product development"
-        supportingCopy="The Blue Atlantic technology division builds the internal and public-facing platforms that power the enterprise ecosystem — with disciplined engineering, governance-aware design, and Caribbean-first product development."
+        supportingCopy="The Blue Atlantic technology division builds the internal and public-facing platforms that power the enterprise ecosystem, with disciplined engineering, governance-aware design, and Caribbean-first product development."
       />
       <ContentSection surface="soft">
         <SectionHeader
           label="Development"
           title="What we develop"
-          description="Technology work across the Blue Atlantic enterprise group supports practical platform needs — from financial infrastructure and workforce systems to intelligence and oversight platforms."
+          description="Technology work across the Blue Atlantic enterprise group supports practical platform needs, from financial infrastructure and workforce systems to intelligence and oversight platforms."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {focusAreas.map((area, index) => (
@@ -85,8 +85,9 @@ export default function TechnologyPage() {
             Blue Atlantic technology platforms are designed for enterprise use
             and structured development. References to secure infrastructure or
             governance-aware systems describe design intent and development
-            direction — not claims of certified cybersecurity, banking
-            authorization, or regulated financial infrastructure.
+            direction. They do not constitute claims of certified
+            cybersecurity, banking authorization, or regulated financial
+            infrastructure.
           </p>
         </Card>
       </ContentSection>

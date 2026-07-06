@@ -45,7 +45,9 @@ export default function AboutPage() {
       />
       <ContentSection surface="blue">
         <Card className="card-accent-neutral flex flex-col gap-6 p-8 md:flex-row md:items-start md:p-10">
-          <BrandSeal size="md" className="shrink-0" />
+          <div className="mx-auto flex shrink-0 items-center justify-center rounded-xl border border-brand-border/70 bg-white p-4 shadow-brand md:mx-0">
+            <BrandSeal size="lg" priority />
+          </div>
           <div>
             <p className="section-label text-brand-atlantic">Our story</p>
             <h2 className="mt-2 text-xl font-semibold text-brand-navy">

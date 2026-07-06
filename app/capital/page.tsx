@@ -42,7 +42,7 @@ export default function CapitalPage() {
         <SectionHeader
           label="Future direction"
           title="Research and institutional development"
-          description="This area of Blue Atlantic is in development. It reflects long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
+          description="This area of Blue Atlantic is in development. It reflects long-term research and capital direction and is not a live investment product, advisory service, or regulated financial offering."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {directionAreas.map((area) => (

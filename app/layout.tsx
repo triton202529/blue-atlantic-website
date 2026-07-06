@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: brandAssets.og.png,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} — Caribbean Enterprise Infrastructure`,
+        alt: `${siteConfig.name} | Caribbean Enterprise Infrastructure`,
       },
     ],
   },

@@ -25,7 +25,7 @@ export default function HomePage() {
         <SectionHeader
           label="Strategic focus"
           title="Strategic pillars"
-          description="Four interconnected areas of enterprise infrastructure — each developed with disciplined execution, shared standards, and long-term regional purpose."
+          description="Four interconnected areas of enterprise infrastructure, each developed with disciplined execution, shared standards, and long-term regional purpose."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar) => (
@@ -65,7 +65,7 @@ export default function HomePage() {
         <SectionHeader
           label="Our approach"
           title="Why Blue Atlantic"
-          description="A Caribbean-born enterprise group committed to institution building — with disciplined execution, governance-aware development, and long-term focus."
+          description="A Caribbean-born enterprise group committed to institution building, with disciplined execution, governance-aware development, and long-term focus."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {whyBlueAtlantic.map((item, index) => (
