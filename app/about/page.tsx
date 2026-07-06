@@ -36,14 +36,19 @@ export default function AboutPage() {
   return (
     <>
       <HeroSection
+        compact
+        eyebrow="About"
         headline="About Blue Atlantic"
         supportingCopy="A Caribbean-born enterprise group building modern technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development."
       />
       <PageContainer>
         <div className="grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
-            <Card key={section.title}>
-              <h2 className="text-lg font-semibold text-brand-navy">
+          {sections.map((section, index) => (
+            <Card key={section.title} hover>
+              <span className="text-xs font-medium tabular-nums text-brand-muted/50">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h2 className="mt-2 text-lg font-semibold text-brand-navy">
                 {section.title}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">

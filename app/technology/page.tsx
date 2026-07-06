@@ -42,18 +42,24 @@ export default function TechnologyPage() {
   return (
     <>
       <HeroSection
+        compact
+        eyebrow="Technology"
         headline="Technology and innovation"
         supportingCopy="The Blue Atlantic technology division builds internal and public-facing platforms, secure digital infrastructure, and governance-aware systems for the enterprise ecosystem."
       />
       <PageContainer>
         <SectionHeader
+          eyebrow="Development"
           title="What we develop"
           description="Our technology work supports the platforms and initiatives across the Blue Atlantic ecosystem — from financial infrastructure to workforce systems and intelligence platforms."
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {focusAreas.map((area) => (
-            <Card key={area.title}>
-              <h2 className="text-lg font-semibold text-brand-navy">
+          {focusAreas.map((area, index) => (
+            <Card key={area.title} hover>
+              <span className="text-xs font-medium tabular-nums text-brand-muted/50">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h2 className="mt-2 text-lg font-semibold text-brand-navy">
                 {area.title}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
@@ -62,7 +68,7 @@ export default function TechnologyPage() {
             </Card>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl border border-brand-border bg-brand-soft p-6 md:p-8">
+        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft">
           <p className="text-sm leading-relaxed text-brand-muted">
             Blue Atlantic technology platforms are designed for enterprise use
             and structured development. References to secure infrastructure or
@@ -70,7 +76,7 @@ export default function TechnologyPage() {
             direction — not claims of certified cybersecurity, banking
             authorization, or regulated financial infrastructure.
           </p>
-        </div>
+        </Card>
       </PageContainer>
     </>
   );

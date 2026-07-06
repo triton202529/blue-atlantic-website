@@ -13,14 +13,14 @@ export default function NewsroomPage() {
   return (
     <>
       <HeroSection
+        compact
+        eyebrow="Newsroom"
         headline="Newsroom"
         supportingCopy="Company updates, announcements, and publications from Blue Atlantic will appear here as they become available."
       />
       <PageContainer>
-        <Card className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand-atlantic">
-            Coming soon
-          </p>
+        <Card className="mx-auto max-w-2xl border-brand-atlantic/10 text-center">
+          <p className="eyebrow text-brand-atlantic">Coming soon</p>
           <h2 className="mt-4 text-xl font-semibold text-brand-navy">
             Updates in development
           </h2>

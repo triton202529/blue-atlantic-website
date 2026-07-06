@@ -38,17 +38,20 @@ export default function ContactPage() {
   return (
     <>
       <HeroSection
+        compact
+        eyebrow="Contact"
         headline="Contact Blue Atlantic"
         supportingCopy="We welcome professional inquiries from partners, institutions, businesses, and collaborators interested in Caribbean enterprise infrastructure."
       />
       <PageContainer>
         <SectionHeader
+          eyebrow="Inquiries"
           title="How to reach us"
           description="Contact information and inquiry channels will be published here. This page does not include a live form at this stage."
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {contactCategories.map((category) => (
-            <Card key={category.title}>
+            <Card key={category.title} hover>
               <h2 className="text-lg font-semibold text-brand-navy">
                 {category.title}
               </h2>
@@ -58,7 +61,7 @@ export default function ContactPage() {
             </Card>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl border border-brand-border bg-brand-soft p-6 text-center md:p-8">
+        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft text-center">
           <p className="text-sm text-brand-muted">
             Contact channels will be available in a future update. For now,
             please note your area of interest when reaching out through
@@ -69,7 +72,7 @@ export default function ContactPage() {
               Learn about Blue Atlantic
             </Button>
           </div>
-        </div>
+        </Card>
       </PageContainer>
     </>
   );

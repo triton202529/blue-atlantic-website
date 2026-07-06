@@ -33,17 +33,20 @@ export default function CapitalPage() {
   return (
     <>
       <HeroSection
+        compact
+        eyebrow="Capital"
         headline="Capital and research direction"
         supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, disciplined analysis, and institutional development within the enterprise group."
       />
       <PageContainer>
         <SectionHeader
-          title="Future direction"
+          eyebrow="Future direction"
+          title="Research and institutional development"
           description="This area of Blue Atlantic is in development. It reflects our long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {directionAreas.map((area) => (
-            <Card key={area.title}>
+            <Card key={area.title} hover>
               <h2 className="text-lg font-semibold text-brand-navy">
                 {area.title}
               </h2>
@@ -53,7 +56,7 @@ export default function CapitalPage() {
             </Card>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl border border-brand-border bg-brand-soft p-6 md:p-8">
+        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft">
           <h3 className="text-base font-semibold text-brand-navy">
             Important notice
           </h3>
@@ -64,9 +67,9 @@ export default function CapitalPage() {
             solicitation to invest. Blue Atlantic is not a licensed broker,
             asset manager, or regulated investment advisor.
           </p>
-        </div>
+        </Card>
         <div className="mt-8">
-          <Button href="/contact" variant="secondary">
+          <Button href="/contact" variant="primary">
             Institutional inquiries
           </Button>
         </div>
