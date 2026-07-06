@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 export const metadata: Metadata = {
   title: "Newsroom",
   description:
-    "Blue Atlantic newsroom for future company updates, announcements, and publications.",
+    "Blue Atlantic newsroom for company updates, ecosystem announcements, institutional notes, and future public releases.",
 };
 
 export default function NewsroomPage() {
@@ -16,7 +16,7 @@ export default function NewsroomPage() {
         compact
         eyebrow="Newsroom"
         headline="Newsroom"
-        supportingCopy="Company updates, announcements, and publications from Blue Atlantic will appear here as they become available."
+        supportingCopy="The Blue Atlantic newsroom will publish company updates, ecosystem announcements, institutional notes, and future public releases."
       />
       <ContentSection surface="soft">
         <Card className="card-accent-neutral mx-auto max-w-2xl text-center">
@@ -26,8 +26,9 @@ export default function NewsroomPage() {
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-brand-muted md:text-base">
             The Blue Atlantic newsroom will serve as the central place for
-            company announcements, ecosystem updates, and institutional
-            publications. Check back for future releases.
+            company announcements, ecosystem updates, institutional notes, and
+            future public releases. Check back for published materials as they
+            become available.
           </p>
         </Card>
       </ContentSection>

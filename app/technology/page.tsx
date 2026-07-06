@@ -8,34 +8,39 @@ import { whyAccentClasses } from "@/lib/card-themes";
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Blue Atlantic's technology division builds internal and public-facing platforms, secure digital infrastructure, and governance-aware systems.",
+    "Blue Atlantic's technology division builds internal and public-facing platforms, secure-by-design systems, and governance-aware infrastructure for the enterprise ecosystem.",
 };
 
 const focusAreas = [
   {
-    title: "Software platforms",
+    title: "Product engineering",
     description:
-      "Design and development of enterprise software platforms supporting financial technology, workforce systems, and operational intelligence across the Blue Atlantic ecosystem.",
+      "End-to-end platform development from concept through deployment — with maintainable architecture, Caribbean-first product thinking, and standards suited to long-term institutional use.",
   },
   {
-    title: "Secure digital infrastructure",
+    title: "Secure-by-design development",
     description:
-      "Building structured digital infrastructure with attention to system architecture, access controls, and operational reliability — designed for enterprise use cases.",
+      "Structured attention to system architecture, access controls, and operational reliability in platform development. This reflects design intent — not claims of certified security or banking authorization.",
+  },
+  {
+    title: "Governance-aware systems",
+    description:
+      "Platforms developed with governance considerations, audit visibility, and structured controls — supporting enterprise accountability across the Blue Atlantic ecosystem.",
+  },
+  {
+    title: "Internal platform development",
+    description:
+      "Technology built to support Blue Atlantic platforms and initiatives — shared foundations that connect financial, workforce, intelligence, and oversight systems.",
   },
   {
     title: "Operational intelligence",
     description:
-      "Systems that support structured data analysis, decision-support workflows, and enterprise visibility — enabling disciplined operational oversight.",
+      "Systems that support structured data analysis, decision-support workflows, and enterprise visibility — enabling disciplined operational oversight and evaluation.",
   },
   {
-    title: "Product engineering",
+    title: "Maintainable architecture",
     description:
-      "End-to-end product development from concept through deployment, with emphasis on clean architecture, maintainable code, and scalable platform design.",
-  },
-  {
-    title: "Governance and audit-aware systems",
-    description:
-      "Platforms designed with governance considerations, audit visibility, and structured controls — supporting enterprise accountability without overclaiming regulatory status.",
+      "Clean, scalable product architecture designed for long-term development — not short-term builds that cannot support institutional growth.",
   },
 ];
 
@@ -45,14 +50,14 @@ export default function TechnologyPage() {
       <HeroSection
         compact
         eyebrow="Technology"
-        headline="Technology and innovation"
-        supportingCopy="The Blue Atlantic technology division builds internal and public-facing platforms, secure digital infrastructure, and governance-aware systems for the enterprise ecosystem."
+        headline="Technology and product development"
+        supportingCopy="The Blue Atlantic technology division builds the internal and public-facing platforms that power the enterprise ecosystem — with disciplined engineering, governance-aware design, and Caribbean-first product development."
       />
       <ContentSection surface="soft">
         <SectionHeader
           label="Development"
           title="What we develop"
-          description="Our technology work supports the platforms and initiatives across the Blue Atlantic ecosystem — from financial infrastructure to workforce systems and intelligence platforms."
+          description="Technology work across the Blue Atlantic enterprise group supports practical platform needs — from financial infrastructure and workforce systems to intelligence and oversight platforms."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {focusAreas.map((area, index) => (

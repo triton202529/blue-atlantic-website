@@ -11,8 +11,8 @@ export default function PartnershipCTA() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-blue-100/75 md:text-lg">
             Blue Atlantic welcomes conversations with institutions, businesses,
-            developers, and regional partners aligned with long-term Caribbean
-            enterprise development.
+            developers, and regional partners who share a long-term view of
+            Caribbean enterprise development.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button href="/contact" variant="secondary">
@@ -23,7 +23,7 @@ export default function PartnershipCTA() {
               variant="ghost"
               className="border-white/15 text-white hover:bg-white/5 hover:text-white"
             >
-              Learn about our companies
+              Explore the ecosystem
             </Button>
           </div>
         </div>

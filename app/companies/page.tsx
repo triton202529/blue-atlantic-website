@@ -8,7 +8,7 @@ import { companies } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Companies",
   description:
-    "Explore the Blue Atlantic ecosystem of platforms and initiatives across financial technology, workforce systems, intelligence, and capital direction.",
+    "Explore the Blue Atlantic ecosystem portfolio of platforms and initiatives across financial technology, workforce systems, intelligence, and capital direction.",
 };
 
 export default function CompaniesPage() {
@@ -18,13 +18,13 @@ export default function CompaniesPage() {
         compact
         eyebrow="Ecosystem"
         headline="The Blue Atlantic ecosystem"
-        supportingCopy="Blue Atlantic supports a portfolio of platforms, systems, and initiatives across technology, workforce, intelligence, and capital direction — each developed with institutional discipline and long-term focus."
+        supportingCopy="A portfolio of platforms and initiatives within the Blue Atlantic enterprise group — built with shared standards, disciplined execution, and long-term institutional purpose."
       />
       <ContentSection surface="blue">
         <SectionHeader
           label="Portfolio"
           title="Platforms and initiatives"
-          description="Each ecosystem company operates as a distinct platform or initiative within the Blue Atlantic enterprise group, sharing a commitment to modern systems and Caribbean-first development."
+          description="Each platform and initiative in the Blue Atlantic ecosystem is developed with institutional discipline, Caribbean-first context, and connection to shared enterprise infrastructure."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {companies.map((company) => (

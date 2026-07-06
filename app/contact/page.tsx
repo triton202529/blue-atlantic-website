@@ -9,27 +9,32 @@ import { whyAccentClasses } from "@/lib/card-themes";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Blue Atlantic for partnerships, institutional conversations, platform inquiries, and general contact.",
+    "Contact Blue Atlantic for institutional conversations, partnerships, platform inquiries, and general company inquiries.",
 };
 
 const contactCategories = [
   {
-    title: "Partnerships",
-    description:
-      "For organizations interested in strategic partnership, regional collaboration, or ecosystem integration with Blue Atlantic platforms.",
-  },
-  {
     title: "Institutional conversations",
     description:
-      "For government entities, institutions, and enterprise organizations exploring structured engagement with Blue Atlantic.",
+      "For government entities, institutions, and enterprise organizations exploring structured engagement with Blue Atlantic on regional infrastructure and long-term development.",
+  },
+  {
+    title: "Partnerships",
+    description:
+      "For organizations interested in strategic partnership, regional collaboration, or ecosystem integration with Blue Atlantic platforms and initiatives.",
   },
   {
     title: "Platform inquiries",
     description:
-      "For questions about Tropicash, EliteHire Solutions, TRITON, Sentinel, or other Blue Atlantic platforms and initiatives.",
+      "For questions about Tropicash, EliteHire Solutions, TRITON, Sentinel, Blue Atlantic Capital / IRD, or other platforms within the ecosystem.",
   },
   {
-    title: "General contact",
+    title: "Developer and business conversations",
+    description:
+      "For developers, businesses, and collaborators interested in platform integration, technical conversations, or enterprise engagement with Blue Atlantic.",
+  },
+  {
+    title: "General company inquiries",
     description:
       "For all other inquiries related to Blue Atlantic, its ecosystem, or future initiatives.",
   },
@@ -42,13 +47,13 @@ export default function ContactPage() {
         compact
         eyebrow="Contact"
         headline="Contact Blue Atlantic"
-        supportingCopy="We welcome professional inquiries from partners, institutions, businesses, and collaborators interested in Caribbean enterprise infrastructure."
+        supportingCopy="Blue Atlantic welcomes institutional conversations, partnerships, platform inquiries, developer and business discussions, and general company inquiries related to Caribbean enterprise infrastructure."
       />
       <ContentSection surface="blue">
         <SectionHeader
           label="Inquiries"
           title="How to reach us"
-          description="Contact information and inquiry channels will be published here. This page does not include a live form at this stage."
+          description="Contact channels will be published here as they become available. This page does not include a live form at this stage."
         />
         <div className="grid gap-6 sm:grid-cols-2">
           {contactCategories.map((category, index) => (
@@ -70,8 +75,8 @@ export default function ContactPage() {
       <ContentSection surface="white">
         <Card className="card-accent-neutral mx-auto max-w-2xl text-center">
           <p className="text-sm text-brand-muted">
-            Contact channels will be available in a future update. For now,
-            please note your area of interest when reaching out through
+            Official contact channels will be available in a future update.
+            Please note your area of interest when reaching out through
             established Blue Atlantic channels.
           </p>
           <div className="mt-6">

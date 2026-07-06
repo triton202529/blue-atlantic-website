@@ -1,16 +1,15 @@
 import BrandSeal from "@/components/BrandSeal";
-import { enterpriseAreas } from "@/lib/site";
+import { enterpriseAreas, heroCopy } from "@/lib/site";
 
 export default function CorporateBrandPanel() {
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.04] p-8 md:p-10">
       <BrandSeal size="md" priority className="mx-auto sm:mx-0" />
       <p className="mt-6 text-base font-semibold text-white">
-        Blue Atlantic Enterprise Group
+        {heroCopy.panelTitle}
       </p>
       <p className="mt-3 max-w-sm text-sm leading-relaxed text-blue-100/75">
-        A Caribbean-born company building modern enterprise infrastructure with
-        disciplined execution and long-term institutional focus.
+        {heroCopy.panelCopy}
       </p>
       <div className="mt-8 border-t border-white/10 pt-6">
         <p className="text-sm font-medium text-blue-100/60">Enterprise areas</p>

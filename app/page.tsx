@@ -7,15 +7,15 @@ import PillarCard from "@/components/PillarCard";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
-import { companies, pillars, whyBlueAtlantic } from "@/lib/site";
+import { companies, heroCopy, pillars, whyBlueAtlantic } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection
         eyebrow="BLUE ATLANTIC"
-        headline="Building modern enterprise infrastructure for the Caribbean and beyond."
-        supportingCopy="Blue Atlantic develops technology, financial infrastructure, workforce platforms, and intelligence systems with disciplined execution, regional purpose, and global standards."
+        headline={heroCopy.headline}
+        supportingCopy={heroCopy.supportingCopy}
         primaryCta={{ label: "Explore our ecosystem", href: "/companies" }}
         secondaryCta={{ label: "Start a conversation", href: "/contact" }}
         visual={<CorporateBrandPanel />}
@@ -25,7 +25,7 @@ export default function HomePage() {
         <SectionHeader
           label="Strategic focus"
           title="Strategic pillars"
-          description="Blue Atlantic develops across four interconnected areas of enterprise infrastructure — each designed for disciplined long-term development and regional impact."
+          description="Four interconnected areas of enterprise infrastructure — each developed with disciplined execution, shared standards, and long-term regional purpose."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar) => (
@@ -44,7 +44,7 @@ export default function HomePage() {
         <SectionHeader
           label="Portfolio"
           title="The Blue Atlantic ecosystem"
-          description="A portfolio of platforms, systems, and initiatives developed with institutional discipline and connected through shared enterprise infrastructure."
+          description="Blue Atlantic is developing a portfolio of platforms, systems, and initiatives connected by shared enterprise infrastructure, disciplined execution, and a Caribbean-first growth strategy."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {companies.map((company) => (
@@ -65,7 +65,7 @@ export default function HomePage() {
         <SectionHeader
           label="Our approach"
           title="Why Blue Atlantic"
-          description="A Caribbean-born enterprise group building modern systems with institutional discipline, governance-aware development, and long-term focus."
+          description="A Caribbean-born enterprise group committed to institution building — with disciplined execution, governance-aware development, and long-term focus."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {whyBlueAtlantic.map((item, index) => (

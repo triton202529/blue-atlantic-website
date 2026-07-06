@@ -8,7 +8,7 @@ import Card from "@/components/Card";
 export const metadata: Metadata = {
   title: "Capital",
   description:
-    "Blue Atlantic Capital and IRD represent future research, capital strategy, and institutional development direction within the Blue Atlantic enterprise group.",
+    "Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, institutional analysis, and disciplined long-term planning.",
 };
 
 const directionAreas = [
@@ -23,7 +23,7 @@ const directionAreas = [
       "Future direction for capital allocation frameworks, institutional development planning, and disciplined analysis of enterprise growth pathways.",
   },
   {
-    title: "Institutional development",
+    title: "Institutional analysis",
     description:
       "Long-term focus on building enduring enterprise structures, governance frameworks, and organizational systems designed for sustainable regional impact.",
   },
@@ -36,13 +36,13 @@ export default function CapitalPage() {
         compact
         eyebrow="Capital"
         headline="Capital and research direction"
-        supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, disciplined analysis, and institutional development within the enterprise group."
+        supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, institutional analysis, and disciplined long-term planning within the enterprise group."
       />
       <ContentSection surface="soft">
         <SectionHeader
           label="Future direction"
           title="Research and institutional development"
-          description="This area of Blue Atlantic is in development. It reflects our long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
+          description="This area of Blue Atlantic is in development. It reflects long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {directionAreas.map((area) => (
@@ -63,10 +63,11 @@ export default function CapitalPage() {
             Important notice
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-            Blue Atlantic Capital / IRD is a research and development direction
-            within the Blue Atlantic enterprise group. Nothing on this page
-            constitutes investment advice, an offer to manage assets, or a
-            solicitation to invest. Blue Atlantic is not a licensed broker,
+            This page is informational only. Nothing on this page constitutes
+            investment advice, an offer to manage assets, a solicitation to
+            invest, or a regulated financial service. Blue Atlantic Capital /
+            IRD is a research and development direction within the Blue
+            Atlantic enterprise group. Blue Atlantic is not a licensed broker,
             asset manager, or regulated investment advisor.
           </p>
         </Card>
