@@ -45,6 +45,16 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+main {
+  scroll-margin-top: 4.5rem;
+}
+
+h1,
+h2,
+h3 {
+  scroll-margin-top: 5.5rem;
+}
+
 .section-divider {
   height: 1px;
   background: linear-gradient(

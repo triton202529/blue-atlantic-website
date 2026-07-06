@@ -21,8 +21,8 @@ export default function HeroSection({
   compact = false,
 }: HeroSectionProps) {
   const padding = compact
-    ? "py-16 md:py-20 lg:py-24"
-    : "py-20 md:py-28 lg:py-32";
+    ? "pt-20 pb-16 md:pt-24 md:pb-20 lg:pb-24"
+    : "pt-24 pb-20 md:pt-28 md:pb-28 lg:pt-32 lg:pb-32";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-brand-atlantic">
@@ -37,9 +37,9 @@ export default function HeroSection({
         }}
       />
 
-      <div className={`relative mx-auto max-w-6xl px-6 md:px-8 ${padding}`}>
+      <div className={`relative mx-auto max-w-6xl scroll-mt-20 px-6 md:px-8 ${padding}`}>
         <div
-          className={`grid items-center gap-12 ${visual ? "lg:grid-cols-2 lg:gap-16" : ""}`}
+          className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-16" : ""}`}
         >
           <div className={visual ? "max-w-xl" : "max-w-3xl"}>
             <p className="eyebrow mb-5 text-blue-200/80">{eyebrow}</p>
@@ -69,7 +69,11 @@ export default function HeroSection({
               </div>
             )}
           </div>
-          {visual && <div className="relative lg:justify-self-end">{visual}</div>}
+          {visual && (
+            <div className="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
+              {visual}
+            </div>
+          )}
         </div>
       </div>
     </section>

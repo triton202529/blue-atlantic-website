@@ -22,7 +22,7 @@ export default function CompanyCard({
 }: CompanyCardProps) {
   const content = (
     <>
-      <div className="mb-4 flex flex-wrap items-center gap-2">
+      <div className="mb-4 flex min-h-[1.75rem] flex-wrap items-center gap-2">
         {category && (
           <span className="rounded-md bg-brand-soft px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-brand-atlantic">
             {category}
@@ -35,7 +35,7 @@ export default function CompanyCard({
         )}
       </div>
       <h3 className="text-lg font-semibold text-brand-navy">{name}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-muted md:text-base">
         {description}
       </p>
       {href && (
@@ -48,8 +48,8 @@ export default function CompanyCard({
   );
 
   const cardClass = featured
-    ? "h-full border-brand-atlantic/20 bg-gradient-to-br from-white to-brand-soft/50"
-    : "h-full";
+    ? "flex h-full min-h-[280px] flex-col border-brand-atlantic/20 bg-gradient-to-br from-white to-brand-soft/50"
+    : "flex h-full min-h-[280px] flex-col";
 
   if (href) {
     return (

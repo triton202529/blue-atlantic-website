@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BrandMark from "@/components/BrandMark";
+import BrandSeal from "@/components/BrandSeal";
 import {
   footerCompanyLinks,
   footerNavLinks,
@@ -18,7 +18,17 @@ export default function GlobalFooter() {
       <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 md:py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <BrandMark size="md" variant="onDark" />
+            <div className="flex items-start gap-4">
+              <BrandSeal size="sm" className="opacity-95" />
+              <div>
+                <p className="text-lg font-semibold tracking-tight">
+                  {siteConfig.name}
+                </p>
+                <p className="mt-1 text-xs font-medium uppercase tracking-widest text-blue-200/50">
+                  Enterprise Group
+                </p>
+              </div>
+            </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-blue-100/70">
               {siteConfig.footerDescription}
             </p>
