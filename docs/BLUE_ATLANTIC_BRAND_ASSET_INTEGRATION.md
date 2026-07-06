@@ -128,7 +128,7 @@ All routes static including `/icon.png` and `/apple-icon.png`.
 ## Git Commit Hash
 
 ```
-PENDING
+f083cac277dfa60d2f207accecba3dbe61cfe358
 ```
 
 Commit message: `BA-W-002: integrate Blue Atlantic brand assets and metadata`
