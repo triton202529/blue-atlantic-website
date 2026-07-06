@@ -87,7 +87,7 @@ The BA-W-001/002 homepage hero introduced an orbit-style ecosystem graphic with 
 ## Git Commit Hash
 
 ```
-PENDING
+c55d0d95106b21bc6db54aad9dc43cdf7f34b049
 ```
 
 Commit message: `BA-W-002A: remove AI-style visuals and refine corporate design`
