@@ -146,7 +146,7 @@ All 8 routes generated as static content:
 ## Git Commit Hash
 
 ```
-cfcf9f2de80f5ef5238b43f7cd3e938b426b7bdb
+cbe210b0e05672d75b4fc50ac1ae3d6d93fe45e5
 ```
 
 Commit message: `BA-W-000: create Blue Atlantic corporate website foundation`
