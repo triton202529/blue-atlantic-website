@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "generate:brand": "node scripts/generate-brand-assets.mjs",
-    "generate:logo-display": "node scripts/create-logo-display.mjs"
+    "generate:logo-display": "node scripts/create-logo-display.mjs",
+    "generate:og": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "next": "16.2.10",

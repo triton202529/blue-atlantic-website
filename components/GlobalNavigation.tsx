@@ -20,7 +20,7 @@ export default function GlobalNavigation() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-border/80 bg-white/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 md:px-8 md:py-4">
-        <Link href="/" className="transition-opacity hover:opacity-80">
+        <Link href="/" className="rounded-lg transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2" aria-label="Blue Atlantic home">
           <BrandLogo variant="nav" />
         </Link>
 
@@ -34,7 +34,7 @@ export default function GlobalNavigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${
                     isActive
                       ? "bg-brand-soft text-brand-navy"
                       : "text-brand-muted hover:bg-brand-soft/60 hover:text-brand-navy"
@@ -57,7 +57,7 @@ export default function GlobalNavigation() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-brand-border text-brand-navy transition-colors hover:bg-brand-soft"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-brand-border text-brand-navy transition-colors hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
@@ -87,7 +87,7 @@ export default function GlobalNavigation() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors ${
+                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${
                       isActive
                         ? "bg-brand-soft text-brand-navy"
                         : "text-brand-muted hover:bg-brand-soft/60 hover:text-brand-navy"

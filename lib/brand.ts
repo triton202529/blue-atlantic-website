@@ -22,7 +22,7 @@ export const brandSealSizes: Record<
   BrandSealSize,
   { dimension: number; className: string }
 > = {
-  nav: { dimension: 36, className: "h-9 w-9" },
+  nav: { dimension: 40, className: "h-10 w-10" },
   footer: { dimension: 48, className: "h-12 w-12" },
   sm: { dimension: 64, className: "h-16 w-16" },
   md: { dimension: 96, className: "h-24 w-24" },

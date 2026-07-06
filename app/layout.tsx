@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "business",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "32x32" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -62,7 +72,9 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-white text-brand-navy">
         <GlobalNavigation />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <GlobalFooter />
       </body>
     </html>

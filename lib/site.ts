@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Blue Atlantic | Caribbean Enterprise Infrastructure",
   tagline: "Building modern enterprise infrastructure for the Caribbean and beyond.",
   description:
-    "Blue Atlantic is a Caribbean-born enterprise group building modern technology, financial infrastructure, workforce platforms, and intelligence systems for long-term regional development and global-standard execution.",
+    "Blue Atlantic is a Caribbean-born enterprise group developing technology, financial infrastructure, workforce platforms, and intelligence systems with disciplined execution and global standards.",
   footerDescription:
     "A Caribbean-born enterprise group building technology, financial infrastructure, workforce platforms, and intelligence systems with disciplined execution and long-term institutional purpose.",
   keywords: [
