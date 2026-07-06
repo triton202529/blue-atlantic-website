@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BrandMark from "@/components/BrandMark";
+import BrandLogo from "@/components/BrandLogo";
 import {
   footerCompanyLinks,
   footerNavLinks,
@@ -18,7 +18,7 @@ export default function GlobalFooter() {
       <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <BrandMark size="md" variant="onDark" />
+            <BrandLogo variant="footer" />
             <p className="mt-5 max-w-md text-sm leading-relaxed text-blue-100/65">
               {siteConfig.footerDescription}
             </p>

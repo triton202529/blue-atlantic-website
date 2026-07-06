@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import BrandMark from "@/components/BrandMark";
+import BrandLogo from "@/components/BrandLogo";
 import { mainNavLinks } from "@/lib/site";
 
 export default function GlobalNavigation() {
@@ -21,7 +21,7 @@ export default function GlobalNavigation() {
     <header className="sticky top-0 z-50 border-b border-brand-border/80 bg-white/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 md:px-8 md:py-4">
         <Link href="/" className="transition-opacity hover:opacity-80">
-          <BrandMark size="sm" />
+          <BrandLogo variant="nav" />
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">

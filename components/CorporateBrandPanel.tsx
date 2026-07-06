@@ -1,10 +1,10 @@
-import BrandSeal from "@/components/BrandSeal";
+import BrandLogo from "@/components/BrandLogo";
 import { enterpriseAreas, heroCopy } from "@/lib/site";
 
 export default function CorporateBrandPanel() {
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.04] p-8 md:p-10">
-      <BrandSeal size="md" variant="transparent" priority className="mx-auto sm:mx-0" />
+      <BrandLogo variant="panel" priority className="mx-auto sm:mx-0" />
       <p className="mt-6 text-base font-semibold text-white">
         {heroCopy.panelTitle}
       </p>

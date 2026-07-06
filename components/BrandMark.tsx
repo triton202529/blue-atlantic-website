@@ -1,3 +1,4 @@
+/** @deprecated Public-facing brand uses BrandLogo/BrandSeal. Retained for favicon/internal fallback only. */
 interface BrandMarkProps {
   size?: "sm" | "md" | "lg";
   variant?: "default" | "light" | "onDark";

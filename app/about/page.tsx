@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BrandSeal from "@/components/BrandSeal";
+import BrandLogo from "@/components/BrandLogo";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
 import Card from "@/components/Card";
@@ -45,9 +45,8 @@ export default function AboutPage() {
       />
       <ContentSection surface="blue">
         <Card className="card-accent-neutral flex flex-col gap-6 p-8 md:flex-row md:items-start md:p-10">
-          <BrandSeal
-            size="lg"
-            variant="framed"
+          <BrandLogo
+            variant="story"
             priority
             className="mx-auto md:mx-0"
           />
