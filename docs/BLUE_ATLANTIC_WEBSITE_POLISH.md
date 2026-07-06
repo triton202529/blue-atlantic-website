@@ -133,7 +133,7 @@ All 8 routes remain static.
 ## Git Commit Hash
 
 ```
-afb845e204a0b16f461e970b84a83a1329d0198d
+053ed558501db8dfb2caf837171a3e9dc395d0fc
 ```
 
 Commit message: `BA-W-001: polish Blue Atlantic homepage and brand identity`
