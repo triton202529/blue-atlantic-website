@@ -87,7 +87,7 @@ Both use `blue-atlantic-company-logo-display.png` through `BrandSeal`.
 ## Git Commit Hash
 
 ```
-(Updated after commit)
+ac19e07
 ```
 
 Commit message: `BA-W-003D: unify Blue Atlantic brand identity`
