@@ -49,7 +49,7 @@ export default function TechnologyPage() {
       />
       <PageContainer>
         <SectionHeader
-          eyebrow="Development"
+        label="Development"
           title="What we develop"
           description="Our technology work supports the platforms and initiatives across the Blue Atlantic ecosystem — from financial infrastructure to workforce systems and intelligence platforms."
         />

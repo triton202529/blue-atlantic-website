@@ -45,7 +45,7 @@ export default function ContactPage() {
       />
       <PageContainer>
         <SectionHeader
-          eyebrow="Inquiries"
+        label="Inquiries"
           title="How to reach us"
           description="Contact information and inquiry channels will be published here. This page does not include a live form at this stage."
         />

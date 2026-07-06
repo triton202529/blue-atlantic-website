@@ -40,7 +40,7 @@ export default function CapitalPage() {
       />
       <PageContainer>
         <SectionHeader
-          eyebrow="Future direction"
+        label="Future direction"
           title="Research and institutional development"
           description="This area of Blue Atlantic is in development. It reflects our long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
         />

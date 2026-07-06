@@ -1,7 +1,7 @@
 interface SectionHeaderProps {
   title: string;
   description?: string;
-  eyebrow?: string;
+  label?: string;
   align?: "left" | "center";
   variant?: "default" | "light";
 }
@@ -9,7 +9,7 @@ interface SectionHeaderProps {
 export default function SectionHeader({
   title,
   description,
-  eyebrow,
+  label,
   align = "left",
   variant = "default",
 }: SectionHeaderProps) {
@@ -17,16 +17,16 @@ export default function SectionHeader({
   const titleColor = variant === "light" ? "text-white" : "text-brand-navy";
   const descriptionColor =
     variant === "light" ? "text-blue-100/90" : "text-brand-muted";
-  const eyebrowColor =
+  const labelColor =
     variant === "light" ? "text-blue-200/80" : "text-brand-atlantic";
 
   return (
-    <div className={`mb-10 max-w-3xl md:mb-14 ${alignment}`}>
-      {eyebrow && (
-        <p className={`eyebrow mb-3 ${eyebrowColor}`}>{eyebrow}</p>
+    <div className={`mb-10 max-w-3xl md:mb-12 ${alignment}`}>
+      {label && (
+        <p className={`section-label mb-3 ${labelColor}`}>{label}</p>
       )}
       <h2
-        className={`text-2xl font-semibold tracking-tight md:text-3xl lg:text-4xl ${titleColor}`}
+        className={`text-2xl font-semibold tracking-tight md:text-3xl ${titleColor}`}
       >
         {title}
       </h2>

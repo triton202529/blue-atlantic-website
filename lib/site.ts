@@ -42,6 +42,13 @@ export const footerCompanyLinks = [
   { href: "/legal", label: "Legal" },
 ] as const;
 
+export const enterpriseAreas = [
+  "Financial technology",
+  "Workforce platforms",
+  "Intelligence systems",
+  "Enterprise infrastructure",
+] as const;
+
 export const pillars = [
   {
     label: "01",

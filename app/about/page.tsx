@@ -43,10 +43,10 @@ export default function AboutPage() {
         supportingCopy="A Caribbean-born enterprise group building modern technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development."
       />
       <PageContainer>
-        <Card className="mb-10 flex flex-col items-center gap-6 border-brand-atlantic/10 bg-brand-soft/50 p-8 text-center md:flex-row md:p-10 md:text-left">
-          <BrandSeal size="lg" className="shrink-0" />
+        <Card className="mb-10 flex flex-col gap-6 border-brand-border p-8 md:flex-row md:items-start md:p-10">
+          <BrandSeal size="md" className="shrink-0" />
           <div>
-            <p className="eyebrow text-brand-atlantic">Brand identity</p>
+            <p className="section-label text-brand-atlantic">About the group</p>
             <h2 className="mt-2 text-xl font-semibold text-brand-navy">
               Caribbean-born enterprise group
             </h2>
@@ -61,7 +61,7 @@ export default function AboutPage() {
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section, index) => (
             <Card key={section.title} hover className="flex flex-col">
-              <span className="text-xs font-medium tabular-nums text-brand-muted/50">
+              <span className="text-sm font-medium tabular-nums text-brand-muted/40">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h2 className="mt-2 text-lg font-semibold text-brand-navy">

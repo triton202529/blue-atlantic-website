@@ -20,7 +20,7 @@ export default function NewsroomPage() {
       />
       <PageContainer>
         <Card className="mx-auto max-w-2xl border-brand-atlantic/10 text-center">
-          <p className="eyebrow text-brand-atlantic">Coming soon</p>
+          <p className="section-label text-brand-atlantic">Coming soon</p>
           <h2 className="mt-4 text-xl font-semibold text-brand-navy">
             Updates in development
           </h2>

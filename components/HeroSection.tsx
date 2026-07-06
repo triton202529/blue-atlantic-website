@@ -25,28 +25,22 @@ export default function HeroSection({
     : "pt-24 pb-20 md:pt-28 md:pb-28 lg:pt-32 lg:pb-32";
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-navy via-brand-navy to-brand-atlantic">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08)_0%,_transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(42,108,184,0.15)_0%,_transparent_50%)]" />
-      <div
-        className="absolute inset-0 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
+    <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]" />
 
       <div className={`relative mx-auto max-w-6xl scroll-mt-20 px-6 md:px-8 ${padding}`}>
         <div
-          className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-16" : ""}`}
+          className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-14" : ""}`}
         >
           <div className={visual ? "max-w-xl" : "max-w-3xl"}>
-            <p className="eyebrow mb-5 text-blue-200/80">{eyebrow}</p>
+            <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-200/70">
+              {eyebrow}
+            </p>
             <h1 className="text-3xl font-semibold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
               {headline}
             </h1>
-            <p className="mt-6 text-base leading-relaxed text-blue-100/90 md:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-blue-100/85 md:text-lg">
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (
@@ -61,7 +55,7 @@ export default function HeroSection({
                     href={secondaryCta.href}
                     variant="ghost"
                     size="lg"
-                    className="border-white/20 text-white hover:bg-white/10 hover:text-white"
+                    className="border-white/15 text-white hover:bg-white/5 hover:text-white"
                   >
                     {secondaryCta.label}
                   </Button>
@@ -70,9 +64,7 @@ export default function HeroSection({
             )}
           </div>
           {visual && (
-            <div className="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
-              {visual}
-            </div>
+            <div className="relative w-full lg:justify-self-end">{visual}</div>
           )}
         </div>
       </div>

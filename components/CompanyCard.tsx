@@ -8,7 +8,6 @@ interface CompanyCardProps {
   statusLabel?: string;
   href?: string;
   id?: string;
-  featured?: boolean;
 }
 
 export default function CompanyCard({
@@ -18,43 +17,36 @@ export default function CompanyCard({
   statusLabel,
   href,
   id,
-  featured = false,
 }: CompanyCardProps) {
   const content = (
     <>
-      <div className="mb-4 flex min-h-[1.75rem] flex-wrap items-center gap-2">
-        {category && (
-          <span className="rounded-md bg-brand-soft px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-brand-atlantic">
-            {category}
-          </span>
-        )}
-        {statusLabel && (
-          <span className="rounded-md border border-brand-border px-2 py-0.5 text-[11px] font-medium text-brand-muted">
-            {statusLabel}
-          </span>
-        )}
-      </div>
+      {(category || statusLabel) && (
+        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-brand-muted">
+          {category && <span>{category}</span>}
+          {category && statusLabel && (
+            <span className="text-brand-border" aria-hidden="true">
+              |
+            </span>
+          )}
+          {statusLabel && <span>{statusLabel}</span>}
+        </div>
+      )}
       <h3 className="text-lg font-semibold text-brand-navy">{name}</h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-muted md:text-base">
         {description}
       </p>
       {href && (
-        <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-brand-atlantic transition-colors group-hover:text-brand-atlantic-light">
-          View details
-          <span aria-hidden="true">→</span>
+        <span className="mt-5 text-sm font-medium text-brand-atlantic group-hover:underline">
+          Learn more
         </span>
       )}
     </>
   );
 
-  const cardClass = featured
-    ? "flex h-full min-h-[280px] flex-col border-brand-atlantic/20 bg-gradient-to-br from-white to-brand-soft/50"
-    : "flex h-full min-h-[280px] flex-col";
-
   if (href) {
     return (
       <Link href={href} className="group block h-full">
-        <Card id={id} hover className={cardClass}>
+        <Card id={id} hover className="flex h-full flex-col">
           {content}
         </Card>
       </Link>
@@ -62,7 +54,7 @@ export default function CompanyCard({
   }
 
   return (
-    <Card id={id} hover={!!featured} className={cardClass}>
+    <Card id={id} hover className="flex h-full flex-col">
       {content}
     </Card>
   );

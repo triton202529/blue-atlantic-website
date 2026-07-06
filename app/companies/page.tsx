@@ -22,7 +22,7 @@ export default function CompaniesPage() {
       />
       <PageContainer>
         <SectionHeader
-          eyebrow="Portfolio"
+        label="Portfolio"
           title="Platforms and initiatives"
           description="Each ecosystem company operates as a distinct platform or initiative within the Blue Atlantic enterprise group, sharing a commitment to modern systems and Caribbean-first development."
         />

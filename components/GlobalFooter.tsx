@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BrandSeal from "@/components/BrandSeal";
+import BrandMark from "@/components/BrandMark";
 import {
   footerCompanyLinks,
   footerNavLinks,
@@ -15,33 +15,25 @@ export default function GlobalFooter() {
 
   return (
     <footer className="mt-auto border-t border-brand-border bg-brand-navy text-white">
-      <div className="mx-auto max-w-6xl px-6 py-14 md:px-8 md:py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="flex items-start gap-4">
-              <BrandSeal size="sm" className="opacity-95" />
-              <div>
-                <p className="text-lg font-semibold tracking-tight">
-                  {siteConfig.name}
-                </p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-widest text-blue-200/50">
-                  Enterprise Group
-                </p>
-              </div>
-            </div>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-blue-100/70">
+            <BrandMark size="md" variant="onDark" />
+            <p className="mt-5 max-w-md text-sm leading-relaxed text-blue-100/65">
               {siteConfig.footerDescription}
             </p>
           </div>
 
           <div>
-            <p className="eyebrow mb-4 text-blue-200/60">Ecosystem</p>
-            <ul className="space-y-2.5">
+            <p className="mb-3 text-sm font-medium text-blue-100/50">
+              Ecosystem
+            </p>
+            <ul className="space-y-2">
               {ecosystemLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-blue-100/70 transition-colors hover:text-white"
+                    className="text-sm text-blue-100/65 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -51,13 +43,15 @@ export default function GlobalFooter() {
           </div>
 
           <div>
-            <p className="eyebrow mb-4 text-blue-200/60">Company</p>
-            <ul className="space-y-2.5">
+            <p className="mb-3 text-sm font-medium text-blue-100/50">
+              Company
+            </p>
+            <ul className="space-y-2">
               {footerCompanyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-blue-100/70 transition-colors hover:text-white"
+                    className="text-sm text-blue-100/65 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -66,7 +60,7 @@ export default function GlobalFooter() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-blue-100/70 transition-colors hover:text-white"
+                  className="text-sm text-blue-100/65 transition-colors hover:text-white"
                 >
                   Contact
                 </Link>
@@ -75,19 +69,19 @@ export default function GlobalFooter() {
           </div>
         </div>
 
-        <div className="section-divider mt-12 opacity-30" />
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-blue-100/50">
-            © {currentYear} Blue Atlantic. All rights reserved. Content is
-            informational.
-          </p>
-          <Link
-            href="/legal"
-            className="text-xs text-blue-100/50 transition-colors hover:text-white"
-          >
-            Legal information
-          </Link>
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-blue-100/45">
+              © {currentYear} Blue Atlantic. All rights reserved. Content is
+              informational.
+            </p>
+            <Link
+              href="/legal"
+              className="text-xs text-blue-100/45 transition-colors hover:text-white"
+            >
+              Legal information
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
