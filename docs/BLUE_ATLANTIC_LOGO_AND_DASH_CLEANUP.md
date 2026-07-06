@@ -105,6 +105,10 @@ Terms such as "licensed bank" and "investment advice" appear only in legal discl
 
 **Status:** Passed (exit code 0)
 
+### `npm run build`
+
+**Status:** Passed (exit code 0)
+
 ## Git Commit Hash
 
 ```
@@ -112,7 +116,3 @@ Terms such as "licensed bank" and "investment advice" appear only in legal discl
 ```
 
 Commit message: `BA-W-003A: update About logo and clean visible dash copy`
-
-### `npm run build`
-
-**Status:** Passed (exit code 0)
