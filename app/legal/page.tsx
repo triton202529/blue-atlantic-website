@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import Card from "@/components/Card";
+import { whyAccentClasses } from "@/lib/card-themes";
 
 export const metadata: Metadata = {
   title: "Legal",
@@ -41,10 +42,14 @@ export default function LegalPage() {
         headline="Legal information"
         supportingCopy="Important legal notices and disclaimers regarding the Blue Atlantic corporate website and ecosystem platforms."
       />
-      <PageContainer>
+      <ContentSection surface="blue">
         <div className="mx-auto max-w-3xl space-y-5">
-          {legalSections.map((section) => (
-            <Card key={section.title} hover>
+          {legalSections.map((section, index) => (
+            <Card
+              key={section.title}
+              hover
+              className={whyAccentClasses[index % whyAccentClasses.length]}
+            >
               <h2 className="text-lg font-semibold text-brand-navy">
                 {section.title}
               </h2>
@@ -54,7 +59,7 @@ export default function LegalPage() {
             </Card>
           ))}
         </div>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

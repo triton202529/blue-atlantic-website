@@ -52,28 +52,28 @@ export const enterpriseAreas = [
 export const pillars = [
   {
     label: "01",
-    category: "FinTech",
+    accent: "pillar-1" as const,
     title: "Financial technology",
     description:
       "Digital payment infrastructure, wallet platforms, and financial systems designed to support Caribbean users, businesses, and future service integrations.",
   },
   {
     label: "02",
-    category: "Workforce",
+    accent: "pillar-2" as const,
     title: "Workforce technology",
     description:
       "Platforms that connect employers, job seekers, and regional labor opportunities through modern workforce tools and structured hiring systems.",
   },
   {
     label: "03",
-    category: "Intelligence",
+    accent: "pillar-3" as const,
     title: "Intelligence systems",
     description:
       "Research, decision-support, and operational intelligence platforms built for disciplined analysis, governance, and enterprise oversight.",
   },
   {
     label: "04",
-    category: "Infrastructure",
+    accent: "pillar-4" as const,
     title: "Enterprise infrastructure",
     description:
       "Secure digital infrastructure, product engineering, and platform systems designed for long-term institutional development and regional growth.",
@@ -85,6 +85,7 @@ export const companies = [
     name: "Tropicash",
     category: "Financial technology",
     statusLabel: "Platform",
+    accent: "fintech" as const,
     description:
       "Digital wallet and payment infrastructure platform for Caribbean users, businesses, and future financial services integrations.",
     detailDescription:
@@ -96,6 +97,7 @@ export const companies = [
     name: "EliteHire Solutions",
     category: "Workforce technology",
     statusLabel: "Ecosystem company",
+    accent: "workforce" as const,
     description:
       "Workforce technology platform helping connect employers, job seekers, and regional labor opportunities.",
     detailDescription:
@@ -107,6 +109,7 @@ export const companies = [
     name: "TRITON",
     category: "Intelligence & research",
     statusLabel: "Intelligence system",
+    accent: "intelligence" as const,
     description:
       "Research, intelligence, and decision-support systems focused on disciplined analysis, governance, and operational oversight.",
     detailDescription:
@@ -118,6 +121,7 @@ export const companies = [
     name: "Sentinel",
     category: "Financial oversight",
     statusLabel: "Oversight platform",
+    accent: "oversight" as const,
     description:
       "Financial oversight and audit intelligence platform designed to support visibility, controls, and enterprise accountability.",
     detailDescription:
@@ -129,6 +133,7 @@ export const companies = [
     name: "Blue Atlantic Capital / IRD",
     category: "Capital & research",
     statusLabel: "Future direction",
+    accent: "capital" as const,
     description:
       "Future capital, research, and investment direction focused on disciplined long-term growth and institutional development.",
     detailDescription:

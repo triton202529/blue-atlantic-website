@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import BrandSeal from "@/components/BrandSeal";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import Card from "@/components/Card";
+import { whyAccentClasses } from "@/lib/card-themes";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,7 +15,7 @@ const sections = [
   {
     title: "Who we are",
     content:
-      "Blue Atlantic is a Caribbean-born enterprise group developing technology, financial infrastructure, workforce platforms, and intelligence systems. We operate as the parent organization behind a growing ecosystem of platforms and initiatives designed for regional impact and global standards.",
+      "Blue Atlantic is a Caribbean-born enterprise group developing technology, financial infrastructure, workforce platforms, and intelligence systems. We are the company building an ecosystem that includes platforms and initiatives designed for regional impact and global standards.",
   },
   {
     title: "What we build",
@@ -42,8 +43,8 @@ export default function AboutPage() {
         headline="About Blue Atlantic"
         supportingCopy="A Caribbean-born enterprise group building modern technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development."
       />
-      <PageContainer>
-        <Card className="mb-10 flex flex-col gap-6 border-brand-border p-8 md:flex-row md:items-start md:p-10">
+      <ContentSection surface="blue">
+        <Card className="card-accent-neutral flex flex-col gap-6 p-8 md:flex-row md:items-start md:p-10">
           <BrandSeal size="md" className="shrink-0" />
           <div>
             <p className="section-label text-brand-atlantic">About the group</p>
@@ -58,10 +59,16 @@ export default function AboutPage() {
             </p>
           </div>
         </Card>
+      </ContentSection>
+      <ContentSection surface="white">
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section, index) => (
-            <Card key={section.title} hover className="flex flex-col">
-              <span className="text-sm font-medium tabular-nums text-brand-muted/40">
+            <Card
+              key={section.title}
+              hover
+              className={`flex flex-col ${whyAccentClasses[index % 3]}`}
+            >
+              <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h2 className="mt-2 text-lg font-semibold text-brand-navy">
@@ -73,7 +80,7 @@ export default function AboutPage() {
             </Card>
           ))}
         </div>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

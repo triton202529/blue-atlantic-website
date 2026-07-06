@@ -1,11 +1,12 @@
 import CompanyCard from "@/components/CompanyCard";
+import ContentSection from "@/components/ContentSection";
 import CorporateBrandPanel from "@/components/CorporateBrandPanel";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import PartnershipCTA from "@/components/PartnershipCTA";
 import PillarCard from "@/components/PillarCard";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import { whyAccentClasses } from "@/lib/card-themes";
 import { companies, pillars, whyBlueAtlantic } from "@/lib/site";
 
 export default function HomePage() {
@@ -20,7 +21,7 @@ export default function HomePage() {
         visual={<CorporateBrandPanel />}
       />
 
-      <PageContainer>
+      <ContentSection surface="white">
         <SectionHeader
           label="Strategic focus"
           title="Strategic pillars"
@@ -31,36 +32,36 @@ export default function HomePage() {
             <PillarCard
               key={pillar.title}
               label={pillar.label}
+              accent={pillar.accent}
               title={pillar.title}
               description={pillar.description}
             />
           ))}
         </div>
-      </PageContainer>
+      </ContentSection>
 
-      <section className="border-t border-brand-border bg-brand-soft">
-        <PageContainer>
-          <SectionHeader
-            label="Portfolio"
-            title="The Blue Atlantic ecosystem"
-            description="A parent company portfolio of platforms, systems, and initiatives — each developed with institutional discipline and long-term focus."
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {companies.map((company) => (
-              <CompanyCard
-                key={company.name}
-                name={company.name}
-                category={company.category}
-                statusLabel={company.statusLabel}
-                description={company.description}
-                href={company.href}
-              />
-            ))}
-          </div>
-        </PageContainer>
-      </section>
+      <ContentSection surface="blue">
+        <SectionHeader
+          label="Portfolio"
+          title="The Blue Atlantic ecosystem"
+          description="A portfolio of platforms, systems, and initiatives developed with institutional discipline and connected through shared enterprise infrastructure."
+        />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {companies.map((company) => (
+            <CompanyCard
+              key={company.name}
+              name={company.name}
+              category={company.category}
+              statusLabel={company.statusLabel}
+              accent={company.accent}
+              description={company.description}
+              href={company.href}
+            />
+          ))}
+        </div>
+      </ContentSection>
 
-      <PageContainer>
+      <ContentSection surface="soft">
         <SectionHeader
           label="Our approach"
           title="Why Blue Atlantic"
@@ -68,8 +69,12 @@ export default function HomePage() {
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {whyBlueAtlantic.map((item, index) => (
-            <Card key={item.title} hover>
-              <span className="text-sm font-medium tabular-nums text-brand-muted/40">
+            <Card
+              key={item.title}
+              hover
+              className={whyAccentClasses[index % whyAccentClasses.length]}
+            >
+              <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-2 text-base font-semibold text-brand-navy">
@@ -81,7 +86,7 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-      </PageContainer>
+      </ContentSection>
 
       <PartnershipCTA />
     </>

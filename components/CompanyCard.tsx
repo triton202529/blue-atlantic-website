@@ -1,5 +1,9 @@
 import Link from "next/link";
 import Card from "./Card";
+import {
+  companyAccentClasses,
+  type CompanyAccent,
+} from "@/lib/card-themes";
 
 interface CompanyCardProps {
   name: string;
@@ -8,6 +12,7 @@ interface CompanyCardProps {
   statusLabel?: string;
   href?: string;
   id?: string;
+  accent?: CompanyAccent;
 }
 
 export default function CompanyCard({
@@ -17,12 +22,17 @@ export default function CompanyCard({
   statusLabel,
   href,
   id,
+  accent = "fintech",
 }: CompanyCardProps) {
+  const accentClass = companyAccentClasses[accent];
+
   const content = (
     <>
       {(category || statusLabel) && (
-        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-brand-muted">
-          {category && <span>{category}</span>}
+        <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-brand-border/60 pb-3 text-xs text-brand-muted">
+          {category && (
+            <span className="font-medium text-brand-navy/80">{category}</span>
+          )}
           {category && statusLabel && (
             <span className="text-brand-border" aria-hidden="true">
               |
@@ -46,7 +56,7 @@ export default function CompanyCard({
   if (href) {
     return (
       <Link href={href} className="group block h-full">
-        <Card id={id} hover className="flex h-full flex-col">
+        <Card id={id} hover className={`flex h-full flex-col ${accentClass}`}>
           {content}
         </Card>
       </Link>
@@ -54,7 +64,7 @@ export default function CompanyCard({
   }
 
   return (
-    <Card id={id} hover className="flex h-full flex-col">
+    <Card id={id} hover className={`flex h-full flex-col ${accentClass}`}>
       {content}
     </Card>
   );

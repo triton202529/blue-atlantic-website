@@ -6,11 +6,23 @@
   --brand-atlantic: #1e4d8c;
   --brand-atlantic-light: #2a6cb8;
   --brand-soft: #f4f7fb;
+  --brand-surface-blue: #eef3f9;
+  --brand-surface-slate: #e8edf4;
+  --brand-surface-navy: #f0f4f8;
   --brand-muted: #5a6478;
   --brand-border: #e2e8f0;
   --brand-card: #ffffff;
   --background: #ffffff;
   --foreground: #0a1628;
+  --accent-fintech: #1e4d8c;
+  --accent-workforce: #4a6278;
+  --accent-intelligence: #142240;
+  --accent-oversight: #3d5a80;
+  --accent-capital: #8a7d5c;
+  --accent-pillar-1: #1e4d8c;
+  --accent-pillar-2: #4a6278;
+  --accent-pillar-3: #142240;
+  --accent-pillar-4: #2a6cb8;
   --radius: 1rem;
   --radius-lg: 1.25rem;
   --shadow-brand: 0 1px 3px rgba(10, 22, 40, 0.06), 0 4px 12px rgba(10, 22, 40, 0.04);
@@ -27,6 +39,9 @@
   --color-brand-atlantic: var(--brand-atlantic);
   --color-brand-atlantic-light: var(--brand-atlantic-light);
   --color-brand-soft: var(--brand-soft);
+  --color-brand-surface-blue: var(--brand-surface-blue);
+  --color-brand-surface-slate: var(--brand-surface-slate);
+  --color-brand-surface-navy: var(--brand-surface-navy);
   --color-brand-muted: var(--brand-muted);
   --color-brand-border: var(--brand-border);
   --color-brand-card: var(--brand-card);
@@ -72,11 +87,92 @@ h3 {
   letter-spacing: 0.01em;
 }
 
+.section-surface-white {
+  background-color: var(--background);
+}
+
+.section-surface-soft {
+  background-color: var(--brand-soft);
+}
+
+.section-surface-blue {
+  background-color: var(--brand-surface-blue);
+}
+
+.section-surface-slate {
+  background-color: var(--brand-surface-slate);
+}
+
 .card-hover {
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card-hover:hover {
   box-shadow: var(--shadow-brand-lg);
-  border-color: rgba(30, 77, 140, 0.15);
+  border-color: rgba(30, 77, 140, 0.2);
+}
+
+.card-accent-fintech {
+  border-top: 3px solid var(--accent-fintech);
+  background: linear-gradient(180deg, #f3f7fc 0%, #ffffff 40%);
+}
+
+.card-accent-workforce {
+  border-top: 3px solid var(--accent-workforce);
+  background: linear-gradient(180deg, #f2f5f8 0%, #ffffff 40%);
+}
+
+.card-accent-intelligence {
+  border-top: 3px solid var(--accent-intelligence);
+  background: linear-gradient(180deg, #eef1f6 0%, #ffffff 40%);
+}
+
+.card-accent-oversight {
+  border-top: 3px solid var(--accent-oversight);
+  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 40%);
+}
+
+.card-accent-capital {
+  border-top: 3px solid var(--accent-capital);
+  background: linear-gradient(180deg, #f6f4ef 0%, #ffffff 40%);
+}
+
+.card-accent-pillar-1 {
+  border-top: 3px solid var(--accent-pillar-1);
+  background: linear-gradient(180deg, #f0f5fb 0%, #ffffff 45%);
+}
+
+.card-accent-pillar-2 {
+  border-top: 3px solid var(--accent-pillar-2);
+  background: linear-gradient(180deg, #f2f5f8 0%, #ffffff 45%);
+}
+
+.card-accent-pillar-3 {
+  border-top: 3px solid var(--accent-pillar-3);
+  background: linear-gradient(180deg, #eef1f6 0%, #ffffff 45%);
+}
+
+.card-accent-pillar-4 {
+  border-top: 3px solid var(--accent-pillar-4);
+  background: linear-gradient(180deg, #edf3fa 0%, #ffffff 45%);
+}
+
+.card-accent-why-1 {
+  border-left: 3px solid var(--accent-pillar-1);
+  background: linear-gradient(90deg, #f5f8fc 0%, #ffffff 30%);
+}
+
+.card-accent-why-2 {
+  border-left: 3px solid var(--accent-pillar-2);
+  background: linear-gradient(90deg, #f4f6f9 0%, #ffffff 30%);
+}
+
+.card-accent-why-3 {
+  border-left: 3px solid var(--accent-pillar-3);
+  background: linear-gradient(90deg, #f2f4f8 0%, #ffffff 30%);
+}
+
+.card-accent-neutral {
+  border-left: 3px solid var(--brand-atlantic);
+  background: linear-gradient(90deg, #f4f7fb 0%, #ffffff 25%);
 }

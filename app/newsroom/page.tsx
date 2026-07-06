@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import Card from "@/components/Card";
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function NewsroomPage() {
         headline="Newsroom"
         supportingCopy="Company updates, announcements, and publications from Blue Atlantic will appear here as they become available."
       />
-      <PageContainer>
-        <Card className="mx-auto max-w-2xl border-brand-atlantic/10 text-center">
+      <ContentSection surface="soft">
+        <Card className="card-accent-neutral mx-auto max-w-2xl text-center">
           <p className="section-label text-brand-atlantic">Coming soon</p>
           <h2 className="mt-4 text-xl font-semibold text-brand-navy">
             Updates in development
@@ -30,7 +30,7 @@ export default function NewsroomPage() {
             publications. Check back for future releases.
           </p>
         </Card>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

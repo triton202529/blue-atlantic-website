@@ -1,22 +1,27 @@
 import Card from "./Card";
+import { pillarAccentClasses, type PillarAccent } from "@/lib/card-themes";
 
 interface PillarCardProps {
   label: string;
   title: string;
   description: string;
+  accent?: PillarAccent;
 }
 
 export default function PillarCard({
   label,
   title,
   description,
+  accent = "pillar-1",
 }: PillarCardProps) {
   return (
-    <Card hover className="flex h-full flex-col">
-      <span className="text-sm font-medium tabular-nums text-brand-muted/50">
+    <Card
+      hover
+      className={`flex h-full flex-col ${pillarAccentClasses[accent]}`}
+    >
+      <span className="text-sm font-semibold tabular-nums text-brand-atlantic/70">
         {label}
       </span>
-      <div className="mt-4 h-px w-10 bg-brand-atlantic/30" />
       <h3 className="mt-4 text-lg font-semibold text-brand-navy">{title}</h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-muted md:text-base">
         {description}

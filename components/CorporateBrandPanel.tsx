@@ -3,15 +3,14 @@ import { enterpriseAreas } from "@/lib/site";
 
 export default function CorporateBrandPanel() {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+    <div className="rounded-xl border border-white/10 bg-white/[0.04] p-8 md:p-10">
       <BrandSeal size="md" priority className="mx-auto sm:mx-0" />
       <p className="mt-6 text-base font-semibold text-white">
         Blue Atlantic Enterprise Group
       </p>
       <p className="mt-3 max-w-sm text-sm leading-relaxed text-blue-100/75">
-        A Caribbean-born parent company building modern enterprise
-        infrastructure with disciplined execution and long-term institutional
-        focus.
+        A Caribbean-born company building modern enterprise infrastructure with
+        disciplined execution and long-term institutional focus.
       </p>
       <div className="mt-8 border-t border-white/10 pt-6">
         <p className="text-sm font-medium text-blue-100/60">Enterprise areas</p>

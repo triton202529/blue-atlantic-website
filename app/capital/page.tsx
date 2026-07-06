@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
@@ -38,15 +38,15 @@ export default function CapitalPage() {
         headline="Capital and research direction"
         supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, disciplined analysis, and institutional development within the enterprise group."
       />
-      <PageContainer>
+      <ContentSection surface="soft">
         <SectionHeader
-        label="Future direction"
+          label="Future direction"
           title="Research and institutional development"
           description="This area of Blue Atlantic is in development. It reflects our long-term research and capital direction — not a live investment product, advisory service, or regulated financial offering."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {directionAreas.map((area) => (
-            <Card key={area.title} hover>
+            <Card key={area.title} hover className="card-accent-capital">
               <h2 className="text-lg font-semibold text-brand-navy">
                 {area.title}
               </h2>
@@ -56,7 +56,9 @@ export default function CapitalPage() {
             </Card>
           ))}
         </div>
-        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft">
+      </ContentSection>
+      <ContentSection surface="blue">
+        <Card className="card-accent-neutral">
           <h3 className="text-base font-semibold text-brand-navy">
             Important notice
           </h3>
@@ -73,7 +75,7 @@ export default function CapitalPage() {
             Institutional inquiries
           </Button>
         </div>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

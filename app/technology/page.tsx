@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import { whyAccentClasses } from "@/lib/card-themes";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -47,16 +48,20 @@ export default function TechnologyPage() {
         headline="Technology and innovation"
         supportingCopy="The Blue Atlantic technology division builds internal and public-facing platforms, secure digital infrastructure, and governance-aware systems for the enterprise ecosystem."
       />
-      <PageContainer>
+      <ContentSection surface="soft">
         <SectionHeader
-        label="Development"
+          label="Development"
           title="What we develop"
           description="Our technology work supports the platforms and initiatives across the Blue Atlantic ecosystem — from financial infrastructure to workforce systems and intelligence platforms."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {focusAreas.map((area, index) => (
-            <Card key={area.title} hover>
-              <span className="text-xs font-medium tabular-nums text-brand-muted/50">
+            <Card
+              key={area.title}
+              hover
+              className={whyAccentClasses[index % whyAccentClasses.length]}
+            >
+              <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h2 className="mt-2 text-lg font-semibold text-brand-navy">
@@ -68,7 +73,9 @@ export default function TechnologyPage() {
             </Card>
           ))}
         </div>
-        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft">
+      </ContentSection>
+      <ContentSection surface="blue">
+        <Card className="card-accent-neutral border-brand-atlantic/15">
           <p className="text-sm leading-relaxed text-brand-muted">
             Blue Atlantic technology platforms are designed for enterprise use
             and structured development. References to secure infrastructure or
@@ -77,7 +84,7 @@ export default function TechnologyPage() {
             authorization, or regulated financial infrastructure.
           </p>
         </Card>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

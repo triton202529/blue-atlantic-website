@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CompanyCard from "@/components/CompanyCard";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import SectionHeader from "@/components/SectionHeader";
 import { companies } from "@/lib/site";
 
@@ -20,9 +20,9 @@ export default function CompaniesPage() {
         headline="The Blue Atlantic ecosystem"
         supportingCopy="Blue Atlantic supports a portfolio of platforms, systems, and initiatives across technology, workforce, intelligence, and capital direction — each developed with institutional discipline and long-term focus."
       />
-      <PageContainer>
+      <ContentSection surface="blue">
         <SectionHeader
-        label="Portfolio"
+          label="Portfolio"
           title="Platforms and initiatives"
           description="Each ecosystem company operates as a distinct platform or initiative within the Blue Atlantic enterprise group, sharing a commitment to modern systems and Caribbean-first development."
         />
@@ -34,11 +34,12 @@ export default function CompaniesPage() {
               name={company.name}
               category={company.category}
               statusLabel={company.statusLabel}
+              accent={company.accent}
               description={company.detailDescription}
             />
           ))}
         </div>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }

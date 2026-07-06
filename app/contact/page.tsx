@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
+import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageContainer from "@/components/PageContainer";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import { whyAccentClasses } from "@/lib/card-themes";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -43,15 +44,19 @@ export default function ContactPage() {
         headline="Contact Blue Atlantic"
         supportingCopy="We welcome professional inquiries from partners, institutions, businesses, and collaborators interested in Caribbean enterprise infrastructure."
       />
-      <PageContainer>
+      <ContentSection surface="blue">
         <SectionHeader
-        label="Inquiries"
+          label="Inquiries"
           title="How to reach us"
           description="Contact information and inquiry channels will be published here. This page does not include a live form at this stage."
         />
         <div className="grid gap-6 sm:grid-cols-2">
-          {contactCategories.map((category) => (
-            <Card key={category.title} hover>
+          {contactCategories.map((category, index) => (
+            <Card
+              key={category.title}
+              hover
+              className={whyAccentClasses[index % whyAccentClasses.length]}
+            >
               <h2 className="text-lg font-semibold text-brand-navy">
                 {category.title}
               </h2>
@@ -61,7 +66,9 @@ export default function ContactPage() {
             </Card>
           ))}
         </div>
-        <Card className="mt-10 border-brand-atlantic/10 bg-brand-soft text-center">
+      </ContentSection>
+      <ContentSection surface="white">
+        <Card className="card-accent-neutral mx-auto max-w-2xl text-center">
           <p className="text-sm text-brand-muted">
             Contact channels will be available in a future update. For now,
             please note your area of interest when reaching out through
@@ -73,7 +80,7 @@ export default function ContactPage() {
             </Button>
           </div>
         </Card>
-      </PageContainer>
+      </ContentSection>
     </>
   );
 }
