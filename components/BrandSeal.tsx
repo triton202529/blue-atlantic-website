@@ -18,7 +18,7 @@ export default function BrandSeal({
 
   return (
     <Image
-      src={brandAssets.seal.png}
+      src={brandAssets.companyLogo}
       alt={alt}
       width={dimension}
       height={dimension}

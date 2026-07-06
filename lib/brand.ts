@@ -1,8 +1,9 @@
 export const brandAssets = {
+  companyLogo: "/brand/blue-atlantic-company-logo.png",
   seal: {
     svg: "/brand/blue-atlantic-seal.svg",
-    png: "/brand/blue-atlantic-seal.png",
-    webp: "/brand/blue-atlantic-seal.webp",
+    png: "/brand/blue-atlantic-company-logo.png",
+    webp: "/brand/blue-atlantic-company-logo.png",
   },
   mark: {
     svg: "/brand/blue-atlantic-mark.svg",
