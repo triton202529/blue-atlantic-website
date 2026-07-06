@@ -132,7 +132,7 @@ Terms appearing **only in legal/informational disclaimers** (acceptable):
 ## Git Commit Hash
 
 ```
-(Updated after commit)
+cfe4580
 ```
 
 Commit message: `BA-W-004: finalize Blue Atlantic launch QA and SEO polish`
