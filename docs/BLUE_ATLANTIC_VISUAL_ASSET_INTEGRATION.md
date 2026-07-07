@@ -93,7 +93,7 @@ All assets are generated locally with Sharp and SVG. No external URLs.
 ## Git Commit Hash
 
 ```
-(Updated after commit)
+6fdc352
 ```
 
 Commit message: `BA-W-007: add Blue Atlantic visual asset depth`
