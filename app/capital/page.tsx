@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Button from "@/components/Button";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
+import PageVisual from "@/components/PageVisual";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
@@ -39,6 +40,12 @@ export default function CapitalPage() {
         supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, institutional analysis, and disciplined long-term planning within the enterprise group."
       />
       <ContentSection surface="soft">
+        <PageVisual
+          asset="research"
+          size="md"
+          caption="Informational research direction only. Not a live investment product or advisory service."
+          className="mb-10"
+        />
         <SectionHeader
           label="Future direction"
           title="Research and institutional development"

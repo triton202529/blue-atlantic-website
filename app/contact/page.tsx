@@ -49,7 +49,7 @@ export default function ContactPage() {
         headline="Contact Blue Atlantic"
         supportingCopy="Blue Atlantic welcomes institutional conversations, partnerships, platform inquiries, developer and business discussions, and general company inquiries related to Caribbean enterprise infrastructure."
       />
-      <ContentSection surface="blue">
+      <ContentSection surface="blue" pattern>
         <SectionHeader
           label="Inquiries"
           title="How to reach us"

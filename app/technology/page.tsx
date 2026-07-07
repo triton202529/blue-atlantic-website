@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
 import SectionHeader from "@/components/SectionHeader";
+import VisualPanel from "@/components/VisualPanel";
 import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
+import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -54,6 +56,14 @@ export default function TechnologyPage() {
         supportingCopy="The Blue Atlantic technology division builds the internal and public-facing platforms that power the enterprise ecosystem, with disciplined engineering, governance-aware design, and Caribbean-first product development."
       />
       <ContentSection surface="soft">
+        <VisualPanel
+          src={visualAssets.systems}
+          alt={visualAssetAlt.systems}
+          title="Enterprise systems and product infrastructure"
+          description="Calm, structured technology development focused on maintainable platforms, governance-aware design, and long-term institutional use across the Blue Atlantic ecosystem."
+          className="mb-12"
+          priority
+        />
         <SectionHeader
           label="Development"
           title="What we develop"

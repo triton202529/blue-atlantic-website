@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Card from "./Card";
 import {
+  categoryVisualClasses,
   companyAccentClasses,
   type CompanyAccent,
 } from "@/lib/card-themes";
@@ -28,6 +29,10 @@ export default function CompanyCard({
 
   const content = (
     <>
+      <div
+        aria-hidden="true"
+        className={`-mx-6 -mt-6 mb-5 h-14 rounded-t-2xl border-b border-brand-border/40 md:-mx-8 md:-mt-8 ${categoryVisualClasses[accent]}`}
+      />
       {(category || statusLabel) && (
         <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-brand-border/60 pb-3 text-xs text-brand-muted">
           {category && (

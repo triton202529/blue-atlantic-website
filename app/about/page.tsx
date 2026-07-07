@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import BrandLogo from "@/components/BrandLogo";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
+import PageVisual from "@/components/PageVisual";
+import VisualPanel from "@/components/VisualPanel";
 import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
+import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 
 export const metadata: Metadata = {
   title: "About",
@@ -44,6 +47,13 @@ export default function AboutPage() {
         supportingCopy="A Caribbean-born enterprise group building modern technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development and global-standard execution."
       />
       <ContentSection surface="blue">
+        <PageVisual
+          asset="horizon"
+          size="lg"
+          caption="Caribbean-born enterprise infrastructure with Atlantic perspective"
+          className="mb-10"
+          priority
+        />
         <Card className="card-accent-neutral flex flex-col gap-6 p-8 md:flex-row md:items-start md:p-10">
           <BrandLogo
             variant="story"
@@ -65,7 +75,15 @@ export default function AboutPage() {
           </div>
         </Card>
       </ContentSection>
-      <ContentSection surface="white">
+      <ContentSection surface="white" pattern>
+        <VisualPanel
+          src={visualAssets.enterpriseMap}
+          alt={visualAssetAlt.enterpriseMap}
+          imagePosition="right"
+          title="Regional enterprise perspective"
+          description="Blue Atlantic builds with Caribbean context and global standards, connecting platforms and initiatives through shared enterprise infrastructure and disciplined execution."
+          className="mb-12"
+        />
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section, index) => (
             <Card

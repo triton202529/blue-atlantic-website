@@ -52,7 +52,7 @@ export default function LegalPage() {
         headline="Legal information"
         supportingCopy="Important legal notices and disclaimers regarding the Blue Atlantic corporate website, ecosystem platforms, and informational content."
       />
-      <ContentSection surface="blue">
+      <ContentSection surface="blue" pattern>
         <div className="mx-auto max-w-3xl space-y-5">
           {legalSections.map((section, index) => (
             <Card

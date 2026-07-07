@@ -18,7 +18,7 @@ export default function NewsroomPage() {
         headline="Newsroom"
         supportingCopy="The Blue Atlantic newsroom will publish company updates, ecosystem announcements, institutional notes, and future public releases."
       />
-      <ContentSection surface="soft">
+      <ContentSection surface="soft" pattern>
         <Card className="card-accent-neutral mx-auto max-w-2xl text-center">
           <p className="section-label text-brand-atlantic">Coming soon</p>
           <h2 className="mt-4 text-xl font-semibold text-brand-navy">
