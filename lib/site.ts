@@ -1,3 +1,17 @@
+/** Intended production domain after purchase and Vercel connection. Not used as active URL until configured. */
+export const intendedProductionUrl = "https://blueatlantic.com";
+
+const defaultDeploymentUrl = "https://blueatlantic-website.vercel.app";
+
+/** Resolves the public site URL from NEXT_PUBLIC_SITE_URL or deployment fallback. */
+export function getSiteUrl(): string {
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (envUrl) {
+    return envUrl.replace(/\/$/, "");
+  }
+  return defaultDeploymentUrl;
+}
+
 export const siteConfig = {
   name: "Blue Atlantic",
   title: "Blue Atlantic | Caribbean Enterprise Infrastructure",
@@ -15,7 +29,9 @@ export const siteConfig = {
     "intelligence systems",
     "Caribbean technology",
   ],
-  url: "https://blueatlantic.com",
+  get url() {
+    return getSiteUrl();
+  },
 };
 
 export const mainNavLinks = [
