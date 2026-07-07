@@ -142,7 +142,7 @@ Also verify: navbar/footer links, mobile menu, official logo consistency (not BA
 ## Git Commit Hash
 
 ```
-(Updated after commit)
+38d2939
 ```
 
 Commit message: `BA-W-006: document Vercel deployment`
