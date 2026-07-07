@@ -77,4 +77,6 @@ After initial push:
 
 ## Git Commit Hash
 
-Documentation commit recorded after initial push.
+Initial publish: `80270cd` (BA-W-004A)
+
+Documentation: `e2dadef` — `BA-W-005: document GitHub publish`
