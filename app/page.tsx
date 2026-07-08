@@ -59,6 +59,8 @@ export default function HomePage() {
               accent={company.accent}
               description={company.description}
               href={company.href}
+              platformUrl={company.platformUrl}
+              platformLabel={company.platformLabel}
             />
           ))}
         </div>

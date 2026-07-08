@@ -38,6 +38,9 @@ export default function CompaniesPage() {
               statusLabel={company.statusLabel}
               accent={company.accent}
               description={company.detailDescription}
+              href={company.href}
+              platformUrl={company.platformUrl}
+              platformLabel={company.platformLabel}
             />
           ))}
         </div>

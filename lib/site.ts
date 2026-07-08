@@ -1,6 +1,8 @@
 /** Intended production domain after purchase and Vercel connection. Not used as active URL until configured. */
 export const intendedProductionUrl = "https://blueatlantic.com";
 
+import type { CompanyAccent } from "@/lib/card-themes";
+
 const defaultDeploymentUrl = "https://blueatlantic-website.vercel.app";
 
 /** Resolves the public site URL from NEXT_PUBLIC_SITE_URL or deployment fallback. */
@@ -105,7 +107,20 @@ export const pillars = [
   },
 ] as const;
 
-export const companies = [
+export interface CompanyEntry {
+  name: string;
+  category: string;
+  statusLabel: string;
+  accent: CompanyAccent;
+  description: string;
+  detailDescription: string;
+  href: string;
+  id: string;
+  platformUrl?: string;
+  platformLabel?: string;
+}
+
+export const companies: CompanyEntry[] = [
   {
     name: "Tropicash",
     category: "Financial technology",
@@ -124,11 +139,13 @@ export const companies = [
     statusLabel: "Ecosystem company",
     accent: "workforce" as const,
     description:
-      "A workforce technology platform supporting employers, job seekers, and regional labor visibility through structured hiring infrastructure.",
+      "EliteHire Solutions develops workforce technology for employers, job seekers, and regional labor visibility. Its platform, EliteHire Pro, supports structured hiring, job discovery, employer tools, and modern employment infrastructure across the Caribbean.",
     detailDescription:
-      "A workforce technology platform supporting employers, job seekers, and regional labor visibility through structured hiring infrastructure. EliteHire Solutions is being developed to strengthen workforce access and modern employment systems across the Caribbean.",
+      "EliteHire Solutions develops workforce technology for employers, job seekers, and regional labor visibility. Its platform, EliteHire Pro, supports structured hiring, job discovery, employer tools, and modern employment infrastructure across the Caribbean.",
     href: "/companies#elitehire-solutions",
     id: "elitehire-solutions",
+    platformUrl: "https://elitehirepro.co/",
+    platformLabel: "Visit EliteHire Pro",
   },
   {
     name: "TRITON",
@@ -148,11 +165,13 @@ export const companies = [
     statusLabel: "Oversight platform",
     accent: "oversight" as const,
     description:
-      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place.",
+      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place. Sentinel supports stronger transparency, structured financial review, and enterprise accountability.",
     detailDescription:
-      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place. Sentinel is being developed to strengthen operational transparency, structured financial review, and enterprise accountability.",
+      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place. Sentinel supports stronger transparency, structured financial review, and enterprise accountability.",
     href: "/companies#sentinel",
     id: "sentinel",
+    platformUrl: "https://sentinel-xi-seven.vercel.app/",
+    platformLabel: "Visit Sentinel",
   },
   {
     name: "Blue Atlantic Capital / IRD",
@@ -160,13 +179,13 @@ export const companies = [
     statusLabel: "Future direction",
     accent: "capital" as const,
     description:
-      "Blue Atlantic Capital / IRD is the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, and long-term institutional development.",
+      "Blue Atlantic Capital / IRD represents the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning.",
     detailDescription:
-      "Blue Atlantic Capital / IRD is the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning. This initiative supports internal research, structured analysis, and disciplined decision support across the Blue Atlantic enterprise group.",
+      "Blue Atlantic Capital / IRD represents the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning.",
     href: "/companies#blue-atlantic-capital",
     id: "blue-atlantic-capital",
   },
-] as const;
+];
 
 export const whyBlueAtlantic = [
   {
