@@ -9,24 +9,24 @@ import Card from "@/components/Card";
 export const metadata: Metadata = {
   title: "Capital",
   description:
-    "Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, institutional analysis, and disciplined long-term planning.",
+    "Blue Atlantic Capital and IRD represent the company's research and capital strategy direction, focused on disciplined analysis, capital planning, and long-term institutional development.",
 };
 
 const directionAreas = [
   {
     title: "Research direction",
     description:
-      "Structured research into regional economic development, enterprise infrastructure, and long-term institutional growth opportunities within the Caribbean context.",
+      "Structured research into Caribbean economic development, enterprise infrastructure, financial systems, and long-term regional growth opportunities.",
   },
   {
     title: "Capital strategy",
     description:
-      "Future direction for capital allocation frameworks, institutional development planning, and disciplined analysis of enterprise growth pathways.",
+      "Planning frameworks for capital allocation, growth priorities, funding readiness, and disciplined enterprise development.",
   },
   {
     title: "Institutional analysis",
     description:
-      "Long-term focus on building enduring enterprise structures, governance frameworks, and organizational systems designed for sustainable regional impact.",
+      "Long-term analysis of governance, operating structures, financial records, and organizational systems designed to support durable regional businesses.",
   },
 ];
 
@@ -37,19 +37,19 @@ export default function CapitalPage() {
         compact
         eyebrow="Capital"
         headline="Capital and research direction"
-        supportingCopy="Blue Atlantic Capital and IRD represent a future direction for research, capital strategy, institutional analysis, and disciplined long-term planning within the enterprise group."
+        supportingCopy="Blue Atlantic Capital and IRD represent the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, and long-term institutional development."
       />
       <ContentSection surface="soft">
         <PageVisual
           asset="research"
           size="md"
-          caption="Informational research direction only. Not a live investment product or advisory service."
+          caption="Research and capital strategy direction within Blue Atlantic"
           className="mb-10"
         />
         <SectionHeader
           label="Future direction"
-          title="Research and institutional development"
-          description="This area of Blue Atlantic is in development. It reflects long-term research and capital direction and is not a live investment product, advisory service, or regulated financial offering."
+          title="Research, capital strategy, and institutional development"
+          description="This area of Blue Atlantic is being developed to support long-term planning, internal research, capital strategy, and structured analysis across the enterprise group."
         />
         <div className="grid gap-6 md:grid-cols-3">
           {directionAreas.map((area) => (
@@ -70,12 +70,9 @@ export default function CapitalPage() {
             Important notice
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-brand-muted">
-            This page is informational only. Nothing on this page constitutes
-            investment advice, an offer to manage assets, a solicitation to
-            invest, or a regulated financial service. Blue Atlantic Capital /
-            IRD is a research and development direction within the Blue
-            Atlantic enterprise group. Blue Atlantic is not a licensed broker,
-            asset manager, or regulated investment advisor.
+            Blue Atlantic Capital / IRD is an internal research and strategy
+            direction within Blue Atlantic. Public investment services,
+            brokerage, and asset management services are not currently offered.
           </p>
         </Card>
         <div className="mt-8">

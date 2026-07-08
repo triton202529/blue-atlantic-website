@@ -112,9 +112,9 @@ export const companies = [
     statusLabel: "Platform",
     accent: "fintech" as const,
     description:
-      "A digital wallet and payment infrastructure platform designed for Caribbean users, businesses, and future financial service integrations.",
+      "Tropicash is a digital wallet and payment infrastructure platform designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations.",
     detailDescription:
-      "A digital wallet and payment infrastructure platform designed for Caribbean users, businesses, and future financial service integrations. Tropicash reflects Blue Atlantic's financial technology direction, building payment systems with regional context and disciplined product development.",
+      "Tropicash is a digital wallet and payment infrastructure platform designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations. Tropicash reflects Blue Atlantic's financial technology direction, building payment systems with regional context and disciplined product development.",
     href: "/companies#tropicash",
     id: "tropicash",
   },
@@ -148,9 +148,9 @@ export const companies = [
     statusLabel: "Oversight platform",
     accent: "oversight" as const,
     description:
-      "A financial oversight and audit intelligence platform designed to support visibility, controls, and enterprise accountability.",
+      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place.",
     detailDescription:
-      "A financial oversight and audit intelligence platform designed to support visibility, controls, and enterprise accountability. Sentinel is being developed to strengthen operational transparency and structured financial review.",
+      "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place. Sentinel is being developed to strengthen operational transparency, structured financial review, and enterprise accountability.",
     href: "/companies#sentinel",
     id: "sentinel",
   },
@@ -160,9 +160,9 @@ export const companies = [
     statusLabel: "Future direction",
     accent: "capital" as const,
     description:
-      "A future research and capital strategy direction focused on disciplined analysis, institutional development, and long-term growth planning.",
+      "Blue Atlantic Capital / IRD is the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, and long-term institutional development.",
     detailDescription:
-      "A future research and capital strategy direction focused on disciplined analysis, institutional development, and long-term growth planning. This initiative represents Blue Atlantic's research and capital direction and is not a live investment product or advisory service.",
+      "Blue Atlantic Capital / IRD is the company's research and capital strategy direction, focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning. This initiative supports internal research, structured analysis, and disciplined decision support across the Blue Atlantic enterprise group.",
     href: "/companies#blue-atlantic-capital",
     id: "blue-atlantic-capital",
   },
