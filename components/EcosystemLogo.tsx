@@ -1,10 +1,10 @@
 import Image from "next/image";
 import {
+  ecosystemLogoTreatmentClasses,
   getEcosystemLogo,
-  type EcosystemLogoTreatment,
 } from "@/lib/ecosystem-brand";
 
-type EcosystemLogoVariant = "card" | "strip" | "compact";
+type EcosystemLogoVariant = "strip" | "card";
 
 interface EcosystemLogoProps {
   companyId?: string;
@@ -13,24 +13,9 @@ interface EcosystemLogoProps {
   priority?: boolean;
 }
 
-const variantSizes: Record<
-  EcosystemLogoVariant,
-  { height: number; maxWidth: number; className: string }
-> = {
-  card: { height: 44, maxWidth: 180, className: "h-9 w-auto max-w-[180px] md:h-11 md:max-w-[200px]" },
-  strip: { height: 36, maxWidth: 140, className: "h-7 w-auto max-w-[120px] md:h-8 md:max-w-[140px]" },
-  compact: { height: 32, maxWidth: 120, className: "h-7 w-auto max-w-[110px]" },
-};
-
-const treatmentClasses: Record<EcosystemLogoTreatment, string> = {
-  light: "bg-[#f7f5ef]",
-  dark: "bg-brand-navy",
-  neutral: "bg-brand-surface-blue/90",
-};
-
 export default function EcosystemLogo({
   companyId,
-  variant = "card",
+  variant = "strip",
   className = "",
   priority = false,
 }: EcosystemLogoProps) {
@@ -40,20 +25,36 @@ export default function EcosystemLogo({
     return null;
   }
 
-  const size = variantSizes[variant];
+  const image = (
+    <Image
+      src={config.src}
+      alt={config.alt}
+      width={config.size.maxWidth}
+      height={config.size.maxHeight}
+      priority={priority}
+      className="ecosystem-logo-image object-contain object-center"
+      style={{
+        maxWidth: config.size.maxWidth,
+        maxHeight: config.size.maxHeight,
+      }}
+    />
+  );
+
+  if (variant === "card") {
+    return (
+      <div
+        className={`ecosystem-logo-cell-card flex items-center justify-center ${className}`}
+      >
+        {image}
+      </div>
+    );
+  }
 
   return (
     <div
-      className={`inline-flex items-center justify-center rounded-lg px-3 py-2 ${treatmentClasses[config.treatment]} ${className}`}
+      className={`ecosystem-logo-cell-strip flex shrink-0 items-center justify-center rounded-lg ${ecosystemLogoTreatmentClasses[config.treatment]} ${className}`}
     >
-      <Image
-        src={config.src}
-        alt={config.alt}
-        width={size.maxWidth}
-        height={size.height}
-        priority={priority}
-        className={`object-contain object-center ${size.className}`}
-      />
+      {image}
     </div>
   );
 }

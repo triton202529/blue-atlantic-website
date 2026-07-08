@@ -187,3 +187,40 @@ h3 {
   border-left: 3px solid var(--brand-atlantic);
   background: linear-gradient(90deg, #f4f7fb 0%, #ffffff 25%);
 }
+
+.ecosystem-logo-image {
+  object-fit: contain;
+  max-width: 80%;
+  max-height: 70%;
+}
+
+.ecosystem-logo-cell-strip {
+  width: 96px;
+  height: 52px;
+}
+
+@media (min-width: 768px) {
+  .ecosystem-logo-cell-strip {
+    width: 112px;
+    height: 56px;
+  }
+}
+
+.ecosystem-logo-cell-card {
+  width: 112px;
+  height: 52px;
+}
+
+.ecosystem-card-logo-header {
+  height: 84px;
+}
+
+@media (min-width: 768px) {
+  .ecosystem-logo-cell-card {
+    height: 56px;
+  }
+
+  .ecosystem-card-logo-header {
+    height: 96px;
+  }
+}

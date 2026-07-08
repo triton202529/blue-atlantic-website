@@ -1,12 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import Card from "./Card";
+import EcosystemLogo from "./EcosystemLogo";
 import {
   categoryVisualClasses,
   companyAccentClasses,
   type CompanyAccent,
 } from "@/lib/card-themes";
-import { getEcosystemLogo, type EcosystemLogoTreatment } from "@/lib/ecosystem-brand";
+import {
+  ecosystemLogoTreatmentClasses,
+  getEcosystemLogo,
+} from "@/lib/ecosystem-brand";
 
 interface CompanyCardProps {
   name: string;
@@ -17,12 +20,6 @@ interface CompanyCardProps {
   id?: string;
   accent?: CompanyAccent;
 }
-
-const headerTreatmentClasses: Record<EcosystemLogoTreatment, string> = {
-  light: "bg-[#f7f5ef]",
-  dark: "bg-brand-navy",
-  neutral: "bg-brand-surface-blue/90",
-};
 
 export default function CompanyCard({
   name,
@@ -38,15 +35,9 @@ export default function CompanyCard({
 
   const header = logo ? (
     <div
-      className={`-mx-6 -mt-6 mb-5 flex h-20 items-center justify-center rounded-t-2xl border-b border-brand-border/40 px-4 md:-mx-8 md:-mt-8 md:h-24 ${headerTreatmentClasses[logo.treatment]}`}
+      className={`ecosystem-card-logo-header -mx-6 -mt-6 mb-5 flex items-center justify-center rounded-t-2xl border-b border-brand-border/40 md:-mx-8 md:-mt-8 ${ecosystemLogoTreatmentClasses[logo.treatment]}`}
     >
-      <Image
-        src={logo.src}
-        alt={logo.alt}
-        width={200}
-        height={48}
-        className="h-9 w-auto max-w-[180px] object-contain object-center md:h-11 md:max-w-[200px]"
-      />
+      <EcosystemLogo companyId={id} variant="card" />
     </div>
   ) : (
     <div
