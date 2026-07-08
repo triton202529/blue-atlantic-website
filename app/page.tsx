@@ -1,14 +1,13 @@
 import CompanyCard from "@/components/CompanyCard";
 import ContentSection from "@/components/ContentSection";
 import CorporateBrandPanel from "@/components/CorporateBrandPanel";
+import EcosystemPortfolioPanel from "@/components/EcosystemPortfolioPanel";
 import HeroSection from "@/components/HeroSection";
-import ImageBand from "@/components/ImageBand";
 import PartnershipCTA from "@/components/PartnershipCTA";
 import PillarCard from "@/components/PillarCard";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
-import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 import { companies, heroCopy, pillars, whyBlueAtlantic } from "@/lib/site";
 
 export default function HomePage() {
@@ -48,22 +47,14 @@ export default function HomePage() {
           title="The Blue Atlantic ecosystem"
           description="Blue Atlantic is developing a portfolio of platforms, systems, and initiatives connected by shared enterprise infrastructure, disciplined execution, and a Caribbean-first growth strategy."
         />
-        <ImageBand
-          src={visualAssets.portfolio}
-          alt={visualAssetAlt.portfolio}
-          height="md"
-          overlay="navy"
-          className="mb-10"
-        >
-          <p className="max-w-xl text-sm leading-relaxed text-white/90 md:text-base">
-            A connected portfolio of platforms and initiatives built with shared
-            standards and long-term institutional purpose across the Caribbean.
-          </p>
-        </ImageBand>
+        <EcosystemPortfolioPanel
+          description="A connected portfolio of platforms and initiatives built with shared standards and long-term institutional purpose across the Caribbean."
+        />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {companies.map((company) => (
             <CompanyCard
               key={company.name}
+              id={company.id}
               name={company.name}
               category={company.category}
               statusLabel={company.statusLabel}
