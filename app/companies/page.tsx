@@ -7,9 +7,9 @@ import SectionHeader from "@/components/SectionHeader";
 import { companies } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Companies",
+  title: "Platforms and systems",
   description:
-    "Explore the Blue Atlantic ecosystem portfolio of platforms and initiatives across financial technology, workforce systems, intelligence, and capital direction.",
+    "Explore Blue Atlantic's portfolio of platforms, systems, and future initiatives across financial technology, workforce systems, intelligence, and capital direction.",
 };
 
 export default function CompaniesPage() {
@@ -18,17 +18,17 @@ export default function CompaniesPage() {
       <HeroSection
         compact
         eyebrow="Ecosystem"
-        headline="The Blue Atlantic ecosystem"
-        supportingCopy="A portfolio of platforms and initiatives within the Blue Atlantic enterprise group, built with shared standards, disciplined execution, and long-term institutional purpose."
+        headline="Blue Atlantic platforms and systems"
+        supportingCopy="Blue Atlantic is developing a portfolio of platforms, systems, and future initiatives connected by shared standards, disciplined execution, and Caribbean-first product thinking."
       />
       <ContentSection surface="blue">
         <SectionHeader
           label="Portfolio"
-          title="Platforms and initiatives"
-          description="Each platform and initiative in the Blue Atlantic ecosystem is developed with institutional discipline, Caribbean-first context, and connection to shared enterprise infrastructure."
+          title="Platforms and systems"
+          description="Each platform, system, and initiative in the Blue Atlantic portfolio is developed with institutional discipline, Caribbean-first context, and connection to shared enterprise infrastructure."
         />
-        <CompanyStructureTable className="mb-10" />
-        <div className="grid gap-6 md:grid-cols-2">
+        <CompanyStructureTable className="mb-8" />
+        <div className="grid gap-5 md:grid-cols-2">
           {companies.map((company) => (
             <CompanyCard
               key={company.id}
@@ -39,8 +39,8 @@ export default function CompaniesPage() {
               accent={company.accent}
               description={company.detailDescription}
               href={company.href}
-              platformUrl={company.platformUrl}
-              platformLabel={company.platformLabel}
+              externalLink={company.externalLink}
+              compact
             />
           ))}
         </div>

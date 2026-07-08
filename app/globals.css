@@ -223,7 +223,7 @@ h3 {
 }
 
 .ecosystem-card-logo-header {
-  height: 84px;
+  height: 76px;
 }
 
 @media (min-width: 768px) {
@@ -232,6 +232,6 @@ h3 {
   }
 
   .ecosystem-card-logo-header {
-    height: 96px;
+    height: 84px;
   }
 }

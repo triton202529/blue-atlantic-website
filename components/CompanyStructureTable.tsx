@@ -35,7 +35,7 @@ export default function CompanyStructureTable({
     >
       <div className="border-b border-brand-border bg-brand-soft/50 px-6 py-5 md:px-8">
         <h2 className="text-lg font-semibold text-brand-navy md:text-xl">
-          Company structure
+          Portfolio structure
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted md:text-base">
           {companyStructureIntro}
@@ -46,13 +46,13 @@ export default function CompanyStructureTable({
           <thead>
             <tr className="border-b border-brand-border bg-brand-soft/30">
               <th className="px-6 py-3 text-xs font-semibold uppercase tracking-wide text-brand-muted md:px-8">
-                Entity
+                Platform / initiative
               </th>
               <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-brand-muted">
-                Area
+                Focus
               </th>
               <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-brand-muted">
-                Role in the ecosystem
+                What it does
               </th>
               <th className="px-6 py-3 text-xs font-semibold uppercase tracking-wide text-brand-muted md:px-8">
                 Current position

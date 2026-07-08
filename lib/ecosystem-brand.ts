@@ -22,8 +22,8 @@ export const ecosystemLogoCells = {
     desktop: { width: 112, height: 56 },
   },
   cardHeader: {
-    mobile: { height: 84 },
-    desktop: { height: 96 },
+    mobile: { height: 76 },
+    desktop: { height: 84 },
   },
 } as const;
 
