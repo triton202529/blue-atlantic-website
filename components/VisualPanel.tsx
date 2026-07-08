@@ -13,6 +13,7 @@ interface VisualPanelProps {
   children?: ReactNode;
   className?: string;
   priority?: boolean;
+  compact?: boolean;
 }
 
 export default function VisualPanel({
@@ -25,10 +26,15 @@ export default function VisualPanel({
   children,
   className = "",
   priority = false,
+  compact = false,
 }: VisualPanelProps) {
   const isNavy = variant === "navy";
   const imageBlock = (
-    <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-brand-border/60 shadow-brand md:aspect-auto md:min-h-[280px] md:flex-1">
+    <div
+      className={`relative aspect-[16/10] overflow-hidden rounded-xl border border-brand-border/60 shadow-brand md:aspect-auto md:flex-1 ${
+        compact ? "md:max-w-md md:min-h-[200px]" : "md:min-h-[280px]"
+      }`}
+    >
       <Image
         src={src}
         alt={alt}
