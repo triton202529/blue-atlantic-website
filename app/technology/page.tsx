@@ -1,48 +1,49 @@
 import type { Metadata } from "next";
+import Button from "@/components/Button";
+import Card from "@/components/Card";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
 import SectionHeader from "@/components/SectionHeader";
 import VisualPanel from "@/components/VisualPanel";
-import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
 import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Blue Atlantic's technology division builds internal and public-facing platforms, secure-by-design systems, and governance-aware infrastructure for the enterprise ecosystem.",
+    "Blue Atlantic builds technology platforms, internal systems, and enterprise software for its own ecosystem and for businesses, institutions, and partners that need practical digital capability.",
 };
 
-const focusAreas = [
+const buildCapabilities = [
   {
-    title: "Product engineering",
+    title: "Internal business systems",
     description:
-      "End-to-end platform development from concept through deployment, with maintainable architecture, Caribbean-first product thinking, and standards suited to long-term institutional use.",
+      "Custom tools for managing workflows, approvals, records, operations, teams, and internal processes.",
   },
   {
-    title: "Secure-by-design development",
+    title: "Product platforms",
     description:
-      "Structured attention to system architecture, access controls, and operational reliability in platform development. This reflects design intent and does not claim certified security or banking authorization.",
+      "End-to-end platform development for digital products, portals, marketplaces, dashboards, and user-facing systems.",
   },
   {
-    title: "Governance-aware systems",
+    title: "Admin and control dashboards",
     description:
-      "Platforms developed with governance considerations, audit visibility, and structured controls that support enterprise accountability across the Blue Atlantic ecosystem.",
+      "Centralized dashboards for oversight, reporting, user management, activity review, and operational control.",
   },
   {
-    title: "Internal platform development",
+    title: "Workforce and hiring systems",
     description:
-      "Technology built to support Blue Atlantic platforms and initiatives through shared foundations that connect financial, workforce, intelligence, and oversight systems.",
+      "Technology for job discovery, employer tools, hiring workflows, candidate management, and regional labor visibility.",
   },
   {
-    title: "Operational intelligence",
+    title: "Financial operations tools",
     description:
-      "Systems that support structured data analysis, decision-support workflows, and enterprise visibility, enabling disciplined operational oversight and evaluation.",
+      "Systems for tracking business finances, records, controls, internal activity, and operational accountability.",
   },
   {
-    title: "Maintainable architecture",
+    title: "Intelligence and reporting systems",
     description:
-      "Clean, scalable product architecture designed for long-term development rather than short-term builds that cannot support institutional growth.",
+      "Decision-support tools, structured reporting, data visibility, governance review, and operational intelligence.",
   },
 ];
 
@@ -53,24 +54,24 @@ export default function TechnologyPage() {
         compact
         eyebrow="Technology"
         headline="Technology and product development"
-        supportingCopy="The Blue Atlantic technology division builds the internal and public-facing platforms that power the enterprise ecosystem, with disciplined engineering, governance-aware design, and Caribbean-first product development."
+        supportingCopy="Blue Atlantic builds the systems behind serious operations: platforms, dashboards, internal tools, and product infrastructure for its own ecosystem and for organizations that need reliable digital capability."
       />
       <ContentSection surface="soft">
         <VisualPanel
           src={visualAssets.systems}
           alt={visualAssetAlt.systems}
-          title="Enterprise systems and product infrastructure"
-          description="Calm, structured technology development focused on maintainable platforms, governance-aware design, and long-term institutional use across the Blue Atlantic ecosystem."
+          title="Systems for operations, products, and partners"
+          description="Our technology work supports Blue Atlantic platforms such as Tropicash, EliteHire Pro, TRITON, and Sentinel. The same product discipline can also support businesses, institutions, and partners that need custom systems built for real operational use."
           className="mb-12"
           priority
         />
         <SectionHeader
-          label="Development"
-          title="What we develop"
-          description="Technology work across the Blue Atlantic enterprise group supports practical platform needs, from financial infrastructure and workforce systems to intelligence and oversight platforms."
+          label="Capabilities"
+          title="What we can build"
+          description="Blue Atlantic designs practical digital systems for organizations that need better tools, clearer workflows, and stronger operational visibility."
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {focusAreas.map((area, index) => (
+          {buildCapabilities.map((area, index) => (
             <Card
               key={area.title}
               hover
@@ -90,16 +91,25 @@ export default function TechnologyPage() {
         </div>
       </ContentSection>
       <ContentSection surface="blue">
-        <Card className="card-accent-neutral border-brand-atlantic/15">
-          <p className="text-sm leading-relaxed text-brand-muted">
-            Blue Atlantic technology platforms are designed for enterprise use
-            and structured development. References to secure infrastructure or
-            governance-aware systems describe design intent and development
-            direction. They do not constitute claims of certified
-            cybersecurity, banking authorization, or regulated financial
-            infrastructure.
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-semibold tracking-tight text-brand-navy md:text-3xl">
+            Need a system built?
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-brand-muted md:text-lg">
+            Blue Atlantic is available for conversations with businesses,
+            institutions, and partners that need practical technology systems
+            designed around real operations, regional context, and long-term
+            maintainability.
           </p>
-        </Card>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button href="/contact" variant="primary">
+              Start a technology conversation
+            </Button>
+            <Button href="/companies" variant="secondary">
+              View platforms and systems
+            </Button>
+          </div>
+        </div>
       </ContentSection>
     </>
   );
