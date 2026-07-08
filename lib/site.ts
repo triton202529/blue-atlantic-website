@@ -38,7 +38,7 @@ export const siteConfig = {
 
 export const mainNavLinks = [
   { href: "/about", label: "About" },
-  { href: "/companies", label: "Companies" },
+  { href: "/companies", label: "Platforms" },
   { href: "/technology", label: "Technology" },
   { href: "/capital", label: "Capital" },
   { href: "/newsroom", label: "Newsroom" },
@@ -47,7 +47,7 @@ export const mainNavLinks = [
 
 export const footerNavLinks = [
   { href: "/", label: "Blue Atlantic" },
-  { href: "/companies", label: "Companies" },
+  { href: "/companies", label: "Platforms" },
   { href: "/technology", label: "Technology" },
   { href: "/capital", label: "Capital" },
   { href: "/contact", label: "Contact" },
