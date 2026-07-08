@@ -1,7 +1,7 @@
 import CompanyCard from "@/components/CompanyCard";
+import CompanyStructurePreview from "@/components/CompanyStructurePreview";
 import ContentSection from "@/components/ContentSection";
 import CorporateBrandPanel from "@/components/CorporateBrandPanel";
-import EcosystemPortfolioPanel from "@/components/EcosystemPortfolioPanel";
 import HeroSection from "@/components/HeroSection";
 import PartnershipCTA from "@/components/PartnershipCTA";
 import PillarCard from "@/components/PillarCard";
@@ -47,9 +47,7 @@ export default function HomePage() {
           title="The Blue Atlantic ecosystem"
           description="Blue Atlantic is developing a portfolio of platforms, systems, and initiatives connected by shared enterprise infrastructure, disciplined execution, and a Caribbean-first growth strategy."
         />
-        <EcosystemPortfolioPanel
-          description="A connected portfolio of platforms and initiatives built with shared standards and long-term institutional purpose across the Caribbean."
-        />
+        <CompanyStructurePreview className="mb-10" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {companies.map((company) => (
             <CompanyCard

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CompanyCard from "@/components/CompanyCard";
+import CompanyStructureTable from "@/components/CompanyStructureTable";
 import ContentSection from "@/components/ContentSection";
-import EcosystemPortfolioPanel from "@/components/EcosystemPortfolioPanel";
 import HeroSection from "@/components/HeroSection";
 import SectionHeader from "@/components/SectionHeader";
 import { companies } from "@/lib/site";
@@ -27,9 +27,7 @@ export default function CompaniesPage() {
           title="Platforms and initiatives"
           description="Each platform and initiative in the Blue Atlantic ecosystem is developed with institutional discipline, Caribbean-first context, and connection to shared enterprise infrastructure."
         />
-        <EcosystemPortfolioPanel
-          description="Shared enterprise infrastructure connects financial technology, workforce platforms, intelligence systems, and future research direction across the Blue Atlantic ecosystem."
-        />
+        <CompanyStructureTable className="mb-10" />
         <div className="grid gap-6 md:grid-cols-2">
           {companies.map((company) => (
             <CompanyCard

@@ -188,6 +188,17 @@ h3 {
   background: linear-gradient(90deg, #f4f7fb 0%, #ffffff 25%);
 }
 
+.structure-table-logo {
+  object-fit: contain;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.structure-table-logo-cell {
+  width: 40px;
+}
+
 .ecosystem-logo-image {
   object-fit: contain;
   max-width: 80%;
