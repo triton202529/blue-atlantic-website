@@ -11,14 +11,19 @@ import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 export const metadata: Metadata = {
   title: "Technology",
   description:
-    "Blue Atlantic builds technology platforms, internal systems, and enterprise software for its own ecosystem and for businesses, institutions, and partners that need practical digital capability.",
+    "Blue Atlantic builds technology platforms, automated workflows, and enterprise software for its own ecosystem and for businesses, institutions, and partners that need practical systems for real operational problems.",
 };
 
 const buildCapabilities = [
   {
+    title: "Workflow automation systems",
+    description:
+      "Automated tools for approvals, task routing, records, notifications, operating processes, and internal administration.",
+  },
+  {
     title: "Business operations systems",
     description:
-      "Custom tools for workflows, approvals, records, teams, operational processes, and internal administration.",
+      "Custom systems for teams, records, workflows, internal processes, operational tracking, and day-to-day management.",
   },
   {
     title: "Product platforms",
@@ -29,11 +34,6 @@ const buildCapabilities = [
     title: "Admin and control dashboards",
     description:
       "Centralized views for reporting, user management, activity review, operational control, and oversight.",
-  },
-  {
-    title: "Workforce and hiring systems",
-    description:
-      "Job discovery tools, employer portals, hiring workflows, candidate management, and regional labor visibility.",
   },
   {
     title: "Financial operations tools",
@@ -49,19 +49,19 @@ const buildCapabilities = [
 
 const operationalPrinciples = [
   {
-    title: "Practical workflows",
+    title: "Automation that saves time",
     description:
-      "Tools designed around how teams actually work, review, approve, track, and report.",
+      "Systems designed to reduce repetitive manual work, route tasks clearly, and keep operations moving.",
   },
   {
-    title: "Maintainable architecture",
+    title: "Problem-solving architecture",
     description:
-      "Systems structured for long-term support, clean development, and future growth.",
+      "Technology shaped around the actual problem, the people using it, and the process it needs to improve.",
   },
   {
-    title: "Regional understanding",
+    title: "Caribbean standard building",
     description:
-      "Technology built with Caribbean context, institutional standards, and real operating constraints in mind.",
+      "Systems built with Caribbean context, institutional discipline, and the goal of raising regional technology standards.",
   },
 ];
 
@@ -72,14 +72,14 @@ export default function TechnologyPage() {
         compact
         eyebrow="Technology"
         headline="Technology and product development"
-        supportingCopy="Blue Atlantic builds technology platforms, internal systems, dashboards, and product infrastructure for serious operations. Our work supports Blue Atlantic initiatives and can also support businesses, institutions, and partners that need reliable digital systems."
+        supportingCopy="Blue Atlantic builds technology platforms, automated workflows, internal systems, dashboards, and product infrastructure for serious operations. Our work supports Blue Atlantic initiatives and can also support businesses, institutions, and partners that need reliable systems built around real operational problems."
       />
       <ContentSection surface="soft">
         <VisualPanel
           src={visualAssets.systems}
           alt={visualAssetAlt.systems}
-          title="Systems for operations, products, and partners"
-          description="Our technology work supports platforms such as Tropicash, EliteHire Pro, TRITON, and Sentinel. The same product discipline can support organizations that need custom tools, clearer workflows, stronger oversight, and maintainable systems built for real operational use."
+          title="Systems for operations, automation, products, and partners"
+          description="Our technology work supports platforms such as Tropicash, EliteHire Pro, TRITON, and Sentinel. The same product discipline can support organizations that need automated workflows, custom tools, clearer processes, stronger oversight, and maintainable systems built for real operational use."
           className="mb-0"
           compact
           priority
@@ -89,15 +89,16 @@ export default function TechnologyPage() {
         <SectionHeader
           label="Technology"
           title="Technology capabilities"
-          description="Blue Atlantic focuses on practical systems that help organizations operate better, manage information clearly, and build digital products with long-term structure."
+          description="Blue Atlantic focuses on practical technology that helps organizations operate better, automate repetitive work, manage information clearly, solve operational problems, and build digital products with long-term structure."
         />
         <div className="mb-8 border-b border-brand-border/70 pb-8 md:mb-10 md:pb-10">
           <h3 className="text-xl font-semibold text-brand-navy md:text-2xl">
             What we can build
           </h3>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-brand-muted md:text-base">
-            Practical digital systems for organizations that need better tools,
-            clearer workflows, and stronger operational visibility.
+            Practical systems for organizations that need better tools, automated
+            workflows, clearer processes, stronger visibility, and reliable
+            digital operations.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
@@ -124,7 +125,7 @@ export default function TechnologyPage() {
         <SectionHeader
           label="Approach"
           title="Built for real operations"
-          description="Blue Atlantic does not approach technology as decoration. Systems are designed around practical use, clear workflows, maintainable architecture, and the operational realities of the organizations they support."
+          description="Blue Atlantic does not approach technology as decoration. Systems are designed to solve real problems, reduce manual work, improve visibility, support clear workflows, and help organizations operate with stronger standards."
         />
         <div className="grid gap-5 md:grid-cols-3">
           {operationalPrinciples.map((item, index) => (
@@ -150,8 +151,9 @@ export default function TechnologyPage() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-brand-muted md:text-lg">
             Blue Atlantic is available for conversations with businesses,
-            institutions, and partners that need practical technology systems
-            designed around real operations, regional context, and long-term
+            institutions, and partners that need practical technology systems,
+            workflow automation, operational dashboards, or digital products
+            designed around real problems, regional context, and long-term
             maintainability.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
