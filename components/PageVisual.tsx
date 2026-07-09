@@ -35,13 +35,15 @@ export default function PageVisual({
   const resolvedAlt = alt ?? visualAssetAlt[asset];
 
   return (
-    <figure className={`relative overflow-hidden rounded-2xl border border-brand-border/60 shadow-brand ${sizeClasses[size]} ${className}`}>
+    <figure
+      className={`relative overflow-hidden rounded-2xl border border-brand-border/60 shadow-brand ${sizeClasses[size]} ${className}`}
+    >
       <Image
         src={visualAssets[asset]}
         alt={resolvedAlt}
         fill
         priority={priority}
-        sizes="(max-width: 768px) 100vw, 960px"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 960px, 420px"
         className="object-cover"
       />
       {overlay && <div className="absolute inset-0 bg-brand-navy/20" />}
