@@ -42,6 +42,7 @@ export default function AboutPage() {
     <>
       <HeroSection
         compact
+        wide
         eyebrow="About"
         headline="About Blue Atlantic"
         supportingCopy="Blue Atlantic is a Caribbean-born enterprise and technology group building the systems, platforms, and operational infrastructure needed for modern regional business. The company develops proprietary platforms while also building disciplined technology capabilities around automation, financial infrastructure, workforce systems, intelligence tools, and long-term institutional development."
@@ -49,44 +50,46 @@ export default function AboutPage() {
       <ContentSection
         surface="blue"
         dense
-        containerClassName="!max-w-7xl"
+        containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
       >
-        <div className="grid items-stretch gap-6 lg:grid-cols-5 lg:gap-8">
-          <PageVisual
-            asset="horizon"
-            size="sm"
-            caption="Caribbean-born enterprise infrastructure with Atlantic perspective"
-            className="!h-[220px] md:!h-[260px] lg:col-span-2 lg:!h-full lg:min-h-[280px]"
-            priority
-          />
-          <Card className="card-accent-neutral flex h-full flex-col gap-5 p-6 md:flex-row md:items-start md:gap-6 md:p-8 lg:col-span-3">
-            <BrandLogo
-              variant="story"
+        <div className="overflow-hidden rounded-2xl border border-brand-border/70 bg-white/70 shadow-brand">
+          <div className="grid items-stretch lg:grid-cols-5">
+            <PageVisual
+              asset="horizon"
+              size="sm"
+              caption="Caribbean-born enterprise infrastructure with Atlantic perspective"
+              className="!h-[220px] rounded-none border-0 shadow-none md:!h-[260px] lg:col-span-2 lg:!h-full lg:min-h-[300px]"
               priority
-              className="mx-auto shrink-0 scale-90 md:mx-0 md:scale-100"
             />
-            <div className="min-w-0 flex-1">
-              <p className="section-label text-brand-atlantic">Our story</p>
-              <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
-                Building for long-term institutional development
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
-                Blue Atlantic is focused on building practical systems that
-                support regional enterprise growth, stronger operations, and
-                long-term institutional development. Our work connects proprietary
-                platforms, product discipline, automation capability, and
-                Caribbean-first execution into one disciplined enterprise
-                structure.
-              </p>
-            </div>
-          </Card>
+            <Card className="card-accent-neutral flex h-full flex-col gap-5 rounded-none border-0 p-6 shadow-none md:flex-row md:items-start md:gap-6 md:p-8 lg:col-span-3">
+              <BrandLogo
+                variant="story"
+                priority
+                className="mx-auto shrink-0 scale-90 md:mx-0 md:scale-100"
+              />
+              <div className="min-w-0 flex-1">
+                <p className="section-label text-brand-atlantic">Our story</p>
+                <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
+                  Building for long-term institutional development
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
+                  Blue Atlantic is focused on building practical systems that
+                  support regional enterprise growth, stronger operations, and
+                  long-term institutional development. Our work connects proprietary
+                  platforms, product discipline, automation capability, and
+                  Caribbean-first execution into one disciplined enterprise
+                  structure.
+                </p>
+              </div>
+            </Card>
+          </div>
         </div>
       </ContentSection>
       <ContentSection
         surface="white"
         pattern
         dense
-        containerClassName="!max-w-7xl"
+        containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
       >
         <VisualPanel
           src={visualAssets.enterpriseMap}
@@ -94,10 +97,10 @@ export default function AboutPage() {
           imagePosition="right"
           title="Regional enterprise perspective"
           description="Blue Atlantic exists to solve real operational problems, raise Caribbean technology standards, and create disciplined systems that can support serious businesses, institutions, and future regional growth."
-          className="mb-8 md:mb-10"
+          className="mb-6 md:mb-8"
           compact
         />
-        <div className="grid gap-5 md:grid-cols-2 md:gap-6">
+        <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
           {sections.map((section, index) => (
             <Card
               key={section.title}

@@ -9,6 +9,7 @@ interface HeroSectionProps {
   secondaryCta?: { label: string; href: string };
   visual?: ReactNode;
   compact?: boolean;
+  wide?: boolean;
 }
 
 export default function HeroSection({
@@ -19,21 +20,25 @@ export default function HeroSection({
   secondaryCta,
   visual,
   compact = false,
+  wide = false,
 }: HeroSectionProps) {
+  // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
   const padding = compact
-    ? "pt-20 pb-16 md:pt-24 md:pb-20 lg:pb-24"
-    : "pt-24 pb-20 md:pt-28 md:pb-28 lg:pt-32 lg:pb-32";
+    ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
+    : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
+  const containerWidth = wide ? "max-w-7xl" : "max-w-6xl";
+  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-4xl" : "max-w-3xl";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light">
       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]" />
 
-      <div className={`relative mx-auto max-w-6xl scroll-mt-20 px-6 md:px-8 ${padding}`}>
+      <div className={`relative mx-auto scroll-mt-28 px-6 md:px-8 ${containerWidth} ${padding}`}>
         <div
           className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-14" : ""}`}
         >
-          <div className={visual ? "max-w-xl" : "max-w-3xl"}>
+          <div className={copyWidth}>
             <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-200/70">
               {eyebrow}
             </p>
