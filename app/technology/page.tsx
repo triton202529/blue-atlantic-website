@@ -49,9 +49,9 @@ const buildCapabilities = [
 
 const operationalPrinciples = [
   {
-    title: "Automation that saves time",
+    title: "Automate everyday tasks",
     description:
-      "Systems designed to reduce repetitive manual work, route tasks clearly, and keep operations moving.",
+      "Systems that reduce repetitive work, route tasks clearly, trigger reminders, organize records, and keep daily operations moving.",
   },
   {
     title: "Problem-solving architecture",
@@ -125,7 +125,7 @@ export default function TechnologyPage() {
         <SectionHeader
           label="Approach"
           title="Built for real operations"
-          description="Blue Atlantic does not approach technology as decoration. Systems are designed to solve real problems, reduce manual work, improve visibility, support clear workflows, and help organizations operate with stronger standards."
+          description="Blue Atlantic does not approach technology as decoration. Systems are designed to solve real problems, automate everyday tasks, reduce manual work, improve visibility, support clear workflows, and help organizations operate with stronger standards."
         />
         <div className="grid gap-5 md:grid-cols-3">
           {operationalPrinciples.map((item, index) => (
