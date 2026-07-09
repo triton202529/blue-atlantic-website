@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AboutBrandArchitecture from "@/components/AboutBrandArchitecture";
 import BrandLogo from "@/components/BrandLogo";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
@@ -47,14 +48,11 @@ export default function AboutPage() {
       <ContentSection
         surface="blue"
         dense
-        containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
+        containerClassName="!max-w-7xl !py-10 md:!py-14 lg:!py-16"
       >
+        <AboutBrandArchitecture className="mb-6 md:mb-8" />
         <Card className="card-accent-neutral flex flex-col items-center gap-6 bg-white p-7 md:flex-row md:items-center md:gap-8 md:p-9 lg:gap-10 lg:p-10">
-          <BrandLogo
-            variant="story"
-            priority
-            className="shrink-0"
-          />
+          <BrandLogo variant="story" priority className="shrink-0" />
           <div className="min-w-0 flex-1 text-center md:text-left">
             <p className="section-label text-brand-atlantic">Our story</p>
             <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
@@ -75,9 +73,9 @@ export default function AboutPage() {
         surface="white"
         pattern
         dense
-        containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
+        containerClassName="!max-w-7xl !py-10 md:!py-14 lg:!py-16"
       >
-        <div className="mb-8 max-w-3xl md:mb-10">
+        <div className="mb-6 max-w-3xl md:mb-8">
           <h2 className="text-xl font-semibold text-brand-navy md:text-2xl">
             Regional enterprise perspective
           </h2>

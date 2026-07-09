@@ -35,8 +35,8 @@ export const brandSealSizes: Record<
   md: { dimension: 96, className: "h-24 w-24" },
   lg: { dimension: 128, className: "h-32 w-32" },
   story: {
-    dimension: 128,
-    className: "h-20 w-20 sm:h-24 sm:w-24 lg:h-32 lg:w-32",
+    dimension: 160,
+    className: "h-[88px] w-[88px] sm:h-28 sm:w-28 lg:h-40 lg:w-40",
   },
   hero: { dimension: 220, className: "h-52 w-52 sm:h-56 sm:w-56 lg:h-60 lg:w-60" },
 };
