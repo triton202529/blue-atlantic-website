@@ -28,10 +28,10 @@ const variantConfig: Record<
 > = {
   nav: {
     size: "nav",
-    sealVariant: "default",
+    sealVariant: "transparent",
     showText: true,
     gap: "gap-2.5",
-    textClass: "text-sm font-semibold tracking-tight text-brand-navy",
+    textClass: "text-sm font-semibold tracking-tight text-white",
   },
   footer: {
     size: "footer",

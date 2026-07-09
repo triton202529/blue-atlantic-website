@@ -18,9 +18,13 @@ export default function GlobalNavigation() {
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-border/80 bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/95 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 md:px-8 md:py-4">
-        <Link href="/" className="rounded-lg transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2" aria-label="Blue Atlantic home">
+        <Link
+          href="/"
+          className="rounded-lg transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
+          aria-label="Blue Atlantic home"
+        >
           <BrandLogo variant="nav" />
         </Link>
 
@@ -34,10 +38,10 @@ export default function GlobalNavigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${
+                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
                     isActive
-                      ? "bg-brand-soft text-brand-navy"
-                      : "text-brand-muted hover:bg-brand-soft/60 hover:text-brand-navy"
+                      ? "bg-white/10 text-white"
+                      : "text-blue-100/70 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -50,14 +54,14 @@ export default function GlobalNavigation() {
         <div className="flex items-center gap-3 lg:hidden">
           <Link
             href="/contact"
-            className="rounded-lg bg-brand-navy px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-navy-light"
+            className="rounded-lg border border-white/15 bg-white/10 px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-white/15"
           >
             Contact
           </Link>
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-brand-border text-brand-navy transition-colors hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
@@ -75,7 +79,7 @@ export default function GlobalNavigation() {
       </nav>
 
       {menuOpen && (
-        <div className="border-t border-brand-border bg-white lg:hidden">
+        <div className="border-t border-white/10 bg-brand-navy lg:hidden">
           <ul className="mx-auto max-w-6xl px-6 py-4 md:px-8">
             {mainNavLinks.map((link) => {
               const isActive =
@@ -87,10 +91,10 @@ export default function GlobalNavigation() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${
+                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
                       isActive
-                        ? "bg-brand-soft text-brand-navy"
-                        : "text-brand-muted hover:bg-brand-soft/60 hover:text-brand-navy"
+                        ? "bg-white/10 text-white"
+                        : "text-blue-100/70 hover:bg-white/5 hover:text-white"
                     }`}
                   >
                     {link.label}
