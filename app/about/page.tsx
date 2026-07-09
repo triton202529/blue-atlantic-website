@@ -11,29 +11,29 @@ import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Blue Atlantic, a Caribbean-born enterprise group building technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development.",
+    "Learn about Blue Atlantic, a Caribbean-born enterprise and technology group building proprietary platforms, operational infrastructure, automation capability, and long-term institutional development.",
 };
 
 const sections = [
   {
     title: "Who we are",
     content:
-      "Blue Atlantic is a Caribbean-born enterprise group building platforms across technology, financial infrastructure, workforce systems, and intelligence. The company is focused on creating durable systems that can support regional opportunity and long-term institutional development.",
+      "Blue Atlantic is a Caribbean-born enterprise and technology group developing proprietary platforms, internal systems, and operational infrastructure for long-term regional growth.",
   },
   {
     title: "What we build",
     content:
-      "We build and develop platforms that serve practical enterprise needs: payments, workforce access, operational intelligence, financial oversight, and future research-led capital strategy.",
+      "We build systems across financial technology, workforce infrastructure, intelligence tools, automation, dashboards, and enterprise operations.",
   },
   {
     title: "Why the Caribbean",
     content:
-      "The Caribbean needs modern infrastructure built with local understanding and global standards. Blue Atlantic is focused on building systems that reflect regional realities while meeting the discipline expected from serious institutions.",
+      "The Caribbean needs modern technology infrastructure built with local understanding, serious execution, and global standards. Blue Atlantic is focused on raising regional capability through disciplined systems.",
   },
   {
     title: "Long-term direction",
     content:
-      "Blue Atlantic is not built around short-term hype. The company is developing an ecosystem of platforms with shared standards, disciplined execution, and long-term institutional purpose.",
+      "Blue Atlantic is not built around short-term hype. The company is developing a portfolio of platforms, systems, and operating capabilities with shared standards, disciplined execution, and long-term institutional purpose.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
         compact
         eyebrow="About"
         headline="About Blue Atlantic"
-        supportingCopy="A Caribbean-born enterprise group building modern technology, financial infrastructure, workforce systems, and intelligence platforms for long-term regional development and global-standard execution."
+        supportingCopy="Blue Atlantic is a Caribbean-born enterprise and technology group building the systems, platforms, and operational infrastructure needed for modern regional business. The company develops proprietary platforms while also building disciplined technology capabilities around automation, financial infrastructure, workforce systems, intelligence tools, and long-term institutional development."
       />
       <ContentSection surface="blue">
         <PageVisual
@@ -66,11 +66,12 @@ export default function AboutPage() {
               Building for long-term institutional development
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
-              Blue Atlantic is developing an ecosystem of platforms connected by
-              shared infrastructure, product discipline, and regional purpose.
-              Our work is focused on building systems that can support Caribbean
-              enterprise growth with the standards expected from serious
-              institutions.
+              Blue Atlantic is focused on building practical systems that
+              support regional enterprise growth, stronger operations, and
+              long-term institutional development. Our work connects proprietary
+              platforms, product discipline, automation capability, and
+              Caribbean-first execution into one disciplined enterprise
+              structure.
             </p>
           </div>
         </Card>
@@ -81,7 +82,7 @@ export default function AboutPage() {
           alt={visualAssetAlt.enterpriseMap}
           imagePosition="right"
           title="Regional enterprise perspective"
-          description="Blue Atlantic builds with Caribbean context and global standards, connecting platforms and initiatives through shared enterprise infrastructure and disciplined execution."
+          description="Blue Atlantic exists to solve real operational problems, raise Caribbean technology standards, and create disciplined systems that can support serious businesses, institutions, and future regional growth."
           className="mb-12"
         />
         <div className="grid gap-6 md:grid-cols-2">
