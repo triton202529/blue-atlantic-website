@@ -48,7 +48,7 @@ const variantConfig: Record<
     textClass: "",
   },
   story: {
-    size: "lg",
+    size: "story",
     sealVariant: "framed",
     showText: false,
     gap: "",

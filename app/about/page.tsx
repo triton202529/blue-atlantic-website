@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import BrandLogo from "@/components/BrandLogo";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import PageVisual from "@/components/PageVisual";
-import VisualPanel from "@/components/VisualPanel";
 import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
-import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 
 export const metadata: Metadata = {
   title: "About",
@@ -52,38 +49,27 @@ export default function AboutPage() {
         dense
         containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
       >
-        <div className="overflow-hidden rounded-2xl border border-brand-border/70 bg-white/70 shadow-brand">
-          <div className="grid items-stretch lg:grid-cols-5">
-            <PageVisual
-              asset="horizon"
-              size="sm"
-              caption="Caribbean-born enterprise infrastructure with Atlantic perspective"
-              className="!h-[220px] rounded-none border-0 shadow-none md:!h-[260px] lg:col-span-2 lg:!h-full lg:min-h-[300px]"
-              priority
-            />
-            <Card className="card-accent-neutral flex h-full flex-col gap-5 rounded-none border-0 p-6 shadow-none md:flex-row md:items-start md:gap-6 md:p-8 lg:col-span-3">
-              <BrandLogo
-                variant="story"
-                priority
-                className="mx-auto shrink-0 scale-90 md:mx-0 md:scale-100"
-              />
-              <div className="min-w-0 flex-1">
-                <p className="section-label text-brand-atlantic">Our story</p>
-                <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
-                  Building for long-term institutional development
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
-                  Blue Atlantic is focused on building practical systems that
-                  support regional enterprise growth, stronger operations, and
-                  long-term institutional development. Our work connects proprietary
-                  platforms, product discipline, automation capability, and
-                  Caribbean-first execution into one disciplined enterprise
-                  structure.
-                </p>
-              </div>
-            </Card>
+        <Card className="card-accent-neutral flex flex-col items-center gap-6 bg-white p-7 md:flex-row md:items-center md:gap-8 md:p-9 lg:gap-10 lg:p-10">
+          <BrandLogo
+            variant="story"
+            priority
+            className="shrink-0"
+          />
+          <div className="min-w-0 flex-1 text-center md:text-left">
+            <p className="section-label text-brand-atlantic">Our story</p>
+            <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
+              Building for long-term institutional development
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
+              Blue Atlantic is focused on building practical systems that
+              support regional enterprise growth, stronger operations, and
+              long-term institutional development. Our work connects proprietary
+              platforms, product discipline, automation capability, and
+              Caribbean-first execution into one disciplined enterprise
+              structure.
+            </p>
           </div>
-        </div>
+        </Card>
       </ContentSection>
       <ContentSection
         surface="white"
@@ -91,15 +77,17 @@ export default function AboutPage() {
         dense
         containerClassName="!max-w-7xl !py-12 md:!py-16 lg:!py-20"
       >
-        <VisualPanel
-          src={visualAssets.enterpriseMap}
-          alt={visualAssetAlt.enterpriseMap}
-          imagePosition="right"
-          title="Regional enterprise perspective"
-          description="Blue Atlantic exists to solve real operational problems, raise Caribbean technology standards, and create disciplined systems that can support serious businesses, institutions, and future regional growth."
-          className="mb-6 md:mb-8"
-          compact
-        />
+        <div className="mb-8 max-w-3xl md:mb-10">
+          <h2 className="text-xl font-semibold text-brand-navy md:text-2xl">
+            Regional enterprise perspective
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
+            Blue Atlantic exists to solve real operational problems, raise
+            Caribbean technology standards, and create disciplined systems that
+            can support serious businesses, institutions, and future regional
+            growth.
+          </p>
+        </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
           {sections.map((section, index) => (
             <Card
