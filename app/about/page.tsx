@@ -47,7 +47,7 @@ export default function AboutPage() {
       <ContentSection
         surface="blue"
         dense
-        containerClassName="!max-w-7xl !py-10 md:!py-14 lg:!py-16"
+        containerClassName="!max-w-[88rem] !pt-8 !pb-10 md:!pt-12 md:!pb-14 lg:!pt-14 lg:!pb-16"
       >
         <AboutBrandArchitecture />
       </ContentSection>
@@ -55,9 +55,9 @@ export default function AboutPage() {
         surface="white"
         pattern
         dense
-        containerClassName="!max-w-7xl !py-10 md:!py-14 lg:!py-16"
+        containerClassName="!max-w-[88rem] !pt-10 !pb-10 md:!pt-12 md:!pb-12 lg:!pt-14 lg:!pb-14"
       >
-        <div className="mb-6 max-w-3xl md:mb-8">
+        <div className="mb-5 max-w-4xl md:mb-6">
           <h2 className="text-xl font-semibold text-brand-navy md:text-2xl">
             Regional enterprise perspective
           </h2>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <Card
               key={section.title}
               hover
-              className={`flex h-full flex-col !p-5 md:!p-6 ${whyAccentClasses[index % 3]}`}
+              className={`flex h-full flex-col !p-6 md:!p-7 ${whyAccentClasses[index % 3]}`}
             >
               <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                 {String(index + 1).padStart(2, "0")}

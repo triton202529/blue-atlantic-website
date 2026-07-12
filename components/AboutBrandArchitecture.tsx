@@ -20,25 +20,25 @@ export default function AboutBrandArchitecture({
     <div
       className={`overflow-hidden rounded-2xl border border-white/10 bg-brand-navy shadow-brand ${className}`}
     >
-      <div className="grid gap-8 px-6 py-8 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-center md:gap-10 md:px-8 md:py-10 lg:gap-12 lg:px-10">
+      <div className="grid gap-8 px-6 py-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-center md:gap-10 md:px-9 md:py-10 lg:gap-14 lg:px-12 lg:py-12">
         <div className="flex flex-col items-center text-center">
-          <div className="relative flex flex-col items-center py-4">
+          <div className="relative flex flex-col items-center py-5">
             <div
               aria-hidden="true"
-              className="absolute -inset-6 rounded-full border border-white/10"
+              className="absolute -inset-7 rounded-full border border-white/10"
             />
             <div
               aria-hidden="true"
-              className="absolute -inset-10 rounded-full border border-white/[0.06]"
+              className="absolute -inset-12 rounded-full border border-white/[0.06]"
             />
             <BrandSeal size="story" variant="transparent" priority />
             <p className="relative mt-5 text-xs font-semibold uppercase tracking-widest text-blue-200/65">
               Company structure
             </p>
-            <p className="relative mt-4 text-base font-semibold tracking-tight text-white">
+            <p className="relative mt-4 text-lg font-semibold tracking-tight text-white">
               Blue Atlantic
             </p>
-            <p className="relative mt-1 text-sm text-blue-100/65">
+            <p className="relative mt-1 text-sm text-blue-100/70">
               Enterprise and technology group
             </p>
           </div>
@@ -69,14 +69,14 @@ export default function AboutBrandArchitecture({
             {capabilities.map((capability) => (
               <li
                 key={capability}
-                className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5"
+                className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4"
               >
                 <div className="flex items-start gap-3">
                   <span
                     aria-hidden="true"
                     className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-atlantic-light"
                   />
-                  <span className="text-sm font-medium leading-snug text-blue-50/95">
+                  <span className="text-sm font-medium leading-snug text-blue-50/95 md:text-[0.95rem]">
                     {capability}
                   </span>
                 </div>
