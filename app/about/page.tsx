@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AboutBrandArchitecture from "@/components/AboutBrandArchitecture";
-import BrandLogo from "@/components/BrandLogo";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
 import Card from "@/components/Card";
@@ -21,7 +20,7 @@ const sections = [
   {
     title: "What we build",
     content:
-      "We build systems across financial technology, workforce infrastructure, intelligence tools, automation, dashboards, and enterprise operations.",
+      "We build systems across financial technology, workforce infrastructure, proprietary intelligence tools, automation, dashboards, and enterprise operations.",
   },
   {
     title: "Why the Caribbean",
@@ -43,31 +42,14 @@ export default function AboutPage() {
         wide
         eyebrow="About"
         headline="About Blue Atlantic"
-        supportingCopy="Blue Atlantic is a Caribbean-born enterprise and technology group building the systems, platforms, and operational infrastructure needed for modern regional business. The company develops proprietary platforms while also building disciplined technology capabilities around automation, financial infrastructure, workforce systems, intelligence tools, and long-term institutional development."
+        supportingCopy="Blue Atlantic is a Caribbean-born enterprise and technology group building the systems, platforms, and operational infrastructure needed for modern regional business. The company develops proprietary platforms while also building disciplined technology capabilities around automation, financial infrastructure, workforce systems, proprietary intelligence tools, and long-term institutional development."
       />
       <ContentSection
         surface="blue"
         dense
         containerClassName="!max-w-7xl !py-10 md:!py-14 lg:!py-16"
       >
-        <AboutBrandArchitecture className="mb-6 md:mb-8" />
-        <Card className="card-accent-neutral flex flex-col items-center gap-6 bg-white p-7 md:flex-row md:items-center md:gap-8 md:p-9 lg:gap-10 lg:p-10">
-          <BrandLogo variant="story" priority className="shrink-0" />
-          <div className="min-w-0 flex-1 text-center md:text-left">
-            <p className="section-label text-brand-atlantic">Our story</p>
-            <h2 className="mt-2 text-xl font-semibold text-brand-navy md:text-[1.35rem]">
-              Building for long-term institutional development
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
-              Blue Atlantic is focused on building practical systems that
-              support regional enterprise growth, stronger operations, and
-              long-term institutional development. Our work connects proprietary
-              platforms, product discipline, automation capability, and
-              Caribbean-first execution into one disciplined enterprise
-              structure.
-            </p>
-          </div>
-        </Card>
+        <AboutBrandArchitecture />
       </ContentSection>
       <ContentSection
         surface="white"
