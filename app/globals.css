@@ -114,6 +114,15 @@ h3 {
   background-color: var(--brand-surface-slate);
 }
 
+.about-page-surface {
+  background: linear-gradient(
+    180deg,
+    #eef5fb 0%,
+    #f5f8fb 45%,
+    #eef4fa 100%
+  );
+}
+
 .card-hover {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
