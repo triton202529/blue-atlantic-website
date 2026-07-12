@@ -20,7 +20,7 @@ export default function AboutBrandArchitecture({
     <div
       className={`overflow-hidden rounded-2xl border border-white/10 bg-brand-navy shadow-brand ${className}`}
     >
-      <div className="grid gap-8 px-6 py-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-center md:gap-10 md:px-9 md:py-10 lg:gap-14 lg:px-12 lg:py-12">
+      <div className="grid gap-8 px-6 py-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-center md:gap-10 md:px-10 md:py-11 lg:min-h-[430px] lg:gap-16 lg:px-14 lg:py-14">
         <div className="flex flex-col items-center text-center">
           <div className="relative flex flex-col items-center py-5">
             <div
@@ -35,7 +35,7 @@ export default function AboutBrandArchitecture({
             <p className="relative mt-5 text-xs font-semibold uppercase tracking-widest text-blue-200/65">
               Company structure
             </p>
-            <p className="relative mt-4 text-lg font-semibold tracking-tight text-white">
+            <p className="relative mt-4 text-xl font-semibold tracking-tight text-white">
               Blue Atlantic
             </p>
             <p className="relative mt-1 text-sm text-blue-100/70">
@@ -53,10 +53,10 @@ export default function AboutBrandArchitecture({
             <p className="text-xs font-semibold uppercase tracking-widest text-blue-200/65">
               Blue Atlantic ecosystem
             </p>
-            <h2 className="mt-2 text-xl font-semibold text-white md:text-2xl">
+            <h2 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
               Building for long-term institutional development
             </h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-blue-100/75 md:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-blue-100/75 md:text-base">
               Blue Atlantic is focused on building practical systems that
               support regional enterprise growth, stronger operations, and
               long-term institutional development. Our work connects proprietary
@@ -65,7 +65,7 @@ export default function AboutBrandArchitecture({
               structure.
             </p>
           </div>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2 md:pl-8">
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2 md:pl-8">
             {capabilities.map((capability) => (
               <li
                 key={capability}

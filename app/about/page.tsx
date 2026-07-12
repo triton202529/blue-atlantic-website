@@ -47,7 +47,7 @@ export default function AboutPage() {
       <ContentSection
         surface="blue"
         dense
-        containerClassName="!max-w-[88rem] !pt-8 !pb-10 md:!pt-12 md:!pb-14 lg:!pt-14 lg:!pb-16"
+        containerClassName="!max-w-[88rem] !pt-8 !pb-10 md:!pt-12 md:!pb-14 lg:!pt-12 lg:!pb-14"
       >
         <AboutBrandArchitecture />
       </ContentSection>
@@ -55,13 +55,13 @@ export default function AboutPage() {
         surface="white"
         pattern
         dense
-        containerClassName="!max-w-[88rem] !pt-10 !pb-10 md:!pt-12 md:!pb-12 lg:!pt-14 lg:!pb-14"
+        containerClassName="!max-w-[88rem] !pt-10 !pb-10 md:!pt-12 md:!pb-12 lg:!pt-12 lg:!pb-12"
       >
-        <div className="mb-5 max-w-4xl md:mb-6">
-          <h2 className="text-xl font-semibold text-brand-navy md:text-2xl">
+        <div className="mb-6 grid gap-4 border-b border-brand-border/70 pb-6 md:mb-7 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+          <h2 className="text-2xl font-semibold text-brand-navy md:text-3xl">
             Regional enterprise perspective
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-brand-muted md:text-base">
+          <p className="text-sm leading-relaxed text-brand-muted md:text-base">
             Blue Atlantic exists to solve real operational problems, raise
             Caribbean technology standards, and create disciplined systems that
             can support serious businesses, institutions, and future regional
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <Card
               key={section.title}
               hover
-              className={`flex h-full flex-col !p-6 md:!p-7 ${whyAccentClasses[index % 3]}`}
+              className={`flex h-full flex-col !p-6 md:!p-8 ${whyAccentClasses[index % 3]}`}
             >
               <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                 {String(index + 1).padStart(2, "0")}

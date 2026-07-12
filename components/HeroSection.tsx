@@ -26,8 +26,12 @@ export default function HeroSection({
   const padding = compact
     ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
     : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
-  const containerWidth = wide ? "max-w-7xl" : "max-w-6xl";
-  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-4xl" : "max-w-3xl";
+  const containerWidth = wide ? "max-w-[88rem]" : "max-w-6xl";
+  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-5xl" : "max-w-3xl";
+  const headlineSize = wide
+    ? "text-3xl md:text-4xl lg:text-5xl"
+    : "text-3xl md:text-4xl lg:text-[2.75rem]";
+  const copySize = wide ? "text-base md:text-xl" : "text-base md:text-lg";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light">
@@ -42,10 +46,12 @@ export default function HeroSection({
             <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-200/70">
               {eyebrow}
             </p>
-            <h1 className="text-3xl font-semibold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
+            <h1
+              className={`font-semibold leading-[1.15] tracking-tight text-white ${headlineSize}`}
+            >
               {headline}
             </h1>
-            <p className="mt-6 text-base leading-relaxed text-blue-100/85 md:text-lg">
+            <p className={`mt-6 leading-relaxed text-blue-100/85 ${copySize}`}>
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (
