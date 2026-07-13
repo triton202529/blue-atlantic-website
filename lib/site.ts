@@ -40,7 +40,6 @@ export const mainNavLinks = [
   { href: "/about", label: "About" },
   { href: "/companies", label: "Platforms" },
   { href: "/technology", label: "Technology" },
-  { href: "/newsroom", label: "Newsroom" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -54,7 +53,6 @@ export const footerNavLinks = [
 
 export const footerCompanyLinks = [
   { href: "/about", label: "About" },
-  { href: "/newsroom", label: "Newsroom" },
   { href: "/legal", label: "Legal" },
 ] as const;
 

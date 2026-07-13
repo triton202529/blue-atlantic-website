@@ -6,7 +6,6 @@ const routes = [
   "/about",
   "/companies",
   "/technology",
-  "/newsroom",
   "/contact",
   "/legal",
 ] as const;
