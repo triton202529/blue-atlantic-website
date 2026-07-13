@@ -40,7 +40,6 @@ export const mainNavLinks = [
   { href: "/about", label: "About" },
   { href: "/companies", label: "Platforms" },
   { href: "/technology", label: "Technology" },
-  { href: "/capital", label: "Capital" },
   { href: "/newsroom", label: "Newsroom" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -49,7 +48,6 @@ export const footerNavLinks = [
   { href: "/", label: "Blue Atlantic" },
   { href: "/companies", label: "Platforms" },
   { href: "/technology", label: "Technology" },
-  { href: "/capital", label: "Capital" },
   { href: "/contact", label: "Contact" },
   { href: "/legal", label: "Legal" },
 ] as const;
@@ -178,18 +176,6 @@ export const companies: CompanyEntry[] = [
       label: "Visit Sentinel",
       href: "https://sentinel-xi-seven.vercel.app/",
     },
-  },
-  {
-    name: "Blue Atlantic Capital / IRD",
-    category: "Capital & research",
-    statusLabel: "Future direction",
-    accent: "capital" as const,
-    description:
-      "Blue Atlantic Capital / IRD represents a future research and capital strategy direction focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning.",
-    detailDescription:
-      "Blue Atlantic Capital / IRD represents a future research and capital strategy direction focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning.",
-    href: "/companies#blue-atlantic-capital",
-    id: "blue-atlantic-capital",
   },
 ];
 

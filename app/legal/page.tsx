@@ -24,12 +24,12 @@ const legalSections = [
   {
     title: "No banking or brokerage representation",
     content:
-      "Blue Atlantic does not claim to be a licensed bank, regulated investment manager, broker, or asset manager through this website. References to financial infrastructure, capital direction, or investment research describe development direction and platform design. They do not represent live regulated financial services.",
+      "Blue Atlantic does not claim to be a licensed bank, regulated investment manager, broker, or asset manager through this website. References to financial infrastructure describe technology direction, platform design, and operational systems. They do not represent live regulated financial services.",
   },
   {
     title: "Platform-specific terms",
     content:
-      "Individual Blue Atlantic platforms and initiatives, including Tropicash, EliteHire Solutions, TRITON, Sentinel, and Blue Atlantic Capital / IRD, may operate under separate legal terms, privacy policies, and service agreements when launched or made publicly available.",
+      "Individual Blue Atlantic platforms and initiatives, including Tropicash, EliteHire Solutions, TRITON, and Sentinel, may operate under separate legal terms, privacy policies, and service agreements when launched or made publicly available.",
   },
   {
     title: "Future services and approvals",

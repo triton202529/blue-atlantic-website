@@ -1,5 +1,3 @@
-import { brandAssets } from "@/lib/brand";
-
 export type EcosystemLogoTreatment = "light" | "dark" | "neutral";
 
 export interface EcosystemLogoSize {
@@ -51,12 +49,6 @@ export const ecosystemLogos: Record<string, EcosystemLogoConfig> = {
     alt: "Sentinel logo",
     treatment: "dark",
     size: { maxWidth: 86, maxHeight: 32 },
-  },
-  "blue-atlantic-capital": {
-    src: brandAssets.companyLogoDisplay,
-    alt: "Blue Atlantic company logo",
-    treatment: "neutral",
-    size: { maxWidth: 42, maxHeight: 42 },
   },
 };
 

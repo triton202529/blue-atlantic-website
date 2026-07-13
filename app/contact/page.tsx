@@ -26,7 +26,7 @@ const contactCategories = [
   {
     title: "Platform inquiries",
     description:
-      "For questions about Tropicash, EliteHire Solutions, TRITON, Sentinel, Blue Atlantic Capital / IRD, or other platforms within the ecosystem.",
+      "For questions about Tropicash, EliteHire Solutions, TRITON, Sentinel, or other platforms within the ecosystem.",
   },
   {
     title: "Developer and business conversations",

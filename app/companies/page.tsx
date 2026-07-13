@@ -9,7 +9,7 @@ import { companies } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Platforms and systems",
   description:
-    "Explore Blue Atlantic's portfolio of platforms, systems, and future initiatives across financial technology, workforce systems, intelligence, and capital direction.",
+    "Explore Blue Atlantic's portfolio of platforms and systems across financial technology, workforce systems, intelligence, and operational infrastructure.",
 };
 
 export default function CompaniesPage() {

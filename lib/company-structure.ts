@@ -63,32 +63,28 @@ export const companyStructureRows: CompanyStructureRow[] = [
     logoSrc: `${ecosystemBase}/sentinel-logo.png`,
     logoAlt: "Sentinel logo",
   },
-  {
-    id: "blue-atlantic-capital",
-    name: "Blue Atlantic Capital / IRD",
-    area: "Capital and research",
-    role: "Research and capital strategy direction focused on disciplined analysis, capital planning, regional opportunity research, institutional development, and long-term growth planning.",
-    position: "Future direction",
-    logoSrc: brandAssets.companyLogoDisplay,
-    logoAlt: "Blue Atlantic company logo",
-    isSeal: true,
-  },
 ];
 
 export const companyStructurePreviewColumns = [
   {
     title: "Blue Atlantic",
-    description: "Core company and enterprise group structure.",
+    description: "Core company and enterprise technology group.",
     items: ["Blue Atlantic"],
   },
   {
-    title: "Platforms",
-    description: "Operating platforms within the Blue Atlantic ecosystem.",
-    items: ["Tropicash", "EliteHire Solutions", "TRITON", "Sentinel"],
+    title: "Platforms and systems",
+    description: "Operating platforms and systems within the Blue Atlantic ecosystem.",
+    items: ["Tropicash", "EliteHire Solutions / EliteHire Pro", "TRITON", "Sentinel"],
   },
   {
-    title: "Future directions",
-    description: "Research and capital strategy direction within Blue Atlantic.",
-    items: ["Blue Atlantic Capital / IRD"],
+    title: "Technology capability",
+    description: "Shared technology capability across Blue Atlantic.",
+    items: [
+      "Automation systems",
+      "Dashboards",
+      "Financial infrastructure tools",
+      "Workforce systems",
+      "Proprietary intelligence tools",
+    ],
   },
 ] as const;
