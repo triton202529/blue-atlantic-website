@@ -3,9 +3,7 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
-import VisualPanel from "@/components/VisualPanel";
 import { whyAccentClasses } from "@/lib/card-themes";
-import { visualAssetAlt, visualAssets } from "@/lib/visual-assets";
 
 export const metadata: Metadata = {
   title: "Technology",
@@ -76,17 +74,23 @@ export default function TechnologyPage() {
       <ContentSection
         surface="soft"
         dense
-        containerClassName="!max-w-[88rem] !pt-8 !pb-8 md:!pt-10 md:!pb-10 lg:!pt-12 lg:!pb-12"
+        containerClassName="!max-w-[88rem] !pt-8 !pb-8 md:!pt-10 md:!pb-10 lg:!pt-10 lg:!pb-10"
       >
-        <VisualPanel
-          src={visualAssets.systems}
-          alt={visualAssetAlt.systems}
-          title="Systems for operations, automation, products, and partners"
-          description="Our technology work supports platforms such as Tropicash, EliteHire Pro, TRITON, and Sentinel. The same product discipline can support organizations that need automated workflows, custom tools, clearer processes, stronger oversight, and maintainable systems built for real operational use."
-          className="mb-0"
-          compact
-          priority
-        />
+        <Card className="card-accent-neutral bg-white !p-6 md:!p-8 lg:!p-10">
+          <div className="max-w-5xl">
+            <p className="section-label mb-3 text-brand-atlantic">Systems</p>
+            <h2 className="text-2xl font-semibold tracking-tight text-brand-navy md:text-3xl">
+              Systems for operations, automation, products, and partners
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-brand-muted md:text-lg">
+              Our technology work supports platforms such as Tropicash,
+              EliteHire Pro, TRITON, and Sentinel. The same product discipline
+              can support organizations that need automated workflows, custom
+              tools, clearer processes, stronger oversight, and maintainable
+              systems built for real operational use.
+            </p>
+          </div>
+        </Card>
       </ContentSection>
       <ContentSection
         surface="white"
