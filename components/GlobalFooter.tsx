@@ -72,7 +72,7 @@ export default function GlobalFooter() {
         <div className="mt-10 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-blue-100/45">
-              © {currentYear} Blue Atlantic. All rights reserved. Content is
+              © {currentYear} Blue Atlantic Inc. All rights reserved. Content is
               informational.
             </p>
             <Link
