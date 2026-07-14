@@ -44,6 +44,12 @@ const whyPreview = [
   },
 ];
 
+const technologyPreviewCapabilities = [
+  "Automation systems",
+  "Dashboards and reporting",
+  "Product platforms",
+];
+
 export default function HomePage() {
   return (
     <>
@@ -124,17 +130,27 @@ export default function HomePage() {
         dense
         containerClassName="!max-w-7xl !py-10 md:!py-12 lg:!py-14"
       >
-        <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-stretch">
-          <Card className="card-accent-neutral flex h-full flex-col !p-6 md:!p-8">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+          <Card className="card-accent-neutral flex flex-col !p-6 md:!p-8">
             <p className="section-label mb-3 text-brand-atlantic">Technology</p>
             <h2 className="text-2xl font-semibold tracking-tight text-brand-navy md:text-3xl">
               Technology and product development
             </h2>
-            <p className="mt-4 flex-1 text-base leading-relaxed text-brand-muted md:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-brand-muted md:text-lg">
               Blue Atlantic builds practical systems for automation, dashboards,
               internal operations, product platforms, reporting, and operational
               visibility.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {technologyPreviewCapabilities.map((capability) => (
+                <span
+                  key={capability}
+                  className="rounded-full border border-brand-border bg-white px-3 py-1.5 text-xs font-medium text-brand-navy/80"
+                >
+                  {capability}
+                </span>
+              ))}
+            </div>
             <div className="mt-7">
               <Button href="/technology" variant="primary">
                 View technology capability
