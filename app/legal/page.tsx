@@ -5,41 +5,41 @@ import Card from "@/components/Card";
 import { whyAccentClasses } from "@/lib/card-themes";
 
 export const metadata: Metadata = {
-  title: "Legal",
+  title: "Legal information",
   description:
     "Legal information and disclaimers for the Blue Atlantic corporate website.",
 };
 
 const legalSections = [
   {
-    title: "Informational content",
+    title: "Informational website",
     content:
-      "The content on this website is provided for general informational purposes only. It describes Blue Atlantic as an enterprise group and its platforms, initiatives, and development direction. Nothing on this website constitutes financial advice, investment advice, legal advice, or an offer to provide regulated services.",
+      "This website is provided for general informational purposes. It describes Blue Atlantic, its platforms, systems, technology capabilities, and development direction. Nothing on this website creates a contract, guarantee, offer, or professional advisory relationship.",
   },
   {
-    title: "No financial or investment advice",
+    title: "No regulated financial services",
     content:
-      "Nothing on this website should be interpreted as financial advice, investment advice, or a recommendation to buy, sell, or hold any financial product. Blue Atlantic does not offer investment products or regulated financial services through this website.",
+      "Blue Atlantic does not present itself through this website as a licensed bank, brokerage firm, investment manager, or regulated financial institution. References to financial technology, payment infrastructure, financial oversight, or capital direction describe platform development and company direction only.",
   },
   {
-    title: "No banking or brokerage representation",
+    title: "Platform and product information",
     content:
-      "Blue Atlantic does not claim to be a licensed bank, regulated investment manager, broker, or asset manager through this website. References to financial infrastructure describe technology direction, platform design, and operational systems. They do not represent live regulated financial services.",
-  },
-  {
-    title: "Platform-specific terms",
-    content:
-      "Individual Blue Atlantic platforms and initiatives, including Tropicash, EliteHire Solutions, TRITON, and Sentinel, may operate under separate legal terms, privacy policies, and service agreements when launched or made publicly available.",
+      "Descriptions of Tropicash, EliteHire Pro, TRITON, Sentinel, and other Blue Atlantic initiatives are provided to explain the Blue Atlantic ecosystem and development direction. Individual platforms may operate under their own terms, policies, and service agreements when launched or made publicly available.",
   },
   {
     title: "Future services and approvals",
     content:
-      "Future services, products, or platform capabilities described on this website may be subject to separate terms, regulatory requirements, and approvals before they become available. Descriptions of future direction do not represent live offerings.",
+      "Some services, features, and platform capabilities described on this website may be in development, subject to separate approvals, technical requirements, operational readiness, or future terms before they become available.",
+  },
+  {
+    title: "Privacy and data collection",
+    content:
+      "This website does not currently include live forms, account creation, payments, or user dashboards. If Blue Atlantic adds interactive features, contact forms, analytics, or account-based services in the future, additional privacy terms may be published.",
   },
   {
     title: "Intellectual property",
     content:
-      "All content, branding, and materials on this website are the property of Blue Atlantic unless otherwise stated. Unauthorized reproduction or use is prohibited.",
+      "Blue Atlantic names, branding, logos, website content, platform descriptions, and related materials are owned by Blue Atlantic unless otherwise stated. Unauthorized reproduction, copying, or misuse is prohibited.",
   },
 ];
 
@@ -50,15 +50,20 @@ export default function LegalPage() {
         compact
         eyebrow="Legal"
         headline="Legal information"
-        supportingCopy="Important legal notices and disclaimers regarding the Blue Atlantic corporate website, ecosystem platforms, and informational content."
+        supportingCopy="Legal notices and disclaimers for the Blue Atlantic website, platform information, technology capability descriptions, and public-facing company content."
       />
-      <ContentSection surface="blue" pattern>
-        <div className="mx-auto max-w-3xl space-y-5">
+      <ContentSection
+        surface="blue"
+        pattern
+        dense
+        containerClassName="!max-w-5xl !py-10 md:!py-12 lg:!py-14"
+      >
+        <div className="grid gap-5 md:grid-cols-2">
           {legalSections.map((section, index) => (
             <Card
               key={section.title}
               hover
-              className={whyAccentClasses[index % whyAccentClasses.length]}
+              className={`${whyAccentClasses[index % whyAccentClasses.length]} !p-6`}
             >
               <h2 className="text-lg font-semibold text-brand-navy">
                 {section.title}
