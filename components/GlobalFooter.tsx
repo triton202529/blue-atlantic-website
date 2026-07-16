@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BrandLogo from "@/components/BrandLogo";
 import {
+  contactEmails,
   footerCompanyLinks,
   footerNavLinks,
   siteConfig,
@@ -22,6 +23,12 @@ export default function GlobalFooter() {
             <p className="mt-5 max-w-md text-sm leading-relaxed text-blue-100/65">
               {siteConfig.footerDescription}
             </p>
+            <a
+              href={`mailto:${contactEmails.general}`}
+              className="mt-4 inline-block break-all text-sm text-blue-100/65 transition-colors hover:text-white"
+            >
+              {contactEmails.general}
+            </a>
           </div>
 
           <div>
@@ -72,8 +79,7 @@ export default function GlobalFooter() {
         <div className="mt-10 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-blue-100/45">
-              © {currentYear} Blue Atlantic Inc. All rights reserved. Content is
-              informational.
+              © {currentYear} Blue Atlantic Inc. All rights reserved.
             </p>
             <Link
               href="/legal"

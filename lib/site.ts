@@ -1,9 +1,14 @@
-/** Intended production domain after purchase and Vercel connection. Not used as active URL until configured. */
-export const intendedProductionUrl = "https://blueatlantic.com";
-
 import type { CompanyAccent } from "@/lib/card-themes";
 
-const defaultDeploymentUrl = "https://blueatlantic-website.vercel.app";
+/** Official production domain. */
+export const intendedProductionUrl = "https://blueatlantic.co";
+
+const defaultDeploymentUrl = "https://blueatlantic.co";
+
+export const contactEmails = {
+  general: "contact@blueatlantic.co",
+  direct: "akim@blueatlantic.co",
+} as const;
 
 /** Resolves the public site URL from NEXT_PUBLIC_SITE_URL or deployment fallback. */
 export function getSiteUrl(): string {
