@@ -60,7 +60,7 @@ export default function ContactPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Card hover className={whyAccentClasses[0]}>
             <a
-              href={`mailto:${contactEmails.general}`}
+              href="mailto:contact@blueatlantic.co"
               className="inline-block break-all text-lg font-semibold text-brand-navy transition-colors hover:text-brand-atlantic"
             >
               {contactEmails.general}
@@ -79,7 +79,7 @@ export default function ContactPage() {
               Atlantic matters, use the direct company email below.
             </p>
             <a
-              href={`mailto:${contactEmails.direct}`}
+              href="mailto:akim@blueatlantic.co"
               className="mt-5 inline-block break-all text-base font-semibold text-brand-navy transition-colors hover:text-brand-atlantic"
             >
               {contactEmails.direct}
@@ -123,7 +123,7 @@ export default function ContactPage() {
             enterprise development.
           </p>
           <div className="mt-6">
-            <Button href={`mailto:${contactEmails.general}`} variant="primary">
+            <Button href="mailto:contact@blueatlantic.co" variant="primary">
               Email Blue Atlantic
             </Button>
           </div>

@@ -26,6 +26,10 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: "px-8 py-3.5 text-sm",
 };
 
+function isExternalHref(href: string): boolean {
+  return /^(mailto:|tel:|https?:\/\/)/i.test(href);
+}
+
 export default function Button({
   href,
   children,
@@ -33,11 +37,19 @@ export default function Button({
   size = "default",
   className = "",
 }: ButtonProps) {
+  const classNames = `inline-flex items-center justify-center rounded-xl font-medium transition-all duration-200 hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  // Next.js Link does not reliably open mailto/tel/external protocol links.
+  if (isExternalHref(href)) {
+    return (
+      <a href={href} className={classNames}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={`inline-flex items-center justify-center rounded-xl font-medium transition-all duration-200 hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-    >
+    <Link href={href} className={classNames}>
       {children}
     </Link>
   );
