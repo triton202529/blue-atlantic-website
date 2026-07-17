@@ -123,9 +123,21 @@ export default function ContactPage() {
             enterprise development.
           </p>
           <div className="mt-6">
-            <Button href="mailto:contact@blueatlantic.co" variant="primary">
-              Email Blue Atlantic
+            <Button
+              href="mailto:contact@blueatlantic.co"
+              variant="primary"
+              className="max-w-full break-all"
+            >
+              Email contact@blueatlantic.co
             </Button>
+            <p className="mt-4 text-sm leading-relaxed text-brand-muted">
+              <a
+                href="mailto:contact@blueatlantic.co"
+                className="break-all font-medium text-brand-navy transition-colors hover:text-brand-atlantic"
+              >
+                Or email contact@blueatlantic.co directly.
+              </a>
+            </p>
           </div>
         </Card>
       </ContentSection>
