@@ -13,6 +13,7 @@ interface ContentSectionProps {
   containerClassName?: string;
   pattern?: boolean;
   dense?: boolean;
+  wide?: boolean;
 }
 
 export default function ContentSection({
@@ -22,15 +23,16 @@ export default function ContentSection({
   containerClassName = "",
   pattern = false,
   dense = false,
+  wide = false,
 }: ContentSectionProps) {
-  const densePadding = dense ? "!py-10 md:!py-14 lg:!py-16" : "";
-
   return (
     <section className={`relative ${sectionSurfaceClasses[surface]} ${className}`}>
       {pattern && <BrandPattern variant="section" />}
       <PageContainer
         as="div"
-        className={`${pattern ? "relative" : ""} ${densePadding} ${containerClassName}`.trim()}
+        dense={dense}
+        wide={wide}
+        className={`${pattern ? "relative" : ""} ${containerClassName}`.trim()}
       >
         {children}
       </PageContainer>

@@ -22,8 +22,8 @@ export default function PillarCard({
       <span className="text-sm font-semibold tabular-nums text-brand-atlantic/70">
         {label}
       </span>
-      <h3 className="mt-4 text-lg font-semibold text-brand-navy">{title}</h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-muted md:text-base">
+      <h3 className="mt-4 type-card text-brand-navy">{title}</h3>
+      <p className="mt-3 flex-1 type-body-sm leading-relaxed text-brand-muted md:text-base">
         {description}
       </p>
     </Card>

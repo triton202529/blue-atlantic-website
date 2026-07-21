@@ -1,34 +1,107 @@
 @import "tailwindcss";
 
+/* =========================================================
+   Blue Atlantic Design System tokens
+   Brand direction: institutional navy, restrained blue,
+   white / pale blue-gray surfaces. No orange.
+   ========================================================= */
+
 :root {
-  --brand-navy: #0a1628;
-  --brand-navy-light: #142240;
-  --brand-atlantic: #1e4d8c;
-  --brand-atlantic-light: #2a6cb8;
-  --brand-soft: #f4f7fb;
-  --brand-surface-blue: #eef3f9;
-  --brand-surface-slate: #e8edf4;
+  /* --- Semantic color --- */
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f7fb;
+  --color-surface-blue: #eef3f9;
+  --color-surface-slate: #e8edf4;
+  --color-navy: #0a1628;
+  --color-navy-elevated: #142240;
+  --color-text: #0a1628;
+  --color-text-secondary: #3d4a5c;
+  --color-text-muted: #5a6478;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: rgba(219, 234, 254, 0.85);
+  --color-blue: #1e4d8c;
+  --color-blue-hover: #2a6cb8;
+  --color-blue-subtle: rgba(42, 108, 184, 0.12);
+  --color-border: #e2e8f0;
+  --color-border-strong: #c5d0de;
+  --color-border-on-dark: rgba(255, 255, 255, 0.1);
+  --color-success: #2f6b4f;
+
+  /* --- Legacy brand aliases (kept for existing utilities) --- */
+  --brand-navy: var(--color-navy);
+  --brand-navy-light: var(--color-navy-elevated);
+  --brand-atlantic: var(--color-blue);
+  --brand-atlantic-light: var(--color-blue-hover);
+  --brand-soft: var(--color-surface-alt);
+  --brand-surface-blue: var(--color-surface-blue);
+  --brand-surface-slate: var(--color-surface-slate);
   --brand-surface-navy: #f0f4f8;
-  --brand-muted: #5a6478;
-  --brand-border: #e2e8f0;
-  --brand-card: #ffffff;
-  --background: #ffffff;
-  --foreground: #0a1628;
+  --brand-muted: var(--color-text-muted);
+  --brand-border: var(--color-border);
+  --brand-card: var(--color-surface);
+  --background: var(--color-page);
+  --foreground: var(--color-text);
+
+  /* Platform accents stay within navy/blue family (no orange) */
   --accent-fintech: #1e4d8c;
   --accent-workforce: #4a6278;
   --accent-intelligence: #142240;
   --accent-oversight: #3d5a80;
-  --accent-capital: #8a7d5c;
+  --accent-capital: #3d5a80;
   --accent-pillar-1: #1e4d8c;
   --accent-pillar-2: #4a6278;
   --accent-pillar-3: #142240;
   --accent-pillar-4: #2a6cb8;
+
+  /* --- Shape --- */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
   --radius: 1rem;
   --radius-lg: 1.25rem;
+  --radius-pill: 9999px;
+
+  /* --- Shadow (subtle institutional only) --- */
   --shadow-brand: 0 1px 3px rgba(10, 22, 40, 0.06), 0 4px 12px rgba(10, 22, 40, 0.04);
   --shadow-brand-lg: 0 4px 6px rgba(10, 22, 40, 0.06), 0 12px 24px rgba(10, 22, 40, 0.08);
   --shadow-brand-xl: 0 8px 16px rgba(10, 22, 40, 0.08), 0 24px 48px rgba(10, 22, 40, 0.06);
+
+  /* --- Spacing scale --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --page-gutter: 1.5rem;
+  --page-gutter-md: 2rem;
   --section-spacing: 5rem;
+  --section-spacing-dense: 2.5rem;
+  --container-max: 72rem;
+  --container-wide: 88rem;
+  --prose-max: 48rem;
+  --touch-min: 2.75rem;
+
+  /* --- Typography --- */
+  --text-display: clamp(1.875rem, 1.4rem + 1.8vw, 3rem);
+  --text-page: clamp(1.75rem, 1.45rem + 1.1vw, 2.5rem);
+  --text-section: clamp(1.5rem, 1.3rem + 0.7vw, 1.875rem);
+  --text-card: 1.125rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+  --text-eyebrow: 0.8125rem;
+  --text-nav: 0.875rem;
+  --leading-display: 1.15;
+  --leading-heading: 1.2;
+  --leading-body: 1.65;
 }
 
 @theme inline {
@@ -54,20 +127,28 @@
   --shadow-brand-xl: var(--shadow-brand-xl);
 }
 
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: var(--page-gutter-md);
+  }
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-page);
+  color: var(--color-text);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
 }
 
 :focus-visible {
-  outline: 2px solid var(--brand-atlantic-light);
+  outline: 2px solid var(--color-blue-hover);
   outline-offset: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--brand-atlantic-light);
+  outline: 2px solid var(--color-blue-hover);
   outline-offset: 2px;
 }
 
@@ -79,6 +160,100 @@ h1,
 h2,
 h3 {
   scroll-margin-top: 5.5rem;
+  line-height: var(--leading-heading);
+}
+
+/* --- Typography utilities --- */
+.type-display {
+  font-size: var(--text-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: var(--leading-display);
+}
+
+.type-page {
+  font-size: var(--text-page);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: var(--leading-heading);
+}
+
+.type-section {
+  font-size: var(--text-section);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: var(--leading-heading);
+}
+
+.type-card {
+  font-size: var(--text-card);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.type-body-lg {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body);
+}
+
+.type-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.type-body-sm {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+}
+
+.type-caption {
+  font-size: var(--text-caption);
+  line-height: 1.4;
+}
+
+.type-eyebrow,
+.section-label {
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.type-nav {
+  font-size: var(--text-nav);
+  font-weight: 500;
+}
+
+.prose-measure {
+  max-width: var(--prose-max);
+}
+
+.text-link {
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.text-link:hover {
+  color: var(--color-blue-hover);
+}
+
+/* --- Layout helpers --- */
+.page-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--page-gutter);
+}
+
+.page-shell-wide {
+  max-width: var(--container-wide);
+}
+
+.touch-target {
+  min-height: var(--touch-min);
+  min-width: var(--touch-min);
 }
 
 .section-divider {
@@ -86,32 +261,31 @@ h3 {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--brand-border) 20%,
-    var(--brand-border) 80%,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
     transparent
   );
 }
 
-.section-label {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-
 .section-surface-white {
-  background-color: var(--background);
+  background-color: var(--color-page);
 }
 
 .section-surface-soft {
-  background-color: var(--brand-soft);
+  background-color: var(--color-surface-alt);
 }
 
 .section-surface-blue {
-  background-color: var(--brand-surface-blue);
+  background-color: var(--color-surface-blue);
 }
 
 .section-surface-slate {
-  background-color: var(--brand-surface-slate);
+  background-color: var(--color-surface-slate);
+}
+
+.section-surface-navy {
+  background-color: var(--color-navy);
+  color: var(--color-text-on-dark);
 }
 
 .about-page-surface {
@@ -123,6 +297,7 @@ h3 {
   );
 }
 
+/* --- Cards --- */
 .card-hover {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -130,6 +305,17 @@ h3 {
 .card-hover:hover {
   box-shadow: var(--shadow-brand-lg);
   border-color: rgba(30, 77, 140, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover,
+  .ba-button {
+    transition: none;
+  }
+
+  .ba-button:hover {
+    transform: none;
+  }
 }
 
 .card-accent-fintech {
@@ -154,7 +340,7 @@ h3 {
 
 .card-accent-capital {
   border-top: 3px solid var(--accent-capital);
-  background: linear-gradient(180deg, #f6f4ef 0%, #ffffff 40%);
+  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 40%);
 }
 
 .card-accent-pillar-1 {

@@ -19,7 +19,7 @@ export default function GlobalNavigation() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy/95 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 md:px-8 md:py-4">
+      <nav className="page-shell flex items-center justify-between py-3.5 md:py-4">
         <Link
           href="/"
           className="rounded-lg transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
@@ -38,7 +38,7 @@ export default function GlobalNavigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
+                  className={`type-nav inline-flex min-h-[var(--touch-min)] items-center rounded-lg px-3.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
                     isActive
                       ? "bg-white/10 text-white"
                       : "text-blue-100/70 hover:bg-white/5 hover:text-white"
@@ -54,14 +54,14 @@ export default function GlobalNavigation() {
         <div className="flex items-center gap-3 lg:hidden">
           <Link
             href="/contact"
-            className="rounded-lg border border-white/15 bg-white/10 px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-white/15"
+            className="type-nav inline-flex min-h-[var(--touch-min)] items-center rounded-lg border border-white/15 bg-white/10 px-3.5 text-white transition-colors hover:bg-white/15"
           >
             Contact
           </Link>
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
+            className="touch-target flex items-center justify-center rounded-lg border border-white/15 text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
@@ -80,7 +80,7 @@ export default function GlobalNavigation() {
 
       {menuOpen && (
         <div className="border-t border-white/10 bg-brand-navy lg:hidden">
-          <ul className="mx-auto max-w-6xl px-6 py-4 md:px-8">
+          <ul className="page-shell py-4">
             {mainNavLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
@@ -91,7 +91,7 @@ export default function GlobalNavigation() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-lg px-3 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
+                    className={`type-nav flex min-h-[var(--touch-min)] items-center rounded-lg px-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-atlantic-light focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy ${
                       isActive
                         ? "bg-white/10 text-white"
                         : "text-blue-100/70 hover:bg-white/5 hover:text-white"

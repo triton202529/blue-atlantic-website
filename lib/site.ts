@@ -74,7 +74,7 @@ export const heroCopy = {
     "Blue Atlantic develops technology, financial infrastructure, workforce platforms, and intelligence systems for a new generation of Caribbean enterprise. Our work combines disciplined execution, regional understanding, and global-standard product development.",
   panelTitle: "Blue Atlantic Enterprise Group",
   panelCopy:
-    "A Caribbean-born company building platforms and systems for long-term institutional development, regional opportunity, and modern enterprise infrastructure.",
+    "A Caribbean-born company building platforms and systems for regional enterprise growth and modern operating infrastructure.",
 } as const;
 
 export const pillars = [

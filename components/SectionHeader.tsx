@@ -21,21 +21,13 @@ export default function SectionHeader({
     variant === "light" ? "text-blue-200/80" : "text-brand-atlantic";
 
   return (
-    <div className={`mb-10 max-w-3xl md:mb-12 ${alignment}`}>
+    <div className={`mb-10 max-w-3xl prose-measure md:mb-12 ${alignment}`}>
       {label && (
-        <p className={`section-label mb-3 ${labelColor}`}>{label}</p>
+        <p className={`type-eyebrow mb-3 ${labelColor}`}>{label}</p>
       )}
-      <h2
-        className={`text-2xl font-semibold tracking-tight md:text-3xl ${titleColor}`}
-      >
-        {title}
-      </h2>
+      <h2 className={`type-section tracking-tight ${titleColor}`}>{title}</h2>
       {description && (
-        <p
-          className={`mt-4 text-base leading-relaxed md:text-lg ${descriptionColor}`}
-        >
-          {description}
-        </p>
+        <p className={`mt-4 type-body-lg ${descriptionColor}`}>{description}</p>
       )}
     </div>
   );

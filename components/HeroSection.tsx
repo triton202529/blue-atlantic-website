@@ -1,5 +1,6 @@
 import { type ReactNode } from "react";
 import Button from "./Button";
+import EyebrowLabel from "./EyebrowLabel";
 
 interface HeroSectionProps {
   headline: string;
@@ -26,32 +27,31 @@ export default function HeroSection({
   const padding = compact
     ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
     : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
-  const containerWidth = wide ? "max-w-[88rem]" : "max-w-6xl";
-  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-5xl" : "max-w-3xl";
-  const headlineSize = wide
-    ? "text-3xl md:text-4xl lg:text-5xl"
-    : "text-3xl md:text-4xl lg:text-[2.75rem]";
-  const copySize = wide ? "text-base md:text-xl" : "text-base md:text-lg";
+  const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
+  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-5xl" : "prose-measure";
+  const headlineClass = compact && !wide ? "type-page" : "type-display";
+  const copyClass = "type-body-lg";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]"
+        aria-hidden="true"
+      />
 
-      <div className={`relative mx-auto scroll-mt-28 px-6 md:px-8 ${containerWidth} ${padding}`}>
+      <div className={`relative scroll-mt-28 ${containerWidth} ${padding}`}>
         <div
           className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-14" : ""}`}
         >
           <div className={copyWidth}>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-200/70">
+            <EyebrowLabel variant="onDark" className="mb-5">
               {eyebrow}
-            </p>
-            <h1
-              className={`font-semibold leading-[1.15] tracking-tight text-white ${headlineSize}`}
-            >
+            </EyebrowLabel>
+            <h1 className={`tracking-tight text-white ${headlineClass}`}>
               {headline}
             </h1>
-            <p className={`mt-6 leading-relaxed text-blue-100/85 ${copySize}`}>
+            <p className={`mt-6 text-blue-100/85 ${copyClass}`}>
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (

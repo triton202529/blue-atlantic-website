@@ -1,10 +1,16 @@
 import { type ReactNode } from "react";
+import {
+  cardPaddingClasses,
+  cardVariantClasses,
+  type CardVariant,
+} from "@/lib/design-system";
 
 interface CardProps {
   children: ReactNode;
   className?: string;
   id?: string;
   hover?: boolean;
+  variant?: CardVariant;
 }
 
 export default function Card({
@@ -12,11 +18,15 @@ export default function Card({
   className = "",
   id,
   hover = false,
+  variant = "standard",
 }: CardProps) {
+  const padding =
+    variant === "compact" ? cardPaddingClasses.compact : cardPaddingClasses.standard;
+
   return (
     <div
       id={id}
-      className={`rounded-2xl border border-brand-border bg-brand-card p-6 shadow-brand md:p-8 ${hover ? "card-hover" : ""} ${className}`}
+      className={`${cardVariantClasses[variant]} ${padding} ${hover ? "card-hover" : ""} ${className}`}
     >
       {children}
     </div>

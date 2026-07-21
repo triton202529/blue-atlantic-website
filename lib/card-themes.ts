@@ -29,13 +29,14 @@ export const whyAccentClasses = [
   "card-accent-why-3",
 ] as const;
 
-export type SectionSurface = "white" | "soft" | "blue" | "slate";
+export type SectionSurface = "white" | "soft" | "blue" | "slate" | "navy";
 
 export const sectionSurfaceClasses: Record<SectionSurface, string> = {
   white: "section-surface-white",
   soft: "section-surface-soft",
   blue: "section-surface-blue",
   slate: "section-surface-slate",
+  navy: "section-surface-navy",
 };
 
 export const categoryVisualClasses: Record<CompanyAccent, string> = {
