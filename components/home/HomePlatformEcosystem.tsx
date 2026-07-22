@@ -37,40 +37,65 @@ export default function HomePlatformEcosystem() {
         description="Blue Atlantic develops and governs a focused set of platforms. Each product serves a distinct role within the broader enterprise group."
       />
 
-      <div className="mb-8 overflow-hidden rounded-2xl border border-brand-border bg-white p-5 shadow-brand md:p-7">
-        <p className="type-caption font-semibold uppercase tracking-wide text-brand-atlantic">
-          Ecosystem relationship
-        </p>
-        <p className="mt-2 max-w-2xl type-body-sm text-brand-muted">
-          Blue Atlantic sits at the center as the enterprise group. Platforms
-          below are developed under shared standards. They do not all connect
-          directly to each other.
-        </p>
-        <div className="mt-6 flex flex-col items-stretch gap-4">
-          <div className="rounded-xl border border-brand-navy/15 bg-brand-navy px-5 py-4 text-center text-white">
-            <p className="text-sm font-semibold">Blue Atlantic</p>
-            <p className="mt-1 text-xs text-blue-100/70">
-              Enterprise group and product direction
-            </p>
-          </div>
-          <div
-            className="mx-auto hidden h-6 w-px bg-brand-border md:block"
-            aria-hidden="true"
-          />
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {homePlatforms.map((platform) => (
-              <div
-                key={platform.id}
-                className="rounded-xl border border-brand-border bg-brand-soft/60 px-4 py-3 text-center"
-              >
-                <p className="text-sm font-semibold text-brand-navy">
-                  {platform.name}
-                </p>
-                <p className="mt-1 text-xs text-brand-muted">
-                  {platform.category}
-                </p>
-              </div>
-            ))}
+      <div className="ba-ecosystem-shell mb-8 p-5 md:p-7">
+        <div
+          className="pointer-events-none absolute inset-0 ba-blueprint-grid opacity-50"
+          aria-hidden="true"
+        />
+        <div className="relative">
+          <p className="type-caption font-semibold uppercase tracking-wide text-brand-atlantic">
+            Ecosystem relationship
+          </p>
+          <p className="mt-2 max-w-2xl type-body-sm text-brand-muted">
+            Blue Atlantic sits at the center as the enterprise group. Platforms
+            below are developed under shared standards. They do not all connect
+            directly to each other.
+          </p>
+
+          <div className="mt-7 flex flex-col items-stretch">
+            <div className="ba-ecosystem-hub px-5 py-5 text-center">
+              <p className="text-sm font-semibold tracking-tight md:text-base">
+                Blue Atlantic
+              </p>
+              <p className="mt-1 text-xs text-blue-100/70">
+                Enterprise group and product direction
+              </p>
+            </div>
+
+            <div className="relative my-1 flex flex-col items-center" aria-hidden="true">
+              <div className="ba-connector-line h-5" />
+              <div className="ba-connector-rail hidden w-full max-w-3xl md:block" />
+              <div className="ba-connector-line h-5 md:hidden" />
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {homePlatforms.map((platform) => {
+                const logo = getEcosystemLogo(platform.id);
+
+                return (
+                  <div
+                    key={platform.id}
+                    className="ba-ecosystem-node flex flex-col items-center px-3 py-4 text-center"
+                  >
+                    <div
+                      className={`mb-3 flex h-12 w-full items-center justify-center rounded-lg ${
+                        logo
+                          ? ecosystemLogoTreatmentClasses[logo.treatment]
+                          : "bg-white"
+                      }`}
+                    >
+                      <EcosystemLogo companyId={platform.id} variant="strip" />
+                    </div>
+                    <p className="text-sm font-semibold text-brand-navy">
+                      {platform.name}
+                    </p>
+                    <p className="mt-1 text-xs text-brand-muted">
+                      {platform.category}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -83,10 +108,10 @@ export default function HomePlatformEcosystem() {
             <Card
               key={platform.id}
               hover
-              className={`flex h-full flex-col overflow-hidden !p-0 ${companyAccentClasses[platform.accent]}`}
+              className={`ba-home-card flex h-full flex-col overflow-hidden !p-0 ${companyAccentClasses[platform.accent]}`}
             >
               <div
-                className={`ecosystem-card-logo-header flex items-center justify-center border-b border-brand-border/40 ${
+                className={`ba-platform-logo-stage ecosystem-card-logo-header flex items-center justify-center border-b border-brand-border/40 ${
                   logo
                     ? ecosystemLogoTreatmentClasses[logo.treatment]
                     : "bg-brand-soft"
@@ -109,7 +134,7 @@ export default function HomePlatformEcosystem() {
                 <p className="mt-2 flex-1 type-body-sm leading-relaxed text-brand-muted">
                   {platform.description}
                 </p>
-                <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+                <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-brand-border/70 pt-4">
                   {platform.externalLink ? (
                     <a
                       href={platform.externalLink.href}

@@ -1,46 +1,48 @@
 import BrandLogo from "@/components/BrandLogo";
 import { enterpriseAreas, heroCopy } from "@/lib/site";
-import { visualAssets } from "@/lib/visual-assets";
-import Image from "next/image";
 
 export default function CorporateBrandPanel() {
   return (
-    <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
-      <Image
-        src={visualAssets.horizon}
-        alt=""
-        fill
-        sizes="(max-width: 1024px) 100vw, 480px"
-        className="object-cover opacity-25"
-        aria-hidden
-      />
+    <div className="ba-enterprise-panel p-6 md:p-8">
       <div
-        className="absolute inset-0 bg-gradient-to-br from-brand-navy/80 via-brand-navy/60 to-brand-atlantic/40"
+        className="pointer-events-none absolute inset-0 ba-blueprint-grid-dark opacity-70"
         aria-hidden="true"
       />
+      <div
+        className="pointer-events-none absolute inset-0 bg-brand-navy/55"
+        aria-hidden="true"
+      />
+
       <div className="relative">
-        <BrandLogo variant="panel" priority className="mx-auto sm:mx-0" />
-        <p className="mt-5 text-base font-semibold text-white">
-          {heroCopy.panelTitle}
-        </p>
-        <p className="mt-2.5 max-w-sm type-body-sm leading-relaxed text-blue-100/75">
-          {heroCopy.panelCopy}
-        </p>
+        <div className="flex items-start justify-between gap-4">
+          <BrandLogo variant="panel" priority className="mx-auto sm:mx-0" />
+          <span
+            className="hidden h-px w-16 self-center bg-white/15 sm:block"
+            aria-hidden="true"
+          />
+        </div>
+
         <div className="mt-6 border-t border-white/10 pt-5">
-          <p className="text-xs font-medium uppercase tracking-wide text-blue-100/60">
+          <p className="text-base font-semibold tracking-tight text-white md:text-lg">
+            {heroCopy.panelTitle}
+          </p>
+          <p className="mt-2.5 max-w-sm type-body-sm leading-relaxed text-blue-100/75">
+            {heroCopy.panelCopy}
+          </p>
+        </div>
+
+        <div className="mt-6 border-t border-white/10 pt-5">
+          <p className="type-caption font-medium uppercase tracking-wide text-blue-100/55">
             Enterprise areas
           </p>
-          <ul className="mt-3 space-y-2.5">
+          <ul className="mt-3">
             {enterpriseAreas.map((area) => (
-              <li
-                key={area}
-                className="flex items-baseline gap-3 text-sm text-white/85"
-              >
+              <li key={area} className="ba-enterprise-area-row text-sm text-white/90">
                 <span
-                  className="mt-2 h-px w-5 shrink-0 bg-brand-atlantic-light/50"
+                  className="h-px w-5 shrink-0 bg-brand-atlantic-light/55"
                   aria-hidden="true"
                 />
-                {area}
+                <span>{area}</span>
               </li>
             ))}
           </ul>

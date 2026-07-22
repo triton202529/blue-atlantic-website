@@ -124,6 +124,7 @@ export const homeAudiencePaths = [
       "Automation, dashboards, internal tools, and product infrastructure for real operations.",
     href: "/technology",
     cta: "View technology",
+    icon: "systems" as const,
   },
   {
     title: "Explore our platforms",
@@ -131,6 +132,7 @@ export const homeAudiencePaths = [
       "See Tropicash, EliteHire Pro, TRITON, Sentinel, and how the ecosystem is structured.",
     href: "/companies",
     cta: "View platforms",
+    icon: "platforms" as const,
   },
   {
     title: "Discuss a partnership",
@@ -138,6 +140,7 @@ export const homeAudiencePaths = [
       "Start a conversation about collaboration, regional initiatives, or platform engagement.",
     href: "/contact",
     cta: "Contact Blue Atlantic",
+    icon: "partnership" as const,
   },
   {
     title: "Learn about Blue Atlantic",
@@ -145,6 +148,7 @@ export const homeAudiencePaths = [
       "Understand the company direction, Caribbean focus, and long-term operating approach.",
     href: "/about",
     cta: "About Blue Atlantic",
+    icon: "about" as const,
   },
 ] as const;
 
@@ -153,15 +157,18 @@ export const homeWhyPoints = [
     title: "Caribbean-first execution",
     description:
       "Built for regional context, local realities, and serious Caribbean enterprise needs.",
+    icon: "region" as const,
   },
   {
     title: "Enterprise discipline",
     description:
       "Shared standards, clear operating structure, and governance-aware product development.",
+    icon: "discipline" as const,
   },
   {
     title: "Long-term institution building",
     description:
       "Focused platforms and capabilities designed for durable regional infrastructure.",
+    icon: "institution" as const,
   },
 ] as const;

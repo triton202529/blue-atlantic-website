@@ -42,20 +42,20 @@ export default function HeroSection({
 
       <div className={`relative scroll-mt-28 ${containerWidth} ${padding}`}>
         <div
-          className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-14" : ""}`}
+          className={`grid items-center gap-10 ${visual ? "lg:grid-cols-2 lg:gap-16" : ""}`}
         >
           <div className={copyWidth}>
-            <EyebrowLabel variant="onDark" className="mb-5">
+            <EyebrowLabel variant="onDark" className="mb-6">
               {eyebrow}
             </EyebrowLabel>
             <h1 className={`tracking-tight text-white ${headlineClass}`}>
               {headline}
             </h1>
-            <p className={`mt-6 text-blue-100/85 ${copyClass}`}>
+            <p className={`mt-5 max-w-xl text-blue-100/85 ${copyClass}`}>
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
                 {primaryCta && (
                   <Button href={primaryCta.href} variant="secondary" size="lg">
                     {primaryCta.label}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Card from "@/components/Card";
 import ContentSection from "@/components/ContentSection";
+import HomeAreaIcon from "@/components/home/HomeAreaIcon";
 import SectionHeader from "@/components/SectionHeader";
 import { homeAudiencePaths } from "@/lib/homepage";
 import { whyAccentClasses } from "@/lib/card-themes";
@@ -22,9 +23,17 @@ export default function HomeAudiencePaths() {
           >
             <Card
               hover
-              className={`flex h-full min-h-[9.5rem] flex-col justify-between ${whyAccentClasses[index % whyAccentClasses.length]}`}
+              className={`ba-home-card ba-home-path-card flex h-full min-h-[10rem] flex-col justify-between ${whyAccentClasses[index % whyAccentClasses.length]}`}
             >
               <div>
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <div className="ba-home-icon-well">
+                    <HomeAreaIcon name={path.icon} />
+                  </div>
+                  <span className="type-caption font-semibold tabular-nums text-brand-atlantic/45">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
                 <h3 className="type-card text-brand-navy transition-colors group-hover:text-brand-atlantic">
                   {path.title}
                 </h3>
@@ -32,8 +41,13 @@ export default function HomeAudiencePaths() {
                   {path.description}
                 </p>
               </div>
-              <span className="mt-5 inline-flex min-h-[var(--touch-min)] items-center text-sm font-medium text-brand-atlantic">
+              <span className="mt-5 inline-flex min-h-[var(--touch-min)] items-center gap-2 text-sm font-medium text-brand-atlantic">
                 {path.cta}
+                <HomeAreaIcon
+                  name="arrow"
+                  size="sm"
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
               </span>
             </Card>
           </Link>
