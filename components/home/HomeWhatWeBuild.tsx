@@ -37,15 +37,15 @@ export default function HomeWhatWeBuild() {
         description="Four focused areas of enterprise work spanning payments, workforce systems, intelligence tools, and shared product infrastructure."
       />
 
-      <div className="grid items-stretch gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-8">
-        <figure className="ba-home-media relative m-0 overflow-hidden rounded-2xl border border-brand-border bg-brand-soft shadow-brand">
-          <div className="relative aspect-[3/2] w-full lg:aspect-auto lg:h-full lg:min-h-[26rem]">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-8">
+        <figure className="ba-home-media relative m-0 w-full overflow-hidden rounded-2xl border border-brand-border bg-brand-soft shadow-brand">
+          <div className="ba-home-tech-frame relative w-full">
             <Image
               src={techTeamImage.src}
               alt={techTeamImage.alt}
               fill
-              sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              className="ba-home-tech-image"
             />
           </div>
         </figure>

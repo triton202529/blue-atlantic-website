@@ -573,16 +573,25 @@ h3 {
   padding-top: 0;
 }
 
-.ba-platform-logo-stage {
-  position: relative;
+.ba-home-tech-frame {
+  aspect-ratio: 3 / 2;
 }
 
-.ba-platform-logo-stage::after {
-  content: "";
-  position: absolute;
-  inset: auto 12% 10px;
-  height: 1px;
-  background: rgba(30, 77, 140, 0.12);
+@media (min-width: 1024px) {
+  .ba-home-tech-frame {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.ba-home-tech-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (min-width: 1024px) {
+  .ba-home-tech-image {
+    object-position: left center;
+  }
 }
 
 .ba-platform-slider {
@@ -924,43 +933,6 @@ h3 {
   color: var(--color-blue);
 }
 
-/* Secondary detailed cards — reduced visual competition */
-.ba-platform-cards-secondary {
-  margin-top: 0.25rem;
-}
-
-.ba-platform-cards-secondary .ba-home-card {
-  border-color: rgba(30, 77, 140, 0.1);
-  box-shadow: none;
-  opacity: 0.9;
-  transition:
-    opacity 0.18s ease-in-out,
-    border-color 0.18s ease-in-out,
-    box-shadow 0.18s ease-in-out,
-    transform 0.18s ease-in-out;
-}
-
-.ba-platform-cards-secondary .ba-home-card:hover {
-  opacity: 1;
-  transform: none;
-  box-shadow: var(--shadow-brand);
-  border-color: rgba(30, 77, 140, 0.16);
-}
-
-.ba-platform-cards-secondary .ba-platform-logo-stage,
-.ba-platform-cards-secondary .ecosystem-card-logo-header {
-  min-height: 3.75rem;
-  height: 3.75rem;
-}
-
-.ba-platform-cards-secondary .ba-platform-logo-stage::after {
-  display: none;
-}
-
-.ba-platform-cards-secondary .type-card {
-  font-size: 1rem;
-}
-
 .ba-platform-slider-control {
   width: var(--touch-min);
   height: var(--touch-min);
@@ -976,8 +948,7 @@ h3 {
   .ba-platform-selector-stage,
   .ba-selector-logo,
   .ba-platform-selector-indicator,
-  .ba-platform-feature-cta,
-  .ba-platform-cards-secondary .ba-home-card {
+  .ba-platform-feature-cta {
     transition: none;
     animation: none;
   }
@@ -988,8 +959,7 @@ h3 {
   }
 
   .ba-home-card:hover,
-  .ba-ecosystem-node:hover,
-  .ba-platform-cards-secondary .ba-home-card:hover {
+  .ba-ecosystem-node:hover {
     transform: none;
   }
 }
