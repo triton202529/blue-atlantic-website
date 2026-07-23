@@ -64,7 +64,7 @@ export const footerCompanyLinks = [
 export const enterpriseAreas = [
   "Financial technology",
   "Workforce platforms",
-  "Intelligence systems",
+  "Proprietary intelligence",
   "Enterprise infrastructure",
 ] as const;
 

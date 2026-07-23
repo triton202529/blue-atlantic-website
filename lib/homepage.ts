@@ -31,7 +31,7 @@ export const homeBuildAreas = [
   },
   {
     id: "intelligence-systems",
-    title: "Intelligence systems",
+    title: "Proprietary intelligence",
     description:
       "Decision-support tools for research, evaluation, oversight, and operational clarity.",
     href: "/companies#triton",
@@ -108,9 +108,9 @@ export const homePlatforms: HomePlatform[] = [
   {
     id: "triton",
     name: "TRITON",
-    category: "Intelligence and research",
+    category: "Proprietary internal intelligence",
     description:
-      "Internal intelligence and decision-support system for disciplined analysis and oversight.",
+      "Proprietary internal intelligence platform for disciplined analysis, decision support, research, and operational oversight.",
     status: "Internal system",
     accent: "intelligence",
     href: "/companies#triton",
