@@ -47,7 +47,13 @@ function tabLabel(name: string): string {
   return name;
 }
 
-export default function PlatformSelector() {
+export default function PlatformSelector({
+  caption = "Platform selector",
+  hideCaption = false,
+}: {
+  caption?: string;
+  hideCaption?: boolean;
+}) {
   const labelId = useId();
   const panelId = useId();
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
@@ -114,8 +120,15 @@ export default function PlatformSelector() {
 
   return (
     <div className="ba-platform-selector">
-      <p id={labelId} className="type-caption font-semibold text-brand-atlantic">
-        Platform selector
+      <p
+        id={labelId}
+        className={
+          hideCaption
+            ? "sr-only"
+            : "type-caption font-semibold text-brand-atlantic"
+        }
+      >
+        {caption}
       </p>
 
       <div

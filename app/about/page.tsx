@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AboutBrandArchitecture from "@/components/AboutBrandArchitecture";
+import AboutPlatformExplorer from "@/components/about/AboutPlatformExplorer";
 import ContentSection from "@/components/ContentSection";
 import HeroSection from "@/components/HeroSection";
 import Card from "@/components/Card";
@@ -90,6 +91,7 @@ export default function AboutPage() {
             ))}
           </div>
         </ContentSection>
+        <AboutPlatformExplorer />
       </div>
     </>
   );

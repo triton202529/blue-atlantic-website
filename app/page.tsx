@@ -2,7 +2,7 @@ import CorporateBrandPanel from "@/components/CorporateBrandPanel";
 import HeroSection from "@/components/HeroSection";
 import HomeAudiencePaths from "@/components/home/HomeAudiencePaths";
 import HomeFinalCta from "@/components/home/HomeFinalCta";
-import HomePlatformEcosystem from "@/components/home/HomePlatformEcosystem";
+import HomePlatformOverview from "@/components/home/HomePlatformOverview";
 import HomeWhatWeBuild from "@/components/home/HomeWhatWeBuild";
 import HomeWhyBlueAtlantic from "@/components/home/HomeWhyBlueAtlantic";
 import { homeHeroCopy } from "@/lib/homepage";
@@ -19,7 +19,7 @@ export default function HomePage() {
         visual={<CorporateBrandPanel />}
       />
       <HomeWhatWeBuild />
-      <HomePlatformEcosystem />
+      <HomePlatformOverview />
       <HomeAudiencePaths />
       <HomeWhyBlueAtlantic />
       <HomeFinalCta />
