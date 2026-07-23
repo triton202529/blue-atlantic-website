@@ -66,6 +66,20 @@ export interface HomePlatform {
   externalLink?: { label: string; href: string };
 }
 
+export function homePlatformStatusClasses(status: HomePlatformStatus): string {
+  switch (status) {
+    case "Available":
+      return "border-brand-atlantic/30 bg-brand-surface-blue text-brand-navy";
+    case "In development":
+    case "Coming soon":
+      return "border-brand-border bg-brand-soft text-brand-muted";
+    case "Internal system":
+      return "border-brand-navy/15 bg-brand-navy/5 text-brand-navy/80";
+    default:
+      return "border-brand-border bg-white text-brand-muted";
+  }
+}
+
 export const homePlatforms: HomePlatform[] = [
   {
     id: "tropicash",

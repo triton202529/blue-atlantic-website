@@ -3,30 +3,17 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import ContentSection from "@/components/ContentSection";
 import EcosystemLogo from "@/components/EcosystemLogo";
+import PlatformSelector from "@/components/home/PlatformSelector";
 import SectionHeader from "@/components/SectionHeader";
 import {
   homePlatforms,
-  type HomePlatformStatus,
+  homePlatformStatusClasses,
 } from "@/lib/homepage";
 import { companyAccentClasses } from "@/lib/card-themes";
 import {
   ecosystemLogoTreatmentClasses,
   getEcosystemLogo,
 } from "@/lib/ecosystem-brand";
-
-function statusClasses(status: HomePlatformStatus): string {
-  switch (status) {
-    case "Available":
-      return "border-brand-atlantic/30 bg-brand-surface-blue text-brand-navy";
-    case "In development":
-    case "Coming soon":
-      return "border-brand-border bg-brand-soft text-brand-muted";
-    case "Internal system":
-      return "border-brand-navy/15 bg-brand-navy/5 text-brand-navy/80";
-    default:
-      return "border-brand-border bg-white text-brand-muted";
-  }
-}
 
 export default function HomePlatformEcosystem() {
   return (
@@ -62,45 +49,19 @@ export default function HomePlatformEcosystem() {
               </p>
             </div>
 
-            <div className="relative my-1 flex flex-col items-center" aria-hidden="true">
+            <div
+              className="relative my-1 flex flex-col items-center"
+              aria-hidden="true"
+            >
               <div className="ba-connector-line h-5" />
-              <div className="ba-connector-rail hidden w-full max-w-3xl md:block" />
-              <div className="ba-connector-line h-5 md:hidden" />
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {homePlatforms.map((platform) => {
-                const logo = getEcosystemLogo(platform.id);
-
-                return (
-                  <div
-                    key={platform.id}
-                    className="ba-ecosystem-node flex flex-col items-center px-3 py-4 text-center"
-                  >
-                    <div
-                      className={`mb-3 flex h-12 w-full items-center justify-center rounded-lg ${
-                        logo
-                          ? ecosystemLogoTreatmentClasses[logo.treatment]
-                          : "bg-white"
-                      }`}
-                    >
-                      <EcosystemLogo companyId={platform.id} variant="strip" />
-                    </div>
-                    <p className="text-sm font-semibold text-brand-navy">
-                      {platform.name}
-                    </p>
-                    <p className="mt-1 text-xs text-brand-muted">
-                      {platform.category}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+            <PlatformSelector />
           </div>
         </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="ba-platform-cards-secondary grid gap-4 md:grid-cols-2 md:gap-5">
         {homePlatforms.map((platform) => {
           const logo = getEcosystemLogo(platform.id);
 
@@ -125,7 +86,7 @@ export default function HomePlatformEcosystem() {
                     {platform.category}
                   </span>
                   <span
-                    className={`rounded-full border px-2.5 py-1 text-xs font-medium ${statusClasses(platform.status)}`}
+                    className={`rounded-full border px-2.5 py-1 text-xs font-medium ${homePlatformStatusClasses(platform.status)}`}
                   >
                     {platform.status}
                   </span>
