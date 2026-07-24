@@ -562,10 +562,83 @@ h3 {
 .ba-enterprise-panel {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  background: rgba(10, 22, 40, 0.72);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ba-home-hero-media {
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+.ba-home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 22, 40, 0.84) 0%,
+    rgba(10, 22, 40, 0.74) 28%,
+    rgba(10, 22, 40, 0.5) 52%,
+    rgba(10, 22, 40, 0.26) 74%,
+    rgba(10, 22, 40, 0.14) 100%
+  );
+}
+
+.ba-home-hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 40, 0.2) 0%,
+    transparent 34%,
+    transparent 70%,
+    rgba(10, 22, 40, 0.16) 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .ba-home-hero-media {
+    object-position: 60% 40%;
+  }
+
+  .ba-home-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 22, 40, 0.8) 0%,
+      rgba(10, 22, 40, 0.7) 38%,
+      rgba(10, 22, 40, 0.52) 68%,
+      rgba(10, 22, 40, 0.4) 100%
+    );
+  }
+
+  .ba-home-hero-veil {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 22, 40, 0.48) 0%,
+      rgba(10, 22, 40, 0.2) 48%,
+      rgba(10, 22, 40, 0.08) 100%
+    );
+  }
+}
+
+@media (max-width: 639px) {
+  .ba-home-hero-media {
+    object-position: 55% 36%;
+  }
+
+  .ba-home-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 22, 40, 0.84) 0%,
+      rgba(10, 22, 40, 0.76) 36%,
+      rgba(10, 22, 40, 0.6) 70%,
+      rgba(10, 22, 40, 0.46) 100%
+    );
+  }
 }
 
 .ba-enterprise-area-row {

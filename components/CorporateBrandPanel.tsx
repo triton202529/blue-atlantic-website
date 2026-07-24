@@ -9,7 +9,7 @@ export default function CorporateBrandPanel() {
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-brand-navy/55"
+        className="pointer-events-none absolute inset-0 bg-brand-navy/40"
         aria-hidden="true"
       />
 

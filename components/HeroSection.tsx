@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { type ReactNode } from "react";
 import Button from "./Button";
 import EyebrowLabel from "./EyebrowLabel";
@@ -11,6 +12,10 @@ interface HeroSectionProps {
   visual?: ReactNode;
   compact?: boolean;
   wide?: boolean;
+  backgroundImage?: {
+    src: string;
+    sizes?: string;
+  };
 }
 
 export default function HeroSection({
@@ -22,6 +27,7 @@ export default function HeroSection({
   visual,
   compact = false,
   wide = false,
+  backgroundImage,
 }: HeroSectionProps) {
   // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
   const padding = compact
@@ -31,14 +37,42 @@ export default function HeroSection({
   const copyWidth = visual ? "max-w-xl" : wide ? "max-w-5xl" : "prose-measure";
   const headlineClass = compact && !wide ? "type-page" : "type-display";
   const copyClass = "type-body-lg";
+  const hasPhotoHero = Boolean(backgroundImage);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" aria-hidden="true" />
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]"
-        aria-hidden="true"
-      />
+    <section
+      className={`relative overflow-hidden ${
+        hasPhotoHero
+          ? "ba-home-hero bg-brand-navy"
+          : "bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light"
+      }`}
+    >
+      {backgroundImage ? (
+        <>
+          <Image
+            src={backgroundImage.src}
+            alt=""
+            fill
+            priority
+            sizes={backgroundImage.sizes ?? "100vw"}
+            className="ba-home-hero-media"
+            aria-hidden="true"
+          />
+          <div className="ba-home-hero-overlay" aria-hidden="true" />
+          <div className="ba-home-hero-veil" aria-hidden="true" />
+        </>
+      ) : (
+        <>
+          <div
+            className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(42,108,184,0.12)_0%,transparent_50%)]"
+            aria-hidden="true"
+          />
+        </>
+      )}
 
       <div className={`relative scroll-mt-28 ${containerWidth} ${padding}`}>
         <div

@@ -17,6 +17,10 @@ export default function HomePage() {
         primaryCta={homeHeroCopy.primaryCta}
         secondaryCta={homeHeroCopy.secondaryCta}
         visual={<CorporateBrandPanel />}
+        backgroundImage={{
+          src: "/images/homepage/homepage-caribbean-hero.webp",
+          sizes: "100vw",
+        }}
       />
       <HomeWhatWeBuild />
       <HomePlatformOverview />
