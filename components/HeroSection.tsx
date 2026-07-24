@@ -31,24 +31,41 @@ export default function HeroSection({
   wide = false,
   backgroundImage,
 }: HeroSectionProps) {
-  // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
-  const padding = compact
-    ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
-    : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
-  const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
-  const copyWidth = visual ? "max-w-xl" : wide ? "max-w-5xl" : "prose-measure";
-  const headlineClass = compact && !wide ? "type-page" : "type-display";
-  const copyClass = "type-body-lg";
   const hasPhotoHero = Boolean(backgroundImage);
   const treatment = backgroundImage?.treatment ?? "home";
-  const mediaClass =
-    treatment === "about" ? "ba-about-hero-media" : "ba-home-hero-media";
-  const overlayClass =
-    treatment === "about" ? "ba-about-hero-overlay" : "ba-home-hero-overlay";
-  const veilClass =
-    treatment === "about" ? "ba-about-hero-veil" : "ba-home-hero-veil";
-  const sectionClass =
-    treatment === "about" ? "ba-about-hero bg-brand-navy" : "ba-home-hero bg-brand-navy";
+  const isAboutHero = treatment === "about";
+
+  // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
+  // About gets a small desktop-only vertical lift (~20–30px); mobile padding stays put.
+  const padding = isAboutHero
+    ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
+    : compact
+      ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
+      : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
+  const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
+  // About: ~12.5% wider reading column than max-w-5xl / max-w-3xl — still not full-bleed.
+  const copyWidth = isAboutHero
+    ? "max-w-[72rem]"
+    : visual
+      ? "max-w-xl"
+      : wide
+        ? "max-w-5xl"
+        : "prose-measure";
+  const ledeWidth = isAboutHero
+    ? "max-w-[54rem]"
+    : visual
+      ? "max-w-xl"
+      : "max-w-3xl";
+  const headlineClass = compact && !wide ? "type-page" : "type-display";
+  const copyClass = "type-body-lg";
+  const mediaClass = isAboutHero ? "ba-about-hero-media" : "ba-home-hero-media";
+  const overlayClass = isAboutHero
+    ? "ba-about-hero-overlay"
+    : "ba-home-hero-overlay";
+  const veilClass = isAboutHero ? "ba-about-hero-veil" : "ba-home-hero-veil";
+  const sectionClass = isAboutHero
+    ? "ba-about-hero bg-brand-navy"
+    : "ba-home-hero bg-brand-navy";
 
   return (
     <section
@@ -96,11 +113,7 @@ export default function HeroSection({
             <h1 className={`tracking-tight text-white ${headlineClass}`}>
               {headline}
             </h1>
-            <p
-              className={`mt-5 text-blue-100/85 ${copyClass} ${
-                visual ? "max-w-xl" : "max-w-3xl"
-              }`}
-            >
+            <p className={`mt-5 text-blue-100/85 ${copyClass} ${ledeWidth}`}>
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (
