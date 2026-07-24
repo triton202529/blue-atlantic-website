@@ -44,6 +44,11 @@ export default function AboutPage() {
         eyebrow="About"
         headline="About Blue Atlantic"
         supportingCopy="Blue Atlantic is a Caribbean-born enterprise and technology group building the systems, platforms, and operational infrastructure needed for modern regional business. The company develops proprietary platforms while also building disciplined technology capabilities around automation, financial infrastructure, workforce systems, proprietary intelligence tools, and long-term institutional development."
+        backgroundImage={{
+          src: "/images/about/about-caribbean-hero.webp",
+          sizes: "100vw",
+          treatment: "about",
+        }}
       />
       <div className="about-page-surface">
         <ContentSection
@@ -52,7 +57,7 @@ export default function AboutPage() {
           className="!bg-transparent"
           containerClassName="!max-w-[88rem] !pt-8 !pb-10 md:!pt-12 md:!pb-14 lg:!pt-12 lg:!pb-14"
         >
-          <AboutBrandArchitecture />
+          <AboutBrandArchitecture className="ba-about-institutional-panel" />
         </ContentSection>
         <ContentSection
           surface="white"
@@ -60,30 +65,30 @@ export default function AboutPage() {
           className="!bg-transparent"
           containerClassName="!max-w-[88rem] !pt-10 !pb-10 md:!pt-12 md:!pb-12 lg:!pt-12 lg:!pb-12"
         >
-          <div className="mb-6 grid gap-4 border-b border-brand-border/70 pb-6 md:mb-7 md:grid-cols-[0.8fr_1.2fr] md:items-end">
-            <h2 className="text-2xl font-semibold text-brand-navy md:text-3xl">
+          <div className="ba-about-perspective-header mb-7 grid gap-3 border-b border-brand-border/70 pb-7 md:mb-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:items-end md:gap-8">
+            <h2 className="text-2xl font-semibold tracking-tight text-brand-navy md:text-3xl">
               Regional enterprise perspective
             </h2>
-            <p className="text-sm leading-relaxed text-brand-muted md:text-base">
+            <p className="max-w-2xl text-sm leading-relaxed text-brand-muted md:justify-self-end md:text-base">
               Blue Atlantic exists to solve real operational problems, raise
               Caribbean technology standards, and create disciplined systems that
               can support serious businesses, institutions, and future regional
               growth.
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
+          <div className="grid auto-rows-fr gap-5 sm:grid-cols-2 lg:gap-6">
             {sections.map((section, index) => (
               <Card
                 key={section.title}
                 hover
-                className={`flex h-full flex-col !p-6 md:!p-8 ${whyAccentClasses[index % 3]}`}
+                className={`ba-about-perspective-card flex h-full min-h-[12.5rem] flex-col !p-6 md:min-h-[13.5rem] md:!p-8 ${whyAccentClasses[index % 3]}`}
               >
                 <span className="text-sm font-semibold tabular-nums text-brand-atlantic/60">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h2 className="mt-2 text-lg font-semibold text-brand-navy">
+                <h3 className="mt-2 text-lg font-semibold text-brand-navy">
                   {section.title}
-                </h2>
+                </h3>
                 <p className="mt-2.5 flex-1 text-sm leading-relaxed text-brand-muted md:text-base">
                   {section.content}
                 </p>

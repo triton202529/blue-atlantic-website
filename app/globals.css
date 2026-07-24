@@ -641,6 +641,95 @@ h3 {
   }
 }
 
+/* About page — denser institutional Caribbean hero */
+.ba-about-hero-media {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 28% 42%;
+}
+
+.ba-about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    115deg,
+    rgba(10, 22, 40, 0.88) 0%,
+    rgba(10, 22, 40, 0.82) 34%,
+    rgba(10, 22, 40, 0.68) 58%,
+    rgba(10, 22, 40, 0.52) 78%,
+    rgba(10, 22, 40, 0.42) 100%
+  );
+}
+
+.ba-about-hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 40, 0.28) 0%,
+    rgba(10, 22, 40, 0.1) 42%,
+    rgba(10, 22, 40, 0.2) 100%
+  );
+}
+
+.ba-about-hero > .relative {
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .ba-about-hero-media {
+    object-position: 32% 38%;
+  }
+
+  .ba-about-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 22, 40, 0.9) 0%,
+      rgba(10, 22, 40, 0.84) 40%,
+      rgba(10, 22, 40, 0.72) 70%,
+      rgba(10, 22, 40, 0.58) 100%
+    );
+  }
+
+  .ba-about-hero-veil {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 22, 40, 0.28) 0%,
+      rgba(10, 22, 40, 0.12) 100%
+    );
+  }
+}
+
+.ba-about-institutional-panel {
+  position: relative;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 16px 40px rgba(10, 22, 40, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.ba-about-institutional-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.ba-about-institutional-panel > * {
+  position: relative;
+}
+
+.ba-about-perspective-card {
+  min-height: 100%;
+}
+
 .ba-enterprise-area-row {
   display: flex;
   align-items: center;

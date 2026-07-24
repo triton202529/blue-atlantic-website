@@ -15,6 +15,8 @@ interface HeroSectionProps {
   backgroundImage?: {
     src: string;
     sizes?: string;
+    /** Homepage uses open atmosphere; About uses denser institutional treatment. */
+    treatment?: "home" | "about";
   };
 }
 
@@ -38,12 +40,21 @@ export default function HeroSection({
   const headlineClass = compact && !wide ? "type-page" : "type-display";
   const copyClass = "type-body-lg";
   const hasPhotoHero = Boolean(backgroundImage);
+  const treatment = backgroundImage?.treatment ?? "home";
+  const mediaClass =
+    treatment === "about" ? "ba-about-hero-media" : "ba-home-hero-media";
+  const overlayClass =
+    treatment === "about" ? "ba-about-hero-overlay" : "ba-home-hero-overlay";
+  const veilClass =
+    treatment === "about" ? "ba-about-hero-veil" : "ba-home-hero-veil";
+  const sectionClass =
+    treatment === "about" ? "ba-about-hero bg-brand-navy" : "ba-home-hero bg-brand-navy";
 
   return (
     <section
       className={`relative overflow-hidden ${
         hasPhotoHero
-          ? "ba-home-hero bg-brand-navy"
+          ? sectionClass
           : "bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-light"
       }`}
     >
@@ -55,11 +66,11 @@ export default function HeroSection({
             fill
             priority
             sizes={backgroundImage.sizes ?? "100vw"}
-            className="ba-home-hero-media"
+            className={mediaClass}
             aria-hidden="true"
           />
-          <div className="ba-home-hero-overlay" aria-hidden="true" />
-          <div className="ba-home-hero-veil" aria-hidden="true" />
+          <div className={overlayClass} aria-hidden="true" />
+          <div className={veilClass} aria-hidden="true" />
         </>
       ) : (
         <>
@@ -85,7 +96,11 @@ export default function HeroSection({
             <h1 className={`tracking-tight text-white ${headlineClass}`}>
               {headline}
             </h1>
-            <p className={`mt-5 max-w-xl text-blue-100/85 ${copyClass}`}>
+            <p
+              className={`mt-5 text-blue-100/85 ${copyClass} ${
+                visual ? "max-w-xl" : "max-w-3xl"
+              }`}
+            >
               {supportingCopy}
             </p>
             {(primaryCta || secondaryCta) && (

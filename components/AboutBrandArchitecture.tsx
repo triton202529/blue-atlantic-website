@@ -69,17 +69,15 @@ export default function AboutBrandArchitecture({
             {capabilities.map((capability) => (
               <li
                 key={capability}
-                className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4"
+                className="flex min-h-[3.5rem] items-start gap-3 rounded-xl border border-white/12 bg-white/[0.045] px-4 py-3.5"
               >
-                <div className="flex items-start gap-3">
-                  <span
-                    aria-hidden="true"
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-atlantic-light"
-                  />
-                  <span className="text-sm font-medium leading-snug text-blue-50/95 md:text-[0.95rem]">
-                    {capability}
-                  </span>
-                </div>
+                <span
+                  aria-hidden="true"
+                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-atlantic-light"
+                />
+                <span className="text-sm font-medium leading-snug text-blue-50/95 md:text-[0.95rem]">
+                  {capability}
+                </span>
               </li>
             ))}
           </ul>
