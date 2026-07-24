@@ -43,11 +43,11 @@
   --background: var(--color-page);
   --foreground: var(--color-text);
 
-  /* Platform accents stay within navy/blue family (no orange) */
-  --accent-fintech: #1e4d8c;
-  --accent-workforce: #4a6278;
-  --accent-intelligence: #142240;
-  --accent-oversight: #3d5a80;
+  /* Platform accents — restrained identity cues (no orange) */
+  --accent-fintech: #2f6b4f;
+  --accent-workforce: #1e4d8c;
+  --accent-intelligence: #2a6cb8;
+  --accent-oversight: #4a6278;
   --accent-capital: #3d5a80;
   --accent-pillar-1: #1e4d8c;
   --accent-pillar-2: #4a6278;
@@ -297,6 +297,25 @@ h3 {
   );
 }
 
+.platforms-page-surface {
+  background: linear-gradient(
+    180deg,
+    #eef5fb 0%,
+    #f5f8fb 42%,
+    #eef4fa 100%
+  );
+}
+
+.ba-platforms-structure {
+  box-shadow:
+    0 1px 3px rgba(10, 22, 40, 0.06),
+    0 10px 28px rgba(10, 22, 40, 0.06);
+}
+
+.ba-platforms-cards {
+  margin-top: 0.25rem;
+}
+
 /* --- Cards --- */
 .card-hover {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
@@ -319,23 +338,23 @@ h3 {
 }
 
 .card-accent-fintech {
-  border-top: 3px solid var(--accent-fintech);
-  background: linear-gradient(180deg, #f3f7fc 0%, #ffffff 40%);
+  border-top: 2px solid var(--accent-fintech);
+  background: linear-gradient(180deg, #f3f8f5 0%, #ffffff 42%);
 }
 
 .card-accent-workforce {
-  border-top: 3px solid var(--accent-workforce);
-  background: linear-gradient(180deg, #f2f5f8 0%, #ffffff 40%);
+  border-top: 2px solid var(--accent-workforce);
+  background: linear-gradient(180deg, #f3f7fc 0%, #ffffff 42%);
 }
 
 .card-accent-intelligence {
-  border-top: 3px solid var(--accent-intelligence);
-  background: linear-gradient(180deg, #eef1f6 0%, #ffffff 40%);
+  border-top: 2px solid var(--accent-intelligence);
+  background: linear-gradient(180deg, #f2f6fb 0%, #ffffff 42%);
 }
 
 .card-accent-oversight {
-  border-top: 3px solid var(--accent-oversight);
-  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 40%);
+  border-top: 2px solid var(--accent-oversight);
+  background: linear-gradient(180deg, #f3f5f8 0%, #ffffff 42%);
 }
 
 .card-accent-capital {
@@ -697,6 +716,67 @@ h3 {
     background: linear-gradient(
       90deg,
       rgba(10, 22, 40, 0.28) 0%,
+      rgba(10, 22, 40, 0.12) 100%
+    );
+  }
+}
+
+/* Platforms page — business-district Caribbean hero (distinct crop/overlay) */
+.ba-platforms-hero-media {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 72% 44%;
+}
+
+.ba-platforms-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    108deg,
+    rgba(10, 22, 40, 0.9) 0%,
+    rgba(10, 22, 40, 0.84) 30%,
+    rgba(10, 22, 40, 0.7) 54%,
+    rgba(10, 22, 40, 0.5) 76%,
+    rgba(10, 22, 40, 0.38) 100%
+  );
+}
+
+.ba-platforms-hero-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 40, 0.26) 0%,
+    rgba(10, 22, 40, 0.08) 40%,
+    rgba(10, 22, 40, 0.18) 100%
+  );
+}
+
+.ba-platforms-hero > .relative {
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .ba-platforms-hero-media {
+    object-position: 68% 40%;
+  }
+
+  .ba-platforms-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 22, 40, 0.9) 0%,
+      rgba(10, 22, 40, 0.84) 38%,
+      rgba(10, 22, 40, 0.72) 70%,
+      rgba(10, 22, 40, 0.56) 100%
+    );
+  }
+
+  .ba-platforms-hero-veil {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 22, 40, 0.3) 0%,
       rgba(10, 22, 40, 0.12) 100%
     );
   }

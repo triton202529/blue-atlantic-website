@@ -33,11 +33,11 @@ export default function CompanyStructureTable({
     <div
       className={`overflow-hidden rounded-2xl border border-brand-border bg-white shadow-brand ${className}`}
     >
-      <div className="border-b border-brand-border bg-brand-soft/50 px-5 py-5 md:px-8">
+      <div className="border-b border-brand-border bg-brand-soft/50 px-5 py-6 md:px-8 md:py-7">
         <h2 className="type-card text-brand-navy md:text-xl">
           Portfolio structure
         </h2>
-        <p className="mt-2 max-w-3xl type-body-sm leading-relaxed text-brand-muted md:text-base">
+        <p className="mt-2.5 max-w-3xl type-body-sm leading-relaxed text-brand-muted md:text-base">
           {companyStructureIntro}
         </p>
       </div>
@@ -47,7 +47,7 @@ export default function CompanyStructureTable({
         {companyStructureRows.map((row, index) => (
           <div
             key={row.id}
-            className={`px-5 py-4 ${
+            className={`px-5 py-5 ${
               index < companyStructureRows.length - 1
                 ? "border-b border-brand-border/80"
                 : ""
@@ -101,7 +101,7 @@ export default function CompanyStructureTable({
                     : ""
                 }
               >
-                <td className="px-6 py-4 md:px-8">
+                <td className="px-6 py-5 md:px-8">
                   <div className="flex items-center gap-3">
                     <StructureTableLogo row={row} />
                     <span className="text-sm font-semibold text-brand-navy">
@@ -109,13 +109,13 @@ export default function CompanyStructureTable({
                     </span>
                   </div>
                 </td>
-                <td className="px-4 py-4 text-sm text-brand-navy/85">
+                <td className="px-4 py-5 text-sm text-brand-navy/85">
                   {row.area}
                 </td>
-                <td className="px-4 py-4 text-sm leading-relaxed text-brand-muted">
+                <td className="px-4 py-5 text-sm leading-relaxed text-brand-muted">
                   {row.role}
                 </td>
-                <td className="px-6 py-4 text-sm text-brand-navy/85 md:px-8">
+                <td className="px-6 py-5 text-sm text-brand-navy/85 md:px-8">
                   {row.position}
                 </td>
               </tr>

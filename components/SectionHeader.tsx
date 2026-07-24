@@ -4,6 +4,7 @@ interface SectionHeaderProps {
   label?: string;
   align?: "left" | "center";
   variant?: "default" | "light";
+  className?: string;
 }
 
 export default function SectionHeader({
@@ -12,6 +13,7 @@ export default function SectionHeader({
   label,
   align = "left",
   variant = "default",
+  className = "",
 }: SectionHeaderProps) {
   const alignment = align === "center" ? "text-center mx-auto" : "text-left";
   const titleColor = variant === "light" ? "text-white" : "text-brand-navy";
@@ -21,7 +23,9 @@ export default function SectionHeader({
     variant === "light" ? "text-blue-200/80" : "text-brand-atlantic";
 
   return (
-    <div className={`mb-10 max-w-3xl prose-measure md:mb-12 ${alignment}`}>
+    <div
+      className={`mb-10 max-w-3xl prose-measure md:mb-12 ${alignment} ${className}`.trim()}
+    >
       {label && (
         <p className={`type-eyebrow mb-3 ${labelColor}`}>{label}</p>
       )}

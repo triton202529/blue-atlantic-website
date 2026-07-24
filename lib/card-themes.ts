@@ -41,11 +41,11 @@ export const sectionSurfaceClasses: Record<SectionSurface, string> = {
 
 export const categoryVisualClasses: Record<CompanyAccent, string> = {
   fintech:
-    "category-visual-fintech bg-gradient-to-r from-brand-atlantic/20 via-brand-atlantic/10 to-transparent",
+    "category-visual-fintech bg-gradient-to-r from-[#2f6b4f]/20 via-[#2f6b4f]/8 to-transparent",
   workforce:
-    "category-visual-workforce bg-gradient-to-r from-[#4a6278]/25 via-[#4a6278]/10 to-transparent",
+    "category-visual-workforce bg-gradient-to-r from-brand-atlantic/22 via-brand-atlantic/10 to-transparent",
   intelligence:
-    "category-visual-intelligence bg-gradient-to-r from-brand-navy-light/30 via-brand-navy-light/10 to-transparent",
+    "category-visual-intelligence bg-gradient-to-r from-[#2a6cb8]/22 via-[#2a6cb8]/10 to-transparent",
   oversight:
-    "category-visual-oversight bg-gradient-to-r from-[#3d5a80]/25 via-[#3d5a80]/10 to-transparent",
+    "category-visual-oversight bg-gradient-to-r from-[#4a6278]/22 via-[#4a6278]/10 to-transparent",
 };

@@ -15,8 +15,8 @@ interface HeroSectionProps {
   backgroundImage?: {
     src: string;
     sizes?: string;
-    /** Homepage uses open atmosphere; About uses denser institutional treatment. */
-    treatment?: "home" | "about";
+    /** Homepage: open atmosphere. About/Platforms: denser institutional treatments. */
+    treatment?: "home" | "about" | "platforms";
   };
 }
 
@@ -33,39 +33,56 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const hasPhotoHero = Boolean(backgroundImage);
   const treatment = backgroundImage?.treatment ?? "home";
-  const isAboutHero = treatment === "about";
+  const isInstitutionalHero =
+    treatment === "about" || treatment === "platforms";
 
   // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
-  // About gets a small desktop-only vertical lift (~20–30px); mobile padding stays put.
-  const padding = isAboutHero
+  // About/Platforms get a small desktop-only vertical lift; mobile padding stays put.
+  const padding = isInstitutionalHero
     ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
     : compact
       ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
       : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
   const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
-  // About: ~12.5% wider reading column than max-w-5xl / max-w-3xl — still not full-bleed.
-  const copyWidth = isAboutHero
+  // Institutional heroes: ~12.5% wider reading column — still not full-bleed.
+  const copyWidth = isInstitutionalHero
     ? "max-w-[72rem]"
     : visual
       ? "max-w-xl"
       : wide
         ? "max-w-5xl"
         : "prose-measure";
-  const ledeWidth = isAboutHero
+  const ledeWidth = isInstitutionalHero
     ? "max-w-[54rem]"
     : visual
       ? "max-w-xl"
       : "max-w-3xl";
   const headlineClass = compact && !wide ? "type-page" : "type-display";
   const copyClass = "type-body-lg";
-  const mediaClass = isAboutHero ? "ba-about-hero-media" : "ba-home-hero-media";
-  const overlayClass = isAboutHero
-    ? "ba-about-hero-overlay"
-    : "ba-home-hero-overlay";
-  const veilClass = isAboutHero ? "ba-about-hero-veil" : "ba-home-hero-veil";
-  const sectionClass = isAboutHero
-    ? "ba-about-hero bg-brand-navy"
-    : "ba-home-hero bg-brand-navy";
+  const mediaClass =
+    treatment === "about"
+      ? "ba-about-hero-media"
+      : treatment === "platforms"
+        ? "ba-platforms-hero-media"
+        : "ba-home-hero-media";
+  const overlayClass =
+    treatment === "about"
+      ? "ba-about-hero-overlay"
+      : treatment === "platforms"
+        ? "ba-platforms-hero-overlay"
+        : "ba-home-hero-overlay";
+  const veilClass =
+    treatment === "about"
+      ? "ba-about-hero-veil"
+      : treatment === "platforms"
+        ? "ba-platforms-hero-veil"
+        : "ba-home-hero-veil";
+  const sectionClass =
+    treatment === "about"
+      ? "ba-about-hero bg-brand-navy"
+      : treatment === "platforms"
+        ? "ba-platforms-hero bg-brand-navy"
+        : "ba-home-hero bg-brand-navy";
 
   return (
     <section
