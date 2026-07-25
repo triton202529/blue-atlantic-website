@@ -15,8 +15,8 @@ interface HeroSectionProps {
   backgroundImage?: {
     src: string;
     sizes?: string;
-    /** Homepage: open atmosphere. About/Platforms/Technology: denser institutional treatments. */
-    treatment?: "home" | "about" | "platforms" | "technology";
+    /** Homepage: open atmosphere. Other pages use denser institutional treatments. */
+    treatment?: "home" | "about" | "platforms" | "technology" | "contact";
   };
 }
 
@@ -45,6 +45,12 @@ const photoHeroClasses = {
     overlay: "ba-technology-hero-overlay",
     veil: "ba-technology-hero-veil",
   },
+  contact: {
+    section: "ba-contact-hero bg-brand-navy",
+    media: "ba-contact-hero-media",
+    overlay: "ba-contact-hero-overlay",
+    veil: "ba-contact-hero-veil",
+  },
 } as const;
 
 export default function HeroSection({
@@ -61,24 +67,27 @@ export default function HeroSection({
   const hasPhotoHero = Boolean(backgroundImage);
   const treatment = backgroundImage?.treatment ?? "home";
   const isTechnologyHero = treatment === "technology";
+  const isContactHero = treatment === "contact";
   const isInstitutionalHero =
     treatment === "about" ||
     treatment === "platforms" ||
-    isTechnologyHero;
+    isTechnologyHero ||
+    isContactHero;
   const photoClasses = photoHeroClasses[treatment];
 
   // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
-  // Institutional pages get a small desktop-only vertical lift; Technology trims mobile bottom pad.
-  const padding = isTechnologyHero
-    ? "pt-28 pb-12 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
-    : isInstitutionalHero
-      ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
-      : compact
-        ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
-        : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
+  // Institutional pages get a small desktop-only vertical lift; Technology/Contact trim mobile bottom pad.
+  const padding =
+    isTechnologyHero || isContactHero
+      ? "pt-28 pb-12 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
+      : isInstitutionalHero
+        ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
+        : compact
+          ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
+          : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
   const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
   // Institutional heroes: ~12.5% wider reading column — still not full-bleed.
-  // Technology keeps a generous headline rail but a tighter lede (~50rem).
+  // Technology/Contact keep a generous headline rail with a tighter lede.
   const copyWidth = isInstitutionalHero
     ? "max-w-[72rem]"
     : visual
@@ -86,17 +95,21 @@ export default function HeroSection({
       : wide
         ? "max-w-5xl"
         : "prose-measure";
-  const ledeWidth = isTechnologyHero
-    ? "max-w-[48rem]"
-    : isInstitutionalHero
-      ? "max-w-[54rem]"
-      : visual
-        ? "max-w-xl"
-        : "max-w-3xl";
+  const ledeWidth = isContactHero
+    ? "max-w-[45rem]"
+    : isTechnologyHero
+      ? "max-w-[48rem]"
+      : isInstitutionalHero
+        ? "max-w-[54rem]"
+        : visual
+          ? "max-w-xl"
+          : "max-w-3xl";
   const headlineClass = compact && !wide ? "type-page" : "type-display";
-  const copyClass = isTechnologyHero
-    ? "type-body-lg ba-technology-hero-lede"
-    : "type-body-lg";
+  const copyClass = isContactHero
+    ? "type-body-lg ba-contact-hero-lede"
+    : isTechnologyHero
+      ? "type-body-lg ba-technology-hero-lede"
+      : "type-body-lg";
   const mediaClass = photoClasses.media;
   const overlayClass = photoClasses.overlay;
   const veilClass = photoClasses.veil;
