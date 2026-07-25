@@ -158,7 +158,7 @@ export default function ContactPage() {
           surface="soft"
           dense
           className="!bg-[rgba(244,247,251,0.78)]"
-          containerClassName="!max-w-[88rem] !pt-8 !pb-10 md:!pt-10 md:!pb-12 lg:!pt-12 lg:!pb-14"
+          containerClassName="!max-w-[88rem] !pt-6 !pb-8 md:!pt-8 md:!pb-10 lg:!pt-10 lg:!pb-12"
         >
           <figure className="ba-contact-support-media relative m-0 w-full overflow-hidden rounded-2xl border border-brand-border bg-brand-soft shadow-brand">
             <div className="ba-contact-support-frame relative w-full">
