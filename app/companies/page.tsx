@@ -20,7 +20,7 @@ export default function CompaniesPage() {
         wide
         eyebrow="Ecosystem"
         headline="Blue Atlantic platforms and systems"
-        supportingCopy="Blue Atlantic is developing a portfolio of platforms, systems, and future initiatives connected by shared standards, disciplined execution, and Caribbean-first product thinking."
+        supportingCopy="Blue Atlantic develops technology platforms designed to strengthen business, finance, workforce, and enterprise operations across the Caribbean."
         backgroundImage={{
           src: "/images/platforms/platforms-caribbean-hero.webp",
           sizes: "100vw",
@@ -37,7 +37,7 @@ export default function CompaniesPage() {
           <SectionHeader
             label="Portfolio"
             title="Platforms and systems"
-            description="Each platform, system, and initiative in the Blue Atlantic portfolio is developed with institutional discipline, Caribbean-first context, and connection to shared enterprise infrastructure."
+            description="The portfolio below outlines Blue Atlantic's current platforms and systems, their focus areas, and how each contributes to the broader enterprise ecosystem."
             className="!mb-8 md:!mb-10"
           />
           <CompanyStructureTable className="ba-platforms-structure mb-10 md:mb-12 lg:mb-14" />

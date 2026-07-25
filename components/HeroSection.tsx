@@ -15,10 +15,37 @@ interface HeroSectionProps {
   backgroundImage?: {
     src: string;
     sizes?: string;
-    /** Homepage: open atmosphere. About/Platforms: denser institutional treatments. */
-    treatment?: "home" | "about" | "platforms";
+    /** Homepage: open atmosphere. About/Platforms/Technology: denser institutional treatments. */
+    treatment?: "home" | "about" | "platforms" | "technology";
   };
 }
+
+const photoHeroClasses = {
+  home: {
+    section: "ba-home-hero bg-brand-navy",
+    media: "ba-home-hero-media",
+    overlay: "ba-home-hero-overlay",
+    veil: "ba-home-hero-veil",
+  },
+  about: {
+    section: "ba-about-hero bg-brand-navy",
+    media: "ba-about-hero-media",
+    overlay: "ba-about-hero-overlay",
+    veil: "ba-about-hero-veil",
+  },
+  platforms: {
+    section: "ba-platforms-hero bg-brand-navy",
+    media: "ba-platforms-hero-media",
+    overlay: "ba-platforms-hero-overlay",
+    veil: "ba-platforms-hero-veil",
+  },
+  technology: {
+    section: "ba-technology-hero bg-brand-navy",
+    media: "ba-technology-hero-media",
+    overlay: "ba-technology-hero-overlay",
+    veil: "ba-technology-hero-veil",
+  },
+} as const;
 
 export default function HeroSection({
   headline,
@@ -33,18 +60,25 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const hasPhotoHero = Boolean(backgroundImage);
   const treatment = backgroundImage?.treatment ?? "home";
+  const isTechnologyHero = treatment === "technology";
   const isInstitutionalHero =
-    treatment === "about" || treatment === "platforms";
+    treatment === "about" ||
+    treatment === "platforms" ||
+    isTechnologyHero;
+  const photoClasses = photoHeroClasses[treatment];
 
   // Compact heroes still clear the sticky nav (~4.5rem) with readable breathing room.
-  // About/Platforms get a small desktop-only vertical lift; mobile padding stays put.
-  const padding = isInstitutionalHero
-    ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
-    : compact
-      ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
-      : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
+  // Institutional pages get a small desktop-only vertical lift; Technology trims mobile bottom pad.
+  const padding = isTechnologyHero
+    ? "pt-28 pb-12 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
+    : isInstitutionalHero
+      ? "pt-28 pb-14 md:pt-[8.5rem] md:pb-20 lg:pt-40 lg:pb-24"
+      : compact
+        ? "pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-36 lg:pb-20"
+        : "pt-28 pb-20 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32";
   const containerWidth = wide ? "page-shell page-shell-wide" : "page-shell";
   // Institutional heroes: ~12.5% wider reading column — still not full-bleed.
+  // Technology keeps a generous headline rail but a tighter lede (~50rem).
   const copyWidth = isInstitutionalHero
     ? "max-w-[72rem]"
     : visual
@@ -52,37 +86,21 @@ export default function HeroSection({
       : wide
         ? "max-w-5xl"
         : "prose-measure";
-  const ledeWidth = isInstitutionalHero
-    ? "max-w-[54rem]"
-    : visual
-      ? "max-w-xl"
-      : "max-w-3xl";
+  const ledeWidth = isTechnologyHero
+    ? "max-w-[48rem]"
+    : isInstitutionalHero
+      ? "max-w-[54rem]"
+      : visual
+        ? "max-w-xl"
+        : "max-w-3xl";
   const headlineClass = compact && !wide ? "type-page" : "type-display";
-  const copyClass = "type-body-lg";
-  const mediaClass =
-    treatment === "about"
-      ? "ba-about-hero-media"
-      : treatment === "platforms"
-        ? "ba-platforms-hero-media"
-        : "ba-home-hero-media";
-  const overlayClass =
-    treatment === "about"
-      ? "ba-about-hero-overlay"
-      : treatment === "platforms"
-        ? "ba-platforms-hero-overlay"
-        : "ba-home-hero-overlay";
-  const veilClass =
-    treatment === "about"
-      ? "ba-about-hero-veil"
-      : treatment === "platforms"
-        ? "ba-platforms-hero-veil"
-        : "ba-home-hero-veil";
-  const sectionClass =
-    treatment === "about"
-      ? "ba-about-hero bg-brand-navy"
-      : treatment === "platforms"
-        ? "ba-platforms-hero bg-brand-navy"
-        : "ba-home-hero bg-brand-navy";
+  const copyClass = isTechnologyHero
+    ? "type-body-lg ba-technology-hero-lede"
+    : "type-body-lg";
+  const mediaClass = photoClasses.media;
+  const overlayClass = photoClasses.overlay;
+  const veilClass = photoClasses.veil;
+  const sectionClass = photoClasses.section;
 
   return (
     <section
