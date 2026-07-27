@@ -391,12 +391,19 @@ h3 {
 
 .ba-contact-support-image {
   object-fit: cover;
-  object-position: 40% 42%;
+  /* Bias hard left so the full Blue Atlantic wall seal clears the frame. */
+  object-position: 8% 34%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ba-contact-support-image {
+    object-position: 10% 36%;
+  }
 }
 
 @media (max-width: 767px) {
   .ba-contact-support-image {
-    object-position: 36% 40%;
+    object-position: 4% 32%;
   }
 }
 
