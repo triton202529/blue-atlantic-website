@@ -163,9 +163,9 @@ export const companies: CompanyEntry[] = [
     availability: "intelligence-system",
     accent: "intelligence" as const,
     description:
-      "TRITON is an intelligence and decision-support system focused on research, governance, evaluation, operational oversight, and disciplined analysis.",
+      "TRITON is Blue Atlantic’s proprietary artificial intelligence platform for market research, decision support, governance, operational oversight, and disciplined analysis.",
     detailDescription:
-      "TRITON is an intelligence and decision-support system focused on research, governance, evaluation, operational oversight, and disciplined analysis.",
+      "TRITON is Blue Atlantic’s proprietary artificial intelligence platform for market research, decision support, governance, operational oversight, and disciplined analysis.",
     href: "/companies#triton",
     id: "triton",
   },

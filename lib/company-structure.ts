@@ -53,8 +53,8 @@ export const companyStructureRows: CompanyStructureRow[] = [
   {
     id: "triton",
     name: "TRITON",
-    area: "Intelligence and research",
-    role: "Intelligence and decision-support system focused on research, governance, evaluation, operational oversight, and disciplined analysis.",
+    area: "Proprietary artificial intelligence",
+    role: "Blue Atlantic’s proprietary artificial intelligence platform for market research, decision support, governance, operational oversight, and disciplined analysis.",
     position: "Intelligence system",
     status: "intelligence-system",
     logoSrc: `${ecosystemBase}/triton-logo.png`,
