@@ -390,20 +390,35 @@ h3 {
 }
 
 .ba-contact-support-image {
+  /*
+   * Next/Image `fill` defaults to inset:0 / 100% size. Oversizing from the
+   * top-left keeps the full circular wall logo (with breathing room) while
+   * cropping surplus from the right — object-position alone cannot do this
+   * because the frame is wider than the 3:2 source.
+   */
   object-fit: cover;
-  /* Bias hard left so the full Blue Atlantic wall seal clears the frame. */
-  object-position: 8% 34%;
+  object-position: left top;
+  inset: auto auto auto 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 108% !important;
+  height: 108% !important;
+  max-width: none !important;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .ba-contact-support-image {
-    object-position: 10% 36%;
+    object-position: left top;
+    width: 110% !important;
+    height: 110% !important;
   }
 }
 
 @media (max-width: 767px) {
   .ba-contact-support-image {
-    object-position: 4% 32%;
+    object-position: left top;
+    width: 112% !important;
+    height: 112% !important;
   }
 }
 
