@@ -392,12 +392,12 @@ h3 {
 .ba-contact-support-image {
   /*
    * Next/Image `fill` defaults to inset:0 / 100% size. Oversizing from the
-   * top-left keeps the full circular wall logo (with breathing room) while
-   * cropping surplus from the right — object-position alone cannot do this
-   * because the frame is wider than the 3:2 source.
+   * left keeps the full circular wall logo while cropping surplus from the
+   * right. A slight downward Y bias reveals the first foreground monitors
+   * without clipping the seal.
    */
   object-fit: cover;
-  object-position: left top;
+  object-position: left 7%;
   inset: auto auto auto 0 !important;
   top: 0 !important;
   left: 0 !important;
@@ -408,7 +408,7 @@ h3 {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .ba-contact-support-image {
-    object-position: left top;
+    object-position: left 6%;
     width: 110% !important;
     height: 110% !important;
   }
@@ -416,7 +416,7 @@ h3 {
 
 @media (max-width: 767px) {
   .ba-contact-support-image {
-    object-position: left top;
+    object-position: left 5%;
     width: 112% !important;
     height: 112% !important;
   }
