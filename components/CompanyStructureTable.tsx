@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PlatformAvailabilityBadge from "@/components/PlatformAvailabilityBadge";
 import {
   companyStructureIntro,
   companyStructureRows,
@@ -55,7 +56,7 @@ export default function CompanyStructureTable({
           >
             <div className="flex items-center gap-3">
               <StructureTableLogo row={row} />
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold text-brand-navy">
                   {row.name}
                 </p>
@@ -65,9 +66,9 @@ export default function CompanyStructureTable({
             <p className="mt-3 type-body-sm leading-relaxed text-brand-muted">
               {row.role}
             </p>
-            <p className="mt-2 text-xs font-medium text-brand-navy/80">
-              {row.position}
-            </p>
+            <div className="mt-2.5">
+              <PlatformAvailabilityBadge kind={row.status} />
+            </div>
           </div>
         ))}
       </div>
@@ -87,7 +88,7 @@ export default function CompanyStructureTable({
                 What it does
               </th>
               <th className="px-6 py-3 text-xs font-semibold uppercase tracking-wide text-brand-muted md:px-8">
-                Current position
+                Status
               </th>
             </tr>
           </thead>
@@ -115,8 +116,8 @@ export default function CompanyStructureTable({
                 <td className="px-4 py-5 text-sm leading-relaxed text-brand-muted">
                   {row.role}
                 </td>
-                <td className="px-6 py-5 text-sm text-brand-navy/85 md:px-8">
-                  {row.position}
+                <td className="px-6 py-5 md:px-8">
+                  <PlatformAvailabilityBadge kind={row.status} />
                 </td>
               </tr>
             ))}

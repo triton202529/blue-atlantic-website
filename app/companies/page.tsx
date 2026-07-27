@@ -48,7 +48,7 @@ export default function CompaniesPage() {
                 id={company.id}
                 name={company.name}
                 category={company.category}
-                statusLabel={company.statusLabel}
+                availability={company.availability}
                 accent={company.accent}
                 description={company.detailDescription}
                 href={company.href}

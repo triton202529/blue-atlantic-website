@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Card from "./Card";
 import EcosystemLogo from "./EcosystemLogo";
+import PlatformAvailabilityBadge from "./PlatformAvailabilityBadge";
 import {
   categoryVisualClasses,
   companyAccentClasses,
@@ -10,6 +11,7 @@ import {
   ecosystemLogoTreatmentClasses,
   getEcosystemLogo,
 } from "@/lib/ecosystem-brand";
+import type { PlatformAvailabilityKind } from "@/lib/platform-availability";
 
 interface ExternalLink {
   label: string;
@@ -20,7 +22,7 @@ interface CompanyCardProps {
   name: string;
   description: string;
   category?: string;
-  statusLabel?: string;
+  availability?: PlatformAvailabilityKind;
   href?: string;
   id?: string;
   accent?: CompanyAccent;
@@ -32,7 +34,7 @@ export default function CompanyCard({
   name,
   description,
   category,
-  statusLabel,
+  availability,
   href,
   id,
   accent = "fintech",
@@ -59,6 +61,8 @@ export default function CompanyCard({
     />
   );
 
+  const showActions = Boolean(href || externalLink || availability === "coming-soon");
+
   return (
     <Card
       id={id}
@@ -66,17 +70,14 @@ export default function CompanyCard({
       className={`flex h-full flex-col ${cardPadding} ${accentClass}`}
     >
       {header}
-      {(category || statusLabel) && (
-        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-brand-border/60 pb-2.5 text-xs text-brand-muted">
+      {(category || availability) && (
+        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-b border-brand-border/60 pb-2.5">
           {category && (
-            <span className="font-medium text-brand-navy/80">{category}</span>
-          )}
-          {category && statusLabel && (
-            <span className="text-brand-border" aria-hidden="true">
-              |
+            <span className="text-xs font-medium text-brand-navy/80">
+              {category}
             </span>
           )}
-          {statusLabel && <span>{statusLabel}</span>}
+          {availability && <PlatformAvailabilityBadge kind={availability} />}
         </div>
       )}
       <h3 className="text-base font-semibold text-brand-navy md:text-lg">
@@ -87,12 +88,12 @@ export default function CompanyCard({
       >
         {description}
       </p>
-      {(href || externalLink) && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+      {showActions && (
+        <div className="ba-platform-card-actions mt-4">
           {href && (
             <Link
               href={href}
-              className="text-sm font-medium text-brand-atlantic transition-colors hover:underline"
+              className="ba-platform-learn-link text-sm font-medium text-brand-atlantic transition-colors hover:underline"
             >
               Learn more
             </Link>
@@ -102,10 +103,19 @@ export default function CompanyCard({
               href={externalLink.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-brand-muted transition-colors hover:text-brand-atlantic hover:underline"
+              className="ba-platform-visit-btn"
             >
-              {externalLink.label}
+              <span>{externalLink.label}</span>
+              <span aria-hidden="true" className="ba-platform-visit-btn__icon">
+                ↗
+              </span>
             </a>
+          )}
+          {!externalLink && availability === "coming-soon" && (
+            <PlatformAvailabilityBadge
+              kind="coming-soon"
+              className="ba-platform-coming-soon-note"
+            />
           )}
         </div>
       )}

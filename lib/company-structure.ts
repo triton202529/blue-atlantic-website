@@ -1,4 +1,5 @@
 import { brandAssets } from "@/lib/brand";
+import type { PlatformAvailabilityKind } from "@/lib/platform-availability";
 
 export interface CompanyStructureRow {
   id: string;
@@ -6,6 +7,7 @@ export interface CompanyStructureRow {
   area: string;
   role: string;
   position: string;
+  status: PlatformAvailabilityKind;
   logoSrc: string;
   logoAlt: string;
   isSeal?: boolean;
@@ -23,6 +25,7 @@ export const companyStructureRows: CompanyStructureRow[] = [
     area: "Enterprise group",
     role: "Company structure, shared standards, governance, product direction, and long-term institutional development.",
     position: "Core company",
+    status: "core-company",
     logoSrc: brandAssets.companyLogoDisplay,
     logoAlt: "Blue Atlantic company logo",
     isSeal: true,
@@ -33,6 +36,7 @@ export const companyStructureRows: CompanyStructureRow[] = [
     area: "Financial technology",
     role: "Digital wallet and payment infrastructure platform designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations.",
     position: "Platform",
+    status: "coming-soon",
     logoSrc: `${ecosystemBase}/tropicash-logo.png`,
     logoAlt: "Tropicash logo",
   },
@@ -42,6 +46,7 @@ export const companyStructureRows: CompanyStructureRow[] = [
     area: "Workforce technology",
     role: "Workforce technology platform supporting employers, job seekers, job discovery, structured hiring, employer tools, and regional labor visibility through EliteHire Pro.",
     position: "Platform",
+    status: "available-now",
     logoSrc: `${ecosystemBase}/elitehire-logo.png`,
     logoAlt: "EliteHire Solutions logo",
   },
@@ -51,6 +56,7 @@ export const companyStructureRows: CompanyStructureRow[] = [
     area: "Intelligence and research",
     role: "Intelligence and decision-support system focused on research, governance, evaluation, operational oversight, and disciplined analysis.",
     position: "Intelligence system",
+    status: "intelligence-system",
     logoSrc: `${ecosystemBase}/triton-logo.png`,
     logoAlt: "TRITON logo",
   },
@@ -60,6 +66,7 @@ export const companyStructureRows: CompanyStructureRow[] = [
     area: "Financial oversight",
     role: "Centralized financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one place.",
     position: "Oversight platform",
+    status: "available-now",
     logoSrc: `${ecosystemBase}/sentinel-logo.png`,
     logoAlt: "Sentinel logo",
   },

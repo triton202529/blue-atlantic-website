@@ -1,4 +1,5 @@
 import type { CompanyAccent } from "@/lib/card-themes";
+import type { PlatformAvailabilityKind } from "@/lib/platform-availability";
 
 /** Official production domain. */
 export const intendedProductionUrl = "https://blueatlantic.co";
@@ -112,6 +113,7 @@ export interface CompanyEntry {
   name: string;
   category: string;
   statusLabel: string;
+  availability: PlatformAvailabilityKind;
   accent: CompanyAccent;
   description: string;
   detailDescription: string;
@@ -127,19 +129,21 @@ export const companies: CompanyEntry[] = [
   {
     name: "Tropicash",
     category: "Financial technology",
-    statusLabel: "Platform",
+    statusLabel: "Coming Soon",
+    availability: "coming-soon",
     accent: "fintech" as const,
     description:
-      "Tropicash is a digital wallet and payment infrastructure platform designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations.",
+      "Tropicash is currently in active development and is planned as a Caribbean digital wallet and payment infrastructure platform for individuals and businesses.",
     detailDescription:
-      "Tropicash is a digital wallet and payment infrastructure platform designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations.",
+      "Tropicash is currently in active development and is planned as a Caribbean digital wallet and payment infrastructure platform for individuals and businesses. The platform is designed to help Caribbean users and businesses send and receive money locally and regionally, manage wallet balances, and support future financial service integrations.",
     href: "/companies#tropicash",
     id: "tropicash",
   },
   {
     name: "EliteHire Solutions",
     category: "Workforce technology",
-    statusLabel: "Platform",
+    statusLabel: "Available Now",
+    availability: "available-now",
     accent: "workforce" as const,
     description:
       "EliteHire Solutions develops workforce technology for employers, job seekers, and regional labor visibility. Its platform, EliteHire Pro, supports job discovery, structured hiring, employer tools, and modern employment infrastructure across the Caribbean.",
@@ -155,7 +159,8 @@ export const companies: CompanyEntry[] = [
   {
     name: "TRITON",
     category: "Intelligence & research",
-    statusLabel: "Intelligence system",
+    statusLabel: "Intelligence System",
+    availability: "intelligence-system",
     accent: "intelligence" as const,
     description:
       "TRITON is an intelligence and decision-support system focused on research, governance, evaluation, operational oversight, and disciplined analysis.",
@@ -167,7 +172,8 @@ export const companies: CompanyEntry[] = [
   {
     name: "Sentinel",
     category: "Financial oversight",
-    statusLabel: "Oversight platform",
+    statusLabel: "Available Now",
+    availability: "available-now",
     accent: "oversight" as const,
     description:
       "Sentinel is a financial oversight and record keeping platform designed to help businesses track finances, activity, controls, and operating records from one centralized place. Sentinel supports stronger transparency, structured financial review, and enterprise accountability.",

@@ -326,6 +326,97 @@ h3 {
   margin-top: 0.25rem;
 }
 
+.ba-availability-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.ba-availability-badge--available {
+  background: #e7f1f8;
+  border-color: rgba(30, 77, 140, 0.22);
+  color: var(--brand-navy);
+}
+
+.ba-availability-badge--coming-soon {
+  background: #f6efe4;
+  border-color: rgba(148, 120, 72, 0.28);
+  color: var(--brand-navy);
+}
+
+.ba-availability-badge--neutral {
+  background: #eef2f6;
+  border-color: rgba(10, 22, 40, 0.12);
+  color: var(--brand-navy);
+}
+
+.ba-platform-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.9rem;
+}
+
+.ba-platform-learn-link {
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ba-platform-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(30, 77, 140, 0.28);
+  background: #ffffff;
+  color: var(--brand-navy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(10, 22, 40, 0.04);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ba-platform-visit-btn:hover {
+  background: var(--brand-surface-blue);
+  border-color: rgba(30, 77, 140, 0.42);
+  color: var(--brand-navy);
+}
+
+.ba-platform-visit-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 4px rgba(42, 108, 184, 0.55);
+}
+
+.ba-platform-visit-btn__icon {
+  font-size: 0.85em;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.ba-platform-coming-soon-note {
+  pointer-events: none;
+  user-select: none;
+}
+
 .ba-technology-systems-panel {
   border-color: rgba(197, 208, 222, 0.9);
   box-shadow:
