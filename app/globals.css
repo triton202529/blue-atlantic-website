@@ -590,18 +590,18 @@ h3 {
 
 /*
  * Sentinel source is a square with heavy letterboxing around a wide wordmark.
- * Cover a mid-size card cell so empty padding is cropped without dominating
- * the header (BA-W-022C correction from the larger 022B scale).
+ * Cover a balanced mid-size cell (BA-W-022D) — wider than TRITON (~92×36)
+ * without dominating the header like 022B/022C.
  */
 .ecosystem-logo-cell-card.ecosystem-logo-cell--sentinel {
-  width: 138px;
-  height: 44px;
+  width: 110px;
+  height: 36px;
 }
 
 @media (min-width: 768px) {
   .ecosystem-logo-cell-card.ecosystem-logo-cell--sentinel {
-    width: 150px;
-    height: 48px;
+    width: 118px;
+    height: 38px;
   }
 }
 
