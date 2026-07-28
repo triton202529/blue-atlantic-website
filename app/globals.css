@@ -588,6 +588,32 @@ h3 {
   max-height: 70%;
 }
 
+/*
+ * Sentinel source is a square with heavy letterboxing around a wide wordmark.
+ * Cover a wider/taller card cell so empty padding is cropped and the mark
+ * reads closer to Tropicash / TRITON visual weight without raising card height.
+ */
+.ecosystem-logo-cell-card.ecosystem-logo-cell--sentinel {
+  width: 188px;
+  height: 62px;
+}
+
+@media (min-width: 768px) {
+  .ecosystem-logo-cell-card.ecosystem-logo-cell--sentinel {
+    width: 220px;
+    height: 70px;
+  }
+}
+
+.ecosystem-logo-cell-card .ecosystem-logo-image--sentinel {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center;
+}
+
 .ecosystem-logo-cell-strip {
   width: 96px;
   height: 52px;

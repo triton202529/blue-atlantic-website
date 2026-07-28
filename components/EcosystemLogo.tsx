@@ -25,6 +25,13 @@ export default function EcosystemLogo({
     return null;
   }
 
+  const logoToneClass = companyId
+    ? `ecosystem-logo-image--${companyId}`
+    : "";
+  const cellToneClass = companyId
+    ? `ecosystem-logo-cell--${companyId}`
+    : "";
+
   const image = (
     <Image
       src={config.src}
@@ -32,7 +39,7 @@ export default function EcosystemLogo({
       width={config.size.maxWidth}
       height={config.size.maxHeight}
       priority={priority}
-      className="ecosystem-logo-image object-contain object-center"
+      className={`ecosystem-logo-image object-contain object-center ${logoToneClass}`.trim()}
       style={{
         maxWidth: config.size.maxWidth,
         maxHeight: config.size.maxHeight,
@@ -43,7 +50,7 @@ export default function EcosystemLogo({
   if (variant === "card") {
     return (
       <div
-        className={`ecosystem-logo-cell-card flex items-center justify-center ${className}`}
+        className={`ecosystem-logo-cell-card flex items-center justify-center ${cellToneClass} ${className}`.trim()}
       >
         {image}
       </div>
