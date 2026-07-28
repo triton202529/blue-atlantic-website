@@ -49,7 +49,7 @@ export const ecosystemLogos: Record<string, EcosystemLogoConfig> = {
     alt: "Sentinel logo",
     treatment: "dark",
     // Intrinsic request size; card CSS cover-crops the square letterboxed asset.
-    size: { maxWidth: 220, maxHeight: 70 },
+    size: { maxWidth: 150, maxHeight: 48 },
   },
 };
 
